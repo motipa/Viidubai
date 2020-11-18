@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace Vii.Views
 {
-    public partial class EventPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class HomePage : ContentPage
     {
-        public EventPage()
+        public HomePage()
         {
             InitializeComponent();
-
             var image = new Image { Source = "gallery.png" };
         }
     }

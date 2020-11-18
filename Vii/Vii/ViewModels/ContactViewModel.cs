@@ -11,7 +11,7 @@ namespace Vii.ViewModels
     {
         public ContactViewModel()
         {
-            Title = "Contact Us";
+            Title = "CONTACT US";
         }
     }
 }

@@ -10,9 +10,36 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <!--<Frame CornerRadius="100" 
+           HeightRequest="200"
+           WidthRequest="200"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True" >
+                --><!--<Label Text="This is text with strikethrough." TextDecorations="Strikethrough" />--><!--
+                <Image  Source="gallery.png"   HorizontalOptions="Center"
+           VerticalOptions="Center"/>
+            </Frame>
+            <Frame CornerRadius="100" 
+           HeightRequest="200"
+           WidthRequest="200"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True" >
+                --><!--<Label Text="This is text with strikethrough." TextDecorations="Strikethrough" />--><!--
+                <Image  Source="gallery.png"  HorizontalOptions="Center"
+           VerticalOptions="Center" />
+            </Frame>
+            <Frame CornerRadius="100" 
+           HeightRequest="200"
+           WidthRequest="200"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True" >
+                --><!--<Label Text="This is text with strikethrough." TextDecorations="Strikethrough" />--><!--
+                <Image  Source="gallery.png"  HorizontalOptions="Center"
+           VerticalOptions="Center"/>
+            </Frame>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

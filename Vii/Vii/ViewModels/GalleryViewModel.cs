@@ -11,7 +11,7 @@ namespace Vii.ViewModels
     {
         public GalleryViewModel()
         {
-            Title = "Gallery";
+            Title = "GALLERY";
         }
     }
 }

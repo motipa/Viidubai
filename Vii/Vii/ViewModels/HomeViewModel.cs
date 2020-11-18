@@ -7,11 +7,11 @@ using Xamarin.Forms;
 
 namespace Vii.ViewModels
 {
-    public class ReservationViewModel : ContentPage
+    public class HomeViewModel : ContentPage
     {
-        public ReservationViewModel()
+        public HomeViewModel()
         {
-            Title = "RESERVATION";
+            Title = "HOME";
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Vii.Views
     public partial class ContactPage : ContentPage
     {
         public ContactPage()
-        {
+        {//ghghg
             InitializeComponent();
         }
     }

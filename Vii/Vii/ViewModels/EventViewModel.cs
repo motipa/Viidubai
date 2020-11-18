@@ -11,7 +11,7 @@ namespace Vii.ViewModels
     {
         public EventViewModel()
         {
-            Title = "Event";
+            Title = "EVENT";
         }
     }
 }

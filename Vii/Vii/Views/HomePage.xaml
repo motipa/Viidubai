@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Vii.Views.HomePage"
+              xmlns:vm="clr-namespace:Vii.ViewModels"
+              Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:HomeViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout Margin="20" Orientation="Horizontal" >
+            <Frame CornerRadius="20"  HeightRequest="120" WidthRequest="120" Padding="0" HorizontalOptions="Start"  IsClippedToBounds="True" >
+                <!--<Label Text="This is text with strikethrough." TextDecorations="Strikethrough" />-->
+                <Image  Source="gallery.png" />
+            </Frame>
+            <Frame CornerRadius="20"  HeightRequest="120"  WidthRequest="120"  HorizontalOptions="Center"  Padding="0" IsClippedToBounds="True" >
+                <!--<Label Text="This is text with strikethrough." TextDecorations="Strikethrough" />-->
+                <Image  Source="gallery.png" />
+            </Frame>
+            <Frame CornerRadius="20"  HeightRequest="120"  WidthRequest="120"  HorizontalOptions="End"  Padding="0"   IsClippedToBounds="True" >
+                <!--<Label Text="This is text with strikethrough." TextDecorations="Strikethrough" />-->
+                <Image  Source="gallery.png"/>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

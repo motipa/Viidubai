@@ -8,8 +8,10 @@
     <Application.Resources>
         <ResourceDictionary>
             <Color x:Key="Primary">black</Color>
-            <Style TargetType="Button">
+            <Style x:Key="buttonStyle" TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="BorderWidth" Value="1"></Setter>
+                <Setter Property="BorderColor" Value="#b29476"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">
@@ -27,6 +29,9 @@
                         </VisualStateGroup>
                     </VisualStateGroupList>
                 </Setter>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="White"></Setter>
             </Style>
         </ResourceDictionary>        
     </Application.Resources>

@@ -8,20 +8,40 @@
         <vm:HomeViewModel />
     </ContentPage.BindingContext>
 
-    <ContentPage.Content>
-        <StackLayout Margin="20" Orientation="Horizontal" >
-            <Frame CornerRadius="20"  HeightRequest="120" WidthRequest="120" Padding="0" HorizontalOptions="Start"  IsClippedToBounds="True" >
-                <!--<Label Text="This is text with strikethrough." TextDecorations="Strikethrough" />-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"/>
+        </Grid.ColumnDefinitions>
+        <Image  Source="gallery.png"  Grid.Column="1"  HorizontalOptions="StartAndExpand" VerticalOptions="Center"  />
+        <Label Grid.Row="1" Grid.Column="1"   Text="SECRET GARDEN" HorizontalOptions="Start" VerticalOptions="Center" />
+
+        <Image  Source="gallery.png" Grid.Column="2"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
+        
+        <Label Grid.Row="1" Grid.Column="2"   Text="AMBER HALL" HorizontalOptions="Start" VerticalOptions="Center" />
+        
+        <Image  Source="gallery.png" Grid.Column="3"  HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+        
+        <Label Grid.Row="1" Grid.Column="3"  Text="RED ROOM" HorizontalOptions="Start" VerticalOptions="Center" />
+    </Grid>
+    <!--<ContentPage.Content>
+        
+        <StackLayout Margin="20">
+            <Frame CornerRadius="20"  HeightRequest="120" WidthRequest="120" Padding="10" HorizontalOptions="Start"  IsClippedToBounds="True" >
+                --><!--<Label Text="This is text with strikethrough." TextDecorations="Strikethrough" />--><!--
                 <Image  Source="gallery.png" />
             </Frame>
-            <Frame CornerRadius="20"  HeightRequest="120"  WidthRequest="120"  HorizontalOptions="Center"  Padding="0" IsClippedToBounds="True" >
-                <!--<Label Text="This is text with strikethrough." TextDecorations="Strikethrough" />-->
+            <Frame CornerRadius="20"  HeightRequest="120"  WidthRequest="120"  HorizontalOptions="Center"  Padding="10" IsClippedToBounds="True" >
+                --><!--<Label Text="This is text with strikethrough." TextDecorations="Strikethrough" />--><!--
                 <Image  Source="gallery.png" />
             </Frame>
-            <Frame CornerRadius="20"  HeightRequest="120"  WidthRequest="120"  HorizontalOptions="End"  Padding="0"   IsClippedToBounds="True" >
-                <!--<Label Text="This is text with strikethrough." TextDecorations="Strikethrough" />-->
+            <Frame CornerRadius="20"  HeightRequest="120"  WidthRequest="120"  HorizontalOptions="End"  Padding="10"   IsClippedToBounds="True" >
+                --><!--<Label Text="This is text with strikethrough." TextDecorations="Strikethrough" />--><!--
                 <Image  Source="gallery.png"/>
             </Frame>
         </StackLayout>
-    </ContentPage.Content>
+    </ContentPage.Content>-->
 </ContentPage>

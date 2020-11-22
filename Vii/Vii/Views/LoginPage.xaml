@@ -7,8 +7,20 @@
              x:Class="Vii.Views.LoginPage"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center" BackgroundColor="Black">
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
-        </StackLayout>
+        <Grid BackgroundColor="Black" Padding="40,20,40,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Text="Login" FontSize="22" Margin="130,10,0,0"/>
+            <Entry Grid.Row="1" Placeholder="Username" PlaceholderColor="White" TextColor="#b29476"/>
+            <Entry Grid.Row="2" Placeholder="Password" PlaceholderColor="White" TextColor="#b29476"/>
+            <Label Grid.Row="3" Text="Forgot Password?" VerticalOptions="Center" Margin="200,0,0,15"/>
+            <Button Grid.Row="4" VerticalOptions="Center" Text="SUBMIT" Style="{StaticResource buttonStyle}" CornerRadius="25" Margin="90,0,90,0"/>
+        </Grid>
+        
     </ContentPage.Content>
 </ContentPage>

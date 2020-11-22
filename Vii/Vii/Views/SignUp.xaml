@@ -9,13 +9,14 @@
             <Frame HorizontalOptions="FillAndExpand" HeightRequest="30" VerticalOptions="Center" BackgroundColor="Black" >
                 <Label Text="WELCOME TO VII DUBAI..!" HorizontalOptions="Center" FontSize="25" FontAttributes="Bold" FontFamily="Cooper Hewitt"/>
             </Frame>
-            <Button Text="SIGN IN WITH VII ACCOUNT" HorizontalOptions="Center" Style="{StaticResource buttonStyle}"/>
-            <Button Text="SIGN IN WITH GOOGLE" HorizontalOptions="Center" Style="{StaticResource buttonStyle}"/>
-            <Button Text="SIGN IN WITH FACEBOOK" HorizontalOptions="Center" Style="{StaticResource buttonStyle}"/>
+            
+            <Button Text="SIGN IN WITH VII ACCOUNT" HorizontalOptions="Center" Style="{StaticResource buttonStyle}" CornerRadius="25"/>
+            <Button Text="SIGN IN WITH GOOGLE" HorizontalOptions="Center" Style="{StaticResource buttonStyle}" CornerRadius="25"/>
+            <Button Text="SIGN IN WITH FACEBOOK" HorizontalOptions="Center" Style="{StaticResource buttonStyle}" CornerRadius="25"/>
             <Label Text="or"/>
             <Label Text="New User"/>
-            <Button Text="SIGN UP WITH VII DUBAI" HorizontalOptions="Center" Style="{StaticResource buttonStyle}"/>
-            <Button Text="SKIP" HorizontalOptions="Center" VerticalOptions="End" Clicked="Button_Clicked" Style="{StaticResource buttonStyle}"/>
+            <Button Text="SIGN UP WITH VII DUBAI" HorizontalOptions="Center" Style="{StaticResource buttonStyle}" CornerRadius="25"/>
+            <Button Text="SKIP" HorizontalOptions="Center" VerticalOptions="End" Clicked="Button_Clicked" Style="{StaticResource buttonStyle}" CornerRadius="25"/>
             <Label Text="Privacy Policy"/>
         </StackLayout>
     </ContentPage.Content>

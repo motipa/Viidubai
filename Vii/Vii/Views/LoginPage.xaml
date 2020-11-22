@@ -19,7 +19,7 @@
             <Entry Grid.Row="1" Placeholder="Username" PlaceholderColor="White" TextColor="#b29476"/>
             <Entry Grid.Row="2" Placeholder="Password" PlaceholderColor="White" TextColor="#b29476"/>
             <Label Grid.Row="3" Text="Forgot Password?" VerticalOptions="Center" Margin="200,0,0,15"/>
-            <Button Grid.Row="4" VerticalOptions="Center" Text="SUBMIT" Style="{StaticResource buttonStyle}" CornerRadius="25" Margin="90,0,90,0"/>
+            <Button Grid.Row="4" VerticalOptions="Center" Text="SUBMIT" Style="{StaticResource buttonStyle}" Margin="90,0,90,0"/>
         </Grid>
         
     </ContentPage.Content>

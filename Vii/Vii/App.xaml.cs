@@ -14,7 +14,7 @@ namespace Vii
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new LoginPage();
+            MainPage = new NavigationPage(new SignUp());
         }
 
         protected override void OnStart()

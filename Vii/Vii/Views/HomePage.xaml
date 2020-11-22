@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Vii.Views.HomePage"
              xmlns:vm="clr-namespace:Vii.ViewModels"
-      
+             Title="{Binding Title}"
              >
     <ContentPage.BindingContext>
         <vm:HomeViewModel />

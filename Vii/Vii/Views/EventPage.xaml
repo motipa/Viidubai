@@ -2,17 +2,92 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Vii.Views.EventPage"
-               xmlns:vm="clr-namespace:Vii.ViewModels"
-              Title="{Binding Title}">
+               xmlns:vm="clr-namespace:Vii.ViewModels" xmlns:forms="http://xamarin.com/schemas/2014/forms/design"
+             Title="{Binding Title}">
     <ContentPage.BindingContext>
         <vm:EventViewModel />
     </ContentPage.BindingContext>
 
+   
+
+<!--<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:DrLink.Controls;assembly=DrLink"
+             xmlns:forms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             x:Class="DrLink.Login.Login">-->
+    <!--<ContentPage.Resources>
+        <ResourceDictionary>
+            --><!--Female template--><!--
+            <DataTemplate x:Key="Template">
+                <StackLayout BackgroundColor="Pink"
+                         Orientation="Horizontal">
+                    <Image Source="{Binding ImageUrl}"
+                   VerticalOptions="Center"
+                   Margin="50,0,0,0" WidthRequest="100"
+                   HeightRequest="200" />
+                    <Label VerticalOptions="Center"
+                   Margin="60,0,0,0"
+                   Text="{Binding Name}"
+                   TextColor="Black"
+                   FontSize="30" />
+                </StackLayout>
+            </DataTemplate>
+
+
+        </ResourceDictionary>
+    </ContentPage.Resources>-->
+    <!--Carousel View-->
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+        <StackLayout Spacing="20">
+            <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <OnPlatform.iOS>
+                        20, 20, 20, 5
+                    </OnPlatform.iOS>
+                    <OnPlatform.Android>
+                        20, 0, 20, 5
+                    </OnPlatform.Android>
+                    <OnPlatform.WinPhone>
+                        20, 0, 20, 5
+                    </OnPlatform.WinPhone>
+                </OnPlatform>
+            </StackLayout.Padding>
+
+            <StackLayout.Children>
+                <AbsoluteLayout>
+                    <AbsoluteLayout.Children>
+                        <!--<controls:CarouselView  />-->
+
+                    </AbsoluteLayout.Children>
+
+                </AbsoluteLayout>
+                <RelativeLayout>
+                    <RelativeLayout.Children>
+                        <ContentView RelativeLayout.XConstraint="0" RelativeLayout.YConstraint="0" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
+                            <ContentView.Content>
+                                <forms:CarouselView x:Name="CarouselZoos"  >
+                                    <forms:CarouselView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Image Grid.RowSpan="2" Aspect="AspectFill" Source="{Binding ImageUrl}"/>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </forms:CarouselView.ItemTemplate>
+                                </forms:CarouselView>
+                            </ContentView.Content>
+                        </ContentView>
+
+                    </RelativeLayout.Children>
+
+                </RelativeLayout>
+            </StackLayout.Children>
         </StackLayout>
     </ContentPage.Content>
+
 </ContentPage>

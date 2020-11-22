@@ -1,18 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Vii.Views.SignUp" >
-    <!--xmlns:vm="clr-namespace:Vii.ViewModels"
-              Title="{Binding Title}">
-    <ContentPage.BindingContext>
-        <vm:EventViewModel />
-    </ContentPage.BindingContext>-->
+             x:Class="Vii.Views.SignUp">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Button Text="Skip" HorizontalOptions="Center" VerticalOptions="End" Clicked="Button_Clicked"/>
+        <StackLayout BackgroundColor="Black" VerticalOptions="Start" Margin="10" Padding="0">
+            
+            <Frame HorizontalOptions="FillAndExpand" HeightRequest="30" VerticalOptions="Center" BackgroundColor="Black" >
+                <Label Text="WELCOME TO VII DUBAI..!" HorizontalOptions="Center" FontSize="25" FontAttributes="Bold" FontFamily="Cooper Hewitt"/>
+            </Frame>
+            <Button Text="SIGN IN WITH VII ACCOUNT" HorizontalOptions="Center" Style="{StaticResource buttonStyle}"/>
+            <Button Text="SIGN IN WITH GOOGLE" HorizontalOptions="Center" Style="{StaticResource buttonStyle}"/>
+            <Button Text="SIGN IN WITH FACEBOOK" HorizontalOptions="Center" Style="{StaticResource buttonStyle}"/>
+            <Label Text="or"/>
+            <Label Text="New User"/>
+            <Button Text="SIGN UP WITH VII DUBAI" HorizontalOptions="Center" Style="{StaticResource buttonStyle}"/>
+            <Button Text="SKIP" HorizontalOptions="Center" VerticalOptions="End" Clicked="Button_Clicked" Style="{StaticResource buttonStyle}"/>
+            <Label Text="Privacy Policy"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

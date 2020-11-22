@@ -25,6 +25,7 @@ namespace Vii.iOS
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
+            //ImageCarouselRenderer.Init();
 
             return base.FinishedLaunching(app, options);
         }

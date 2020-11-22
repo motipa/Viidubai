@@ -16,6 +16,11 @@ namespace Vii.Views
             InitializeComponent();
 
             var image = new Image { Source = "gallery.png" };
+
+          
         }
     }
+  
+
+   
 }

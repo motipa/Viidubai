@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vii.Android", "Vii\Vii.Andr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vii.iOS", "Vii\Vii.iOS\Vii.iOS.csproj", "{215A62A8-D0EB-457C-B9D2-EE77CC5DE4CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vii", "Vii\Vii\Vii.csproj", "{C2EE8132-84DE-4481-810E-D09D25E92255}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vii", "Vii\Vii\Vii.csproj", "{C2EE8132-84DE-4481-810E-D09D25E92255}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

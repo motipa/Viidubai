@@ -10,9 +10,18 @@ namespace Vii.ViewModels
 {
     public class HomeViewModel : ContentPage
     {
+        public ImageSource image
+        {
+            get; set;
+        }
+
+        public string Heading { get; set; }
+        public string Caption { get; set; }
         public HomeViewModel()
         {
             Title = "HOME";
+
+
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("HomePage"));
         }
 

@@ -13,6 +13,7 @@
                 <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="BorderWidth" Value="1"></Setter>
                 <Setter Property="BorderColor" Value="#b29476"></Setter>
+                <Setter Property="CornerRadius" Value="0"/>
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">

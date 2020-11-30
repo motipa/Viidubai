@@ -2,6 +2,22 @@
 <resources>
 
   <style name="MainTheme" parent="MainTheme.Base">
+	  <item name="alertDialogTheme">@style/AppCompatAlertDialogStyle</item>
+  </style>
+
+  <!--AlertDialog Colors-->
+  <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Dialog.Alert">
+	  <!--buttons-->
+	  <item name="colorAccent">@android:color/black</item>
+	  <!--title-->
+	  <item name="android:textColor">@android:color/black</item>
+	  <!--text-->
+	  <item name="android:textColorPrimary">@android:color/black</item>
+	  <!--selection list-->
+	  <item name="android:textColorTertiary">@android:color/black</item>
+	  <!--background-->
+	  <item name="android:background">@android:color/white</item>
+ 
     <!-- As of Xamarin.Forms 4.6 the theme has moved into the Forms binary -->
     <!-- If you want to override anything you can do that here. -->
     <!-- Underneath are a couple of entries to get you started. -->

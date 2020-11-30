@@ -21,5 +21,17 @@ namespace Vii.Views
         {
             Navigation.PushAsync(new HomePage());
         }
+        private void privacypolicy_tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PrivacyPolicyPage());
+        }
+        private void signin_tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new SignInPage());
+        }
+        async void Createaccount_Button_Clicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Success", "You have created an account successfully.Please login with Username and password", "OK");
+        }
     }
 }

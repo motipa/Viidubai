@@ -18,6 +18,17 @@ namespace Vii
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync("//LoginPage");
+           
+           // Application.Current.MainPage = new HomePage();
+
+
         }
+        //private async void OnMenuItemClicked1(object sender, EventArgs e)
+        //{
+         
+        //   // Application.Current.MainPage = new HomePage();
+
+
+        //}
     }
 }

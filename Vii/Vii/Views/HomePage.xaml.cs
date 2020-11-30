@@ -7,48 +7,136 @@ using System.Threading.Tasks;
 using Xamd.ImageCarousel.Forms.Plugin.Abstractions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using System.Timers;
+using System.ComponentModel;
 
 namespace Vii.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+    [DesignTimeVisible(false)]
     public partial class HomePage : ContentPage
     {
-        ObservableCollection <FileImageSource> imageSources = new ObservableCollection <FileImageSource>();
+        public string Heading { get; set; }
+        public string Caption { get; set; }
+        public ImageSource Pic { get; set; }
         public HomePage()
         {
             InitializeComponent();
-            // //var image = new Image { Source = "Secretgarden.jpg" };
-            // //             //Create a collection of ImageSources
-            //     imageSources.Add("Secretgarden.jpg");
-            //     imageSources.Add("reservation.png");
-            //     imageSources.Add("support.png");
+            Setup();
+            DateTime objdate = DateTime.Today;
+            string abc = DateTime.Now.DayOfWeek.ToString();
+           
+            if (abc == "Sunday")
+            {
+               // Heading = "SUNDAY";
+                Caption = "Begin the week with some upbeat HipHop and RnB tunes by Khaleeji, DJ MadH, DJ Sam B and DJ MGK all night. ";
+                Pic = "SUNDAY.jpg";
 
-            ////  imgSlider.Images = imageSources;
-            var images = new List<string>
+            }
+            else if (abc == "Monday")
             {
-               "Secretgarden.jpg","reservation.png","support.png"
-            };
-            MainCarouselView.ItemsSource = images;
-            MainCarouselView1.ItemsSource = images;
-            Device.StartTimer(TimeSpan.FromSeconds(5), (Func<bool>)(() =>
+              //Heading = "MONDAY";
+              Caption = "Mondays, we’re taking you Uptown! Enjoy some fantastic hip hop and RnB tunes ";
+              Pic = "MONDAY.jpg";
+            }
+            else if (abc =="Tuesday")
             {
-                MainCarouselView.Position = (MainCarouselView.Position + 1) % images.Count;
-                MainCarouselView1.Position = (MainCarouselView1.Position + 1) % images.Count;
-                return true;
-            }));
+               // Heading = "TUESDAY";
+                Caption = "Viva la fiesta, viva la noche! It’s Chicas Night every Tuesday, ladies! ";
+                Pic = "TUESDAY.jpg";
+            }
+            else if (abc == "Wednesday")
+            {
+               // Heading = "WEDNESDAY";
+                Caption = "Old school tunes are here to beat your weekday blues – Soul Juice ";
+                Pic = "WEDNESDAY.jpg";
+            }
+            else if (abc == "Friday")
+            {
+               // Heading = "FRIDAY";
+                Caption = "Step up your weekend game with the Red Madness brunch on Friday. ";
+                Pic = "FRIDAY.jpg";
+            }
+            else if (abc == "Thursday")
+            {
+               // Heading = "THURSDAY";
+                Caption = "Begin your weekend with the Takeover Brunch on Thursday. ";
+                Pic = "FRIDAY.jpg";
+            }
+
+            else {
+               // Heading = "SATURDAY";
+                Caption = "Yala Habibi! Venture into a Maylay Garden themed experience at the Secret Garden. ";
+                Pic = "SATURDAY1.jpg";
+            }
+
+            this.BindingContext = this;
+
         }
-        //void OnImageButtonClicked(object sender, EventArgs e)
-        //{
-        //    Navigation.PushAsync(new EventPage());
-        //}
-        //void OnImageButtonClicked1(object sender, EventArgs e)
-        //{
-        //    Navigation.PushAsync(new EventPage());
-        //}
-        //void OnImageButtonClicked2(object sender, EventArgs e)
-        //{
-        //    Navigation.PushAsync(new EventPage());
-        //}
+
+        private void Caption_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new EventPage());
+        }
+
+        private void SecretGarden_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AboutPage());
+        }
+
+        private void RedRoom_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AboutPage());
+        }
+
+        private void AmberHall_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AboutPage());
+        }
+
+        private List<Event> AllEvents { get; set; }
+
+        private List<Event> GetEvents()
+        {
+            return new List<Event>()
+            {
+                new Event{  Date = new DateTime(DateTime.Now.Ticks + new TimeSpan(11, 07, 45, 59).Ticks)},
+               
+            };
+        }
+
+        private void Setup()
+        {
+            AllEvents = GetEvents();
+            eventList.ItemsSource = AllEvents;
+
+            Device.StartTimer(new TimeSpan(0, 0, 1), () =>
+            {
+                foreach (var evt in AllEvents)
+                {
+                    var timespan = evt.Date - DateTime.Now;
+                    evt.Timespan = timespan;
+                }
+
+                eventList.ItemsSource = null;
+                eventList.ItemsSource = AllEvents;
+
+                return true;
+            });
+        }
+        public class Event
+        {
+            public DateTime Date { get; set; }
+            public TimeSpan Timespan { get; set; }
+            public string Days => Timespan.Days.ToString("00");
+            public string Hours => Timespan.Hours.ToString("00");
+            public string Minutes => Timespan.Minutes.ToString("00");
+            public string Seconds => Timespan.Seconds.ToString("00");
+          
+        }
+
+
+
     }
 }
+

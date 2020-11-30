@@ -16,5 +16,21 @@ namespace Vii.Views
         {//ghghg
             InitializeComponent();
         }
+
+        private void FB_Tapped(object sender, EventArgs e)
+        {
+            Device.OpenUri(new Uri(" https://m.facebook.com/ViiDubai/"));
+
+        }
+        private void Instagram_Tapped(object sender, EventArgs e)
+        {
+            Device.OpenUri(new Uri("https://www.instagram.com/viidubai/?hl=en"));
+
+        }
+        private void Youtube_Tapped(object sender, EventArgs e)
+        {
+            Device.OpenUri(new Uri("https://www.youtube.com/channel/UCudFTW-A72acizU5mIn1s5g?view_as=subscriber"));
+
+        }
     }
 }

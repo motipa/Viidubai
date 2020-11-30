@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Vii.Views.AboutPage"
              xmlns:vm="clr-namespace:Vii.ViewModels"
-             Title="{Binding Title}">
+             Title="{Binding Title}"  BackgroundColor="Black">
     
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
@@ -14,43 +14,69 @@
             <Color x:Key="Accent">#96d1ff</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
+    <ScrollView VerticalOptions="Center" HorizontalOptions="Center" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Always">
+        <StackLayout>
+           
+                    <StackLayout >
+                        <Label  FontAttributes="Bold" FontSize="Title" Text="VII Dubai" Padding="5,5,5,5"  HorizontalTextAlignment="Center" TextColor="#b29476"  FontFamily="Cooper Hewitt"/>
+                    <Label  Padding="5,5,5,5"  HorizontalTextAlignment="Center" TextColor="White"  FontFamily="Cooper Hewitt" Text="The exclusive lounging destination in Dubai. Located on the 7th floor of the Conrad Hotel dubai with three different exotic venues to choose from along with a breathtaking view overlooking the Sheik Zayed Road. Did we mention our menu is to die for? Our exciting menu is curated with delicious dishes from all over the world along with exotic cocktails and shisha flavors alongside upbeat playlists created by our DJs. It has  grown to become one of the popular nightlife destinations in Dubai. The trendy spot has  become a hub for socializing &amp; celebrations. Open from 7 pm to 3 am, 7 days a week." HorizontalOptions="Start" VerticalOptions="Center" />
+                    </StackLayout>
+             
+           
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <StackLayout BackgroundColor="Black" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Start">
-                <ContentView Padding="0,20,0,20" VerticalOptions="FillAndExpand">
-                    <Image Source="icon.png" VerticalOptions="Center" HeightRequest="64" />
-                </ContentView>
-            </StackLayout>
+            <Label  Padding="5,5,5,5" HorizontalTextAlignment="Center" Margin="10,0,0,0"  Grid.Column="0" FontAttributes="Bold" FontSize="Title" TextColor="#b29476" FontFamily="Cooper Hewitt"  Text="SECRET GARDEN" HorizontalOptions="Center" VerticalOptions="Center" />
+
+            <Image  Source="SecretGarden.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+           
+            <Frame Margin="10,-67,10,10" BorderColor="#b29476" BackgroundColor="Black">
+                <StackLayout>
+                    <Label  Padding="10"  HorizontalTextAlignment="Center"   TextColor="White"  FontFamily="Cooper Hewitt" Text="The secret garden is a hidden sanctuary, a beautiful lounge in Vii Dubai,enveloped with greenery with a classy interior,all around, which gives off a tropical and outdoorsy vibe while you're still enjoying inside."></Label>
+                    <Label  Padding="10"  HorizontalTextAlignment="Center"   TextColor="White"  FontFamily="Cooper Hewitt" Text=" Serving a wide selection of delicious food and exotic beverages, Secret garden is an ideal place to unwind. Most of our exclusive events happen here - Secret Sundays, Uptown Mondays, Chica's Night and many more. Not to miss out on our resident ladies man, Mr. Monkey, who is a very stylish golden monkey. He wears black shades and golden chains cause he's cool like that!"></Label>
+                </StackLayout>
+            </Frame>
+
+
+            <Label  Margin="10,0,0,0"  HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Title" TextColor="#b29476" FontFamily="Cooper Hewitt"  Text="RED ROOM" HorizontalOptions="Center" VerticalOptions="Center" />
+
+            <Image Source="RedRoom.png"  HorizontalOptions="Center" VerticalOptions="Center"  />
+
+            <Frame Margin="10,-67,10,10" BorderColor="#b29476" BackgroundColor="Black" >
+                <StackLayout>
+                    <Label  Padding="10,10,10,0"  HorizontalTextAlignment="Center" TextColor="White"  FontFamily="Cooper Hewitt" Text="This enticing lounge is considered a hot spot amongst the crowd, the ambiance is a reflection of the alluring dimmed red soft lights spread across the destination. "/>
+                    <Label  Padding="10,10,10,0"  HorizontalTextAlignment="Center" TextColor="White"  FontFamily="Cooper Hewitt" Text="The Red Room happens to be the ideal destination for the Friday 'Red Madness' brunch followed by a Rozay after-party. It's the perfect destination for Friday Brunchin' &amp; Drinkin' with your friends "/>
+                </StackLayout>
+
+            </Frame>
+
+            <Label  Margin="10,0,0,0" Grid.Column="0"  HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Title" TextColor="#b29476" FontFamily="Cooper Hewitt"  Text="AMBER HALL" HorizontalOptions="Center" VerticalOptions="Center" />
+            
+            <Image Source="AmberHall.gif"  HorizontalOptions="Center" VerticalOptions="Center" />
+
+            <Frame Margin="10,-67,10,10" BorderColor="#b29476" BackgroundColor="Black">
+                <StackLayout>
+                    <Label HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Title" TextColor="#b29476" FontFamily="Cooper Hewitt"  Text="COMING SOON." HorizontalOptions="Center" VerticalOptions="Center"/>
+                   
+                    <Label Padding="10,10,10,0"  HorizontalTextAlignment="Center" TextColor="White"  FontFamily="Cooper Hewitt" Text="This enticing lounge is considered a hot spot amongst the crowd, the ambiance is a reflection of the alluring dimmed red soft lights spread across the destination." ></Label>
+
+                    <Label Padding="10,10,10,0"  HorizontalTextAlignment="Center" TextColor="White"  FontFamily="Cooper Hewitt" Text="The Red Room happens to be the ideal destination for the Friday 'Red Madness' brunch followed by a Rozay after-party. It's the perfect destination for Friday Brunchin' &amp; Drinkin' with your friends. " ></Label>
+
+                    <Label Padding="10,10,10,0" HorizontalTextAlignment="Center" TextColor="White" FontFamily="Cooper Hewitt" Text="Not just another ordinary hall! Vii Dubai's upcoming royal amber themed restaurant &amp; elegant theatre venue has been in the works for quite some time."></Label>
+
+                    <Label Padding="10,10,10,0"  HorizontalTextAlignment="Center" TextColor="White"  FontFamily="Cooper Hewitt" Text="The theatrical style hall has a different ambience and tone set as compared to the other eccentric venues at Vii Dubai. For all you music lovers, this is where you're supposed to be!" ></Label>
+                    <!--<Label Padding="30,10,20,0"  HorizontalTextAlignment="Center" TextColor="White"  Text="."></Label>-->
+
+                    <Label Padding="10,10,10,0"  HorizontalTextAlignment="Center" TextColor="White"  FontFamily="Cooper Hewitt" Text=" The concept encompasses a magnificent live music stage with lovely music playing throughout the day and night. And NO, We did not forget you, foodies! There's a well-crafted ​inspired menu for each day of the week to keep your taste buds tingling" ></Label>
+                </StackLayout>
+                
+            </Frame>
+           
+            
+            
+           
+
         </StackLayout>
-        <ScrollView Grid.Row="1" BackgroundColor="White">
-            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                <Label Text="About Us" FontSize="Title"/>
-                <Label Text="Venues:" FontSize="16" Padding="0,0,0,0"/>
-                <Label Text="Secret Garden" FontSize="16" Padding="0,0,0,0"/>
-                <Label Text="Red Room" FontSize="16" Padding="0,0,0,0"/>
-                <Label Text="Amber Hall" FontSize="16" Padding="0,0,0,0"/>
-                <Label FontSize="16" Padding="0,24,0,0">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="See More"/>
-                                <Span Text="link" FontAttributes="Bold"/>
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Button Margin="0,10,0,0" Text="See more"
-                        Command="{Binding OpenWebCommand}"
-                        BackgroundColor="{StaticResource Primary}"
-                        TextColor="White" />
-            </StackLayout>
-        </ScrollView>
-    </Grid>
+    </ScrollView>
+   
 
 
 </ContentPage>

@@ -3,46 +3,154 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Vii.Views.HomePage"
              xmlns:vm="clr-namespace:Vii.ViewModels"
-             Title="{Binding Title}"
-             >
+               xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             xmlns:forms11="http://xamarin.com/schemas/2014/forms/design"
+             Title="{Binding Title}" BackgroundColor="Black"  >
+
     <ContentPage.BindingContext>
         <vm:HomeViewModel />
     </ContentPage.BindingContext>
+   
+    <StackLayout>
+        <ScrollView>
+            <Frame BorderColor="#b29476" BackgroundColor="Black" Margin="0,0,0,0">
+        <StackLayout>
+            <Grid>
+                      <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="105"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="500"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="120"/>
+                           
+                </Grid.RowDefinitions>
+                      <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="105"/>
+                    <ColumnDefinition Width="105"/>
+                    <ColumnDefinition Width="105"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="130"/>
-            <RowDefinition Height="50"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="60"/>
-        </Grid.ColumnDefinitions>
-        <Image  Source="gallery.png"  Grid.Column="1"  HorizontalOptions="StartAndExpand" VerticalOptions="Center"  />
-        <Label Grid.Row="1" Grid.Column="1"   Text="SECRET GARDEN" HorizontalOptions="Start" VerticalOptions="Center" />
+                      <Label Grid.Row="0" Grid.ColumnSpan="3"   TextColor="#b29476" FontSize="Title" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Cooper Hewitt" Text="DISCOVER US"  />
 
-        <Image  Source="gallery.png" Grid.Column="2"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
-        
-        <Label Grid.Row="1" Grid.Column="2"   Text="AMBER HALL" HorizontalOptions="Start" VerticalOptions="Center" />
-        
-        <Image  Source="gallery.png" Grid.Column="3"  HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
-        
-        <Label Grid.Row="1" Grid.Column="3"  Text="RED ROOM" HorizontalOptions="Start" VerticalOptions="Center" />
-    </Grid>
-    <!--<ContentPage.Content>
-        
-        <StackLayout Margin="20">
-            <Frame CornerRadius="20"  HeightRequest="120" WidthRequest="120" Padding="10" HorizontalOptions="Start"  IsClippedToBounds="True" >
-                --><!--<Label Text="This is text with strikethrough." TextDecorations="Strikethrough" />--><!--
-                <Image  Source="gallery.png" />
-            </Frame>
-            <Frame CornerRadius="20"  HeightRequest="120"  WidthRequest="120"  HorizontalOptions="Center"  Padding="10" IsClippedToBounds="True" >
-                --><!--<Label Text="This is text with strikethrough." TextDecorations="Strikethrough" />--><!--
-                <Image  Source="gallery.png" />
-            </Frame>
-            <Frame CornerRadius="20"  HeightRequest="120"  WidthRequest="120"  HorizontalOptions="End"  Padding="10"   IsClippedToBounds="True" >
-                --><!--<Label Text="This is text with strikethrough." TextDecorations="Strikethrough" />--><!--
-                <Image  Source="gallery.png"/>
-            </Frame>
+                      <Image  Grid.Row="1" Margin="0,0,0,0" HeightRequest="600"  WidthRequest="600" Grid.Column="0"  Aspect="AspectFill" Source="Secret_Garden.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="SecretGarden_Tapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                      <Label Grid.Row="2" Grid.ColumnSpan="3" Margin="-1,0,0,0" Grid.Column="0"  TextColor="White" FontFamily="Cooper Hewitt"  Text="SECRET GARDEN" HorizontalOptions="Start" VerticalOptions="Center" />
+
+
+                      <Image  Grid.Row="1"  Aspect="AspectFill" Margin="0,0,0,0" HeightRequest="600"  WidthRequest="600" Grid.Column="1"  Source="Amber_Hall.png"  HorizontalOptions="Center" VerticalOptions="Center" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="AmberHall_Tapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <!--<Frame   Grid.Row="1"  Margin="10,0,0,0" Grid.Column="1" CornerRadius="100"  HeightRequest="600"  WidthRequest="200"  HorizontalOptions="Center" Padding="0" IsClippedToBounds="True">
+               
+        </Frame>-->
+
+                       <Label Grid.Row="2" Grid.ColumnSpan="3" Margin="12,0,0,0" Grid.Column="1" FontFamily="Cooper Hewitt" TextColor="White" Text="AMBER HALL" HorizontalOptions="Start" VerticalOptions="Center" />
+
+                       <Image Grid.Row="1" Margin="0,0,0,0"  Aspect="AspectFill" HeightRequest="600"  WidthRequest="600" Grid.Column="2" Source="Red_Room.png"  HorizontalOptions="Center" VerticalOptions="Center" >
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="RedRoom_Tapped" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <!--<Frame Grid.Row="1" Margin="10,0,0,0" Grid.Column="2"  CornerRadius="100"  HeightRequest="900"  WidthRequest="900"  HorizontalOptions="Center" Padding="0" IsClippedToBounds="True">
+           
+        </Frame>-->
+
+                        <Label Grid.Row="2" Grid.ColumnSpan="3" Margin="15,0,0,0" Grid.Column="2" FontFamily="Cooper Hewitt"  TextColor="White"  Text="RED ROOM" HorizontalOptions="Start" VerticalOptions="Center" />
+
+
+                        <Label Grid.Row="3" Grid.ColumnSpan="3" Text="EVENT" FontAttributes="Bold"  HorizontalTextAlignment="Center" TextColor="#b29476" FontSize="Title" FontFamily="Cooper Hewitt"  />
+
+                        <StackLayout  Grid.Row="4" Grid.ColumnSpan="3"  >
+
+                            <Label TextColor="White" FontSize="Subtitle" Text="Todays Red Room &amp; Secret Garden " HorizontalTextAlignment="Center"   />
+                        
+                        <Image  Source="{Binding Pic}" Aspect="AspectFill"  HeightRequest="400"  WidthRequest="390" />
+
+                        <Label Text="{Binding Caption}"   HorizontalOptions="Fill" VerticalOptions="Fill" TextColor="White">
+
+                        </Label>
+                        <Label Text="Read More" TextColor="White" HorizontalTextAlignment="Center" TextDecorations="Underline"  HorizontalOptions="Fill" VerticalOptions="Fill" >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Caption_Tapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                           
+                        <!--<Label Text="AMBER HALL" HorizontalTextAlignment="Center" FontSize="Title"  HorizontalOptions="Fill" VerticalOptions="Fill" TextColor="#b29476" />-->
+
+                        </StackLayout>
+                
+                        <StackLayout  Grid.Row="5" Grid.ColumnSpan="3" >
+                            <Image  Source="AMBER_HALL_logo.png"   Aspect="AspectFill"  WidthRequest="400" />
+
+                            <Label Text="COMING SOON." HorizontalTextAlignment="Center" FontSize="Subtitle"  HorizontalOptions="Fill" VerticalOptions="Fill" TextColor="White" />
+                        </StackLayout>
+                     
+                        <StackLayout Grid.Row="6" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Center">
+                        <CollectionView x:Name="eventList"  >
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <ContentView>                                       
+                                            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="auto"/>
+                                                    <RowDefinition Height="100"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="400"/>
+                                                </Grid.ColumnDefinitions>
+                                                <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="3" HorizontalOptions="Center" Margin="10,0,110,0" Spacing="15">
+                                                   
+                                                    <StackLayout>
+                                                        <Label Text="{Binding Days}" FontSize="45" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                                                        <Label Text="DAYS" FontSize="10" TextColor="White" Opacity="0.5" HorizontalOptions="Center" Margin="0"/>
+                                                    </StackLayout>
+                                                    <StackLayout>
+                                                        <Label Text="{Binding Hours}" FontSize="45" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                                                        <Label Text="HOURS" FontSize="10" TextColor="White" Opacity="0.5" HorizontalOptions="Center" Margin="0"/>
+                                                    </StackLayout>
+                                                    <StackLayout>
+                                                        <Label Text="{Binding Minutes}" FontSize="45" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                                                        <Label Text="MINUTES" FontSize="10" TextColor="White" Opacity="0.5" HorizontalOptions="Center" Margin="0"/>
+                                                    </StackLayout>
+                                                    <StackLayout>
+                                                        <Label Text="{Binding Seconds}" FontSize="45" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                                                        <Label Text="SECONDS" FontSize="10" TextColor="White" Opacity="0.5" HorizontalOptions="Center" Margin="0"/>
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </Grid>
+                                     
+                                    </ContentView>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                        </StackLayout>
+                        <!--<StackLayout  Grid.Row="5" Grid.ColumnSpan="3"  >
+
+                        <Label TextColor="White" FontSize="Subtitle" Text="{Binding Heading}"  HeightRequest="400"  WidthRequest="400"   />
+                        <Image  Source="{Binding Pic}" Aspect="AspectFill" />
+
+                        <Label x:Name="CaptionTxt" Text="{Binding Caption}" FontSize="20" HeightRequest="10" WidthRequest="30" HorizontalOptions="Fill" VerticalOptions="Fill" TextColor="White" />
+
+                    </StackLayout>-->
+                        <!--<Frame Grid.Row="1" Margin="10,0,0,0"  Grid.Column="0" CornerRadius="100"  HeightRequest="900"  WidthRequest="1000"  HorizontalOptions="Center" Padding="0" IsClippedToBounds="True">
+
+        </Frame>-->
+
+                    </Grid>
         </StackLayout>
-    </ContentPage.Content>-->
+            </Frame>
+        </ScrollView>
+    </StackLayout>
+   
+   
 </ContentPage>

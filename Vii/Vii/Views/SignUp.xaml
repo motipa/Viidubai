@@ -32,6 +32,15 @@
                     <Button Text="Create Account" Clicked="Createaccount_Button_Clicked" Style="{StaticResource buttonStyle}" Margin="60,10,60,10"/>
                 </StackLayout>
             </Frame>
+            
+            <Button Text="SIGN IN WITH VII ACCOUNT" HorizontalOptions="Center" Style="{StaticResource buttonStyle}" CornerRadius="25"/>
+            <Button Text="SIGN IN WITH GOOGLE" HorizontalOptions="Center" Style="{StaticResource buttonStyle}" CornerRadius="25"/>
+            <Button Text="SIGN IN WITH FACEBOOK" HorizontalOptions="Center" Style="{StaticResource buttonStyle}" CornerRadius="25"/>
+            <Label Text="or"/>
+            <Label Text="New User"/>
+            <Button Text="SIGN UP WITH VII DUBAI" HorizontalOptions="Center" Style="{StaticResource buttonStyle}" CornerRadius="25"/>
+            <Button Text="SKIP" HorizontalOptions="Center" VerticalOptions="End" Clicked="Button_Clicked" Style="{StaticResource buttonStyle}" CornerRadius="25"/>
+            <Label Text="Privacy Policy"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

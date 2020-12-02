@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item>
+		<color android:color="@color/splash_background"/>
+	</item>
+	<item>
+		<ImageView
+			android:src="@drawable/AMBER_HALL_logo"
+			android:tileMode="disabled"
+			android:gravity="center"
+			android:layout_width = "10dp"
+			android:layout_height="50dp"
+			android:scaleType="fitXY"
+			 />
+		<!--<ImageView
+		   android:id="@+id/AMBER_HALL_logo"
+		   android:layout_width="0dp"
+		   android:layout_height="wrap_content"
+		   android:layout_weight="1"
+		   android:contentDescription="@string/picTile"
+		   android:src="@drawable/washington0" >
+		</ImageView>-->
+	</item>
+</layer-list>

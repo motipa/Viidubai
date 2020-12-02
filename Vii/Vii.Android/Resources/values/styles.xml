@@ -4,6 +4,14 @@
   <style name="MainTheme" parent="MainTheme.Base">
 	  <item name="alertDialogTheme">@style/AppCompatAlertDialogStyle</item>
   </style>
+	<style name="MainTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowBackground">@drawable/AMBER_HALL_logo</item>
+    <item name="android:windowNoTitle">true</item>  
+    <item name="android:windowFullscreen">true</item>  
+    <item name="android:windowContentOverlay">@null</item>  
+    <item name="android:windowActionBar">true</item>
+		
+  </style>
 
   <!--AlertDialog Colors-->
   <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Dialog.Alert">

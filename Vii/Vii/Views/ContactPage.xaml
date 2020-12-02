@@ -3,13 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Vii.Views.ContactPage"
                xmlns:vm="clr-namespace:Vii.ViewModels"
-             Title="{Binding Title}" BackgroundColor="Black">
-    <ContentPage.BindingContext>
+             Title="CONTACT US" BackgroundColor="Black">
+    <!--<ContentPage.BindingContext>
         <vm:ContactViewModel />
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
     <ContentPage.Content>
         <ScrollView>
-        <Frame BorderColor="#b29476" BackgroundColor="black" Margin="10,10,10,20" Padding="0,0,0,0">
+        <Frame BorderColor="#b29476" BackgroundColor="black" Margin="10,0,10,10" Padding="0,0,0,0">
             <Grid  StyleClass="">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="20" />
@@ -57,12 +57,12 @@
                                 <TapGestureRecognizer Tapped="Instagram_Tapped" />
                             </Image.GestureRecognizers>
                         </Image>
-                        <Image  Source="Youtube.jpg"  HorizontalOptions="Center" HeightRequest="140"  WidthRequest="65" >
+                        <Image  Source="Youtube.jpg"  HorizontalOptions="Center" HeightRequest="90"  WidthRequest="65" >
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="Youtube_Tapped" />
                             </Image.GestureRecognizers>
                         </Image>
-                        <Image  Source="soundcloud.jpg"  HorizontalOptions="Center" HeightRequest="170" WidthRequest="60" >
+                        <Image  Source="soundcloud.jpg"  HorizontalOptions="Center" HeightRequest="120" WidthRequest="60" >
                            
                         </Image>
                         <!--<Image  Source="AMBER_HALL_logo.png"    WidthRequest="400" />

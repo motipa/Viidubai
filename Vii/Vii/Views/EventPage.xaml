@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Vii.Views.EventPage"
                xmlns:vm="clr-namespace:Vii.ViewModels" 
-             Title="{Binding Title}" BackgroundColor="Black" >
-    <ContentPage.BindingContext>
+             Title="EVENT" BackgroundColor="Black" >
+    <!--<ContentPage.BindingContext>
         <vm:EventViewModel />
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
     <ContentPage.Content FontFamily="Cooper Hewitt">
 
         <ScrollView>
@@ -61,7 +61,7 @@
                         </StackLayout>
                     </StackLayout>
                 </Frame>
-                <Image   Margin="0" HeightRequest="200"  WidthRequest="400"   Source="TUESDAY.jpg"  />
+                <Image   Margin="0" HeightRequest="200"  WidthRequest="400"   Source="SoulJuice.jpg"  />
 
                 <Frame BorderColor="#b29476" BackgroundColor="Black" Margin="0" WidthRequest="400">
                     <StackLayout>
@@ -75,7 +75,7 @@
                     </StackLayout>
                 </Frame>
 
-                <Image   Margin="0" HeightRequest="200"  WidthRequest="400"  Source="TUESDAY.jpg"  />
+                <Image   Margin="0" HeightRequest="200"  WidthRequest="400"  Source="TakeoverThursdays.jpg"  />
 
 
                 <Frame BorderColor="#b29476" BackgroundColor="Black" Margin="0" WidthRequest="400">
@@ -90,7 +90,7 @@
                     </StackLayout>
                  </Frame>
 
-                <Image   Margin="0" HeightRequest="200"  WidthRequest="400"   Source="TUESDAY.jpg"  />
+                <Image   Margin="0" HeightRequest="200"  WidthRequest="400"   Source="RedMadness.jpg"  />
 
 
                 <Frame BorderColor="#b29476" BackgroundColor="Black" Margin="0" WidthRequest="400">
@@ -118,7 +118,7 @@
                     </StackLayout>
                 </Frame>
 
-                <Image   Margin="0" HeightRequest="200"  WidthRequest="400"   Source="SATURDAY1.jpg"  />
+                <Image   Margin="0" HeightRequest="200"  WidthRequest="400"   Source="MAWLAY.jpg"  />
 
 
                 <Frame BorderColor="#b29476" BackgroundColor="Black" Margin="0" WidthRequest="400">
@@ -137,7 +137,7 @@
 
                 <Frame BorderColor="#b29476" BackgroundColor="Black" Margin="0" WidthRequest="400">
                     <StackLayout>
-                        <Label  FontFamily="Cooper Hewitt" FontSize="Subtitle" TextColor="#b29476"  Text="CULTURE" HorizontalOptions="Center" VerticalOptions="Center" />
+                        <Label  FontFamily="Cooper Hewitt" FontSize="Subtitle" TextColor="#b29476"  Text="CULTURE.jpg" HorizontalOptions="Center" VerticalOptions="Center" />
                         <Label  FontFamily="Cooper Hewitt" HorizontalTextAlignment="Center" TextColor="White"  Text="Be a part of the exciting vibrant &amp; alluring culture set at the Red Room, one of our exquisite venues. Embark on the journey by enjoying some urban beats by DJ SHONI and DJ YO-YO while devouring dishes from our lip-smacking menu &amp; selected offers on drinks, you can't refuse, from 7 PM to 3 AM. Win our Sparkling Wine Showers offer for every AED 1,500 that you spend with us! AM." HorizontalOptions="Start" VerticalOptions="Center" />
                         <StackLayout  Orientation="Horizontal"  HorizontalOptions="Center">
                             <Button  Text="Book Now" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Clicked="Button_Clicked" Style="{StaticResource buttonStyle}"  />

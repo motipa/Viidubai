@@ -6,17 +6,17 @@
                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
              xmlns:forms11="http://xamarin.com/schemas/2014/forms/design"
-             Title="{Binding Title}" BackgroundColor="Black"  >
+             Title=" HOME" BackgroundColor="Black"  >
 
-    <ContentPage.BindingContext>
+    <!--<ContentPage.BindingContext>
         <vm:HomeViewModel />
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
    
     <StackLayout>
         <ScrollView>
             <Frame BorderColor="#b29476" BackgroundColor="Black" Margin="0,0,0,0">
         <StackLayout>
-            <Grid>
+            <Grid   RowSpacing="1" ColumnSpacing="9">
                       <Grid.RowDefinitions>
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="105"/>
@@ -36,20 +36,23 @@
 
                       <Label Grid.Row="0" Grid.ColumnSpan="3"   TextColor="#b29476" FontSize="Title" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Cooper Hewitt" Text="DISCOVER US"  />
 
-                      <Image  Grid.Row="1" Margin="0,0,0,0" HeightRequest="600"  WidthRequest="600" Grid.Column="0"  Aspect="AspectFill" Source="Secret_Garden.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                
+                <Image  Grid.Row="1" Margin="0,0,0,0" HeightRequest="600"  WidthRequest="600" Grid.Column="0"  Aspect="AspectFill" Source="Secret_Garden.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="SecretGarden_Tapped" />
                             </Image.GestureRecognizers>
                         </Image>
-                      <Label Grid.Row="2" Grid.ColumnSpan="3" Margin="-1,0,0,0" Grid.Column="0"  TextColor="White" FontFamily="Cooper Hewitt"  Text="SECRET GARDEN" HorizontalOptions="Start" VerticalOptions="Center" />
+                   
+                <Label Grid.Row="2" Grid.ColumnSpan="3" Margin="-1,0,0,0" Grid.Column="0"  TextColor="White" FontFamily="Cooper Hewitt"  Text="SECRET GARDEN" HorizontalOptions="Start" VerticalOptions="Center" />
 
 
-                      <Image  Grid.Row="1"  Aspect="AspectFill" Margin="0,0,0,0" HeightRequest="600"  WidthRequest="600" Grid.Column="1"  Source="Amber_Hall.png"  HorizontalOptions="Center" VerticalOptions="Center" >
+               <Image  Grid.Row="1"  Aspect="AspectFill" Margin="0,0,0,0" HeightRequest="600"  WidthRequest="600" Grid.Column="1"  Source="Amber_Hall.png"  HorizontalOptions="Center" VerticalOptions="Center" >
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="AmberHall_Tapped" />
                             </Image.GestureRecognizers>
                         </Image>
-                        <!--<Frame   Grid.Row="1"  Margin="10,0,0,0" Grid.Column="1" CornerRadius="100"  HeightRequest="600"  WidthRequest="200"  HorizontalOptions="Center" Padding="0" IsClippedToBounds="True">
+                  
+                <!--<Frame   Grid.Row="1"  Margin="10,0,0,0" Grid.Column="1" CornerRadius="100"  HeightRequest="600"  WidthRequest="200"  HorizontalOptions="Center" Padding="0" IsClippedToBounds="True">
                
         </Frame>-->
 
@@ -60,7 +63,8 @@
                                     <TapGestureRecognizer Tapped="RedRoom_Tapped" />
                                 </Image.GestureRecognizers>
                             </Image>
-                            <!--<Frame Grid.Row="1" Margin="10,0,0,0" Grid.Column="2"  CornerRadius="100"  HeightRequest="900"  WidthRequest="900"  HorizontalOptions="Center" Padding="0" IsClippedToBounds="True">
+                     
+                <!--<Frame Grid.Row="1" Margin="10,0,0,0" Grid.Column="2"  CornerRadius="100"  HeightRequest="900"  WidthRequest="900"  HorizontalOptions="Center" Padding="0" IsClippedToBounds="True">
            
         </Frame>-->
 

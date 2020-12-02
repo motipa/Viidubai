@@ -3,11 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Vii.Views.AboutPage"
              xmlns:vm="clr-namespace:Vii.ViewModels"
-             Title="{Binding Title}"  BackgroundColor="Black">
+             Title="ABOUT US"  BackgroundColor="Black">
     
-    <ContentPage.BindingContext>
+    <!--<ContentPage.BindingContext>
         <vm:AboutViewModel />
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
     
     <ContentPage.Resources>
         <ResourceDictionary>

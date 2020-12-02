@@ -3,11 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Vii.Views.ReservationPage"
              xmlns:vm="clr-namespace:Vii.ViewModels"
-             Title="{Binding Title}" BackgroundColor="Black">
+             Title="RESERVATION" BackgroundColor="Black">
 
-    <ContentPage.BindingContext>
+    <!--<ContentPage.BindingContext>
         <vm:ReservationViewModel />
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
     
     <ContentPage.Content>
         <StackLayout>

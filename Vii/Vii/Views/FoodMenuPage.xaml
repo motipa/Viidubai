@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Vii.Views.FoodMenuPage"
                xmlns:vm="clr-namespace:Vii.ViewModels"
-              Title="{Binding Title}" BackgroundColor="Black">
-    <ContentPage.BindingContext>
+              Title="MENU" BackgroundColor="Black">
+    <!--<ContentPage.BindingContext>
         <vm:FoodMenuViewModel />
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
     <ContentPage.Content>
         <ScrollView BackgroundColor="Black">
             <StackLayout>

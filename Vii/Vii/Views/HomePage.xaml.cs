@@ -24,40 +24,40 @@ namespace Vii.Views
             InitializeComponent();
             Setup();
             DateTime objdate = DateTime.Today;
-            string abc = DateTime.Now.DayOfWeek.ToString();
+            string Day = DateTime.Now.DayOfWeek.ToString();
            
-            if (abc == "Sunday")
+            if (Day == "Sunday")
             {
                // Heading = "SUNDAY";
                 Caption = "Begin the week with some upbeat HipHop and RnB tunes by Khaleeji, DJ MadH, DJ Sam B and DJ MGK all night. ";
                 Pic = "SUNDAY.jpg";
 
             }
-            else if (abc == "Monday")
+            else if (Day == "Monday")
             {
               //Heading = "MONDAY";
               Caption = "Mondays, we’re taking you Uptown! Enjoy some fantastic hip hop and RnB tunes ";
               Pic = "MONDAY.jpg";
             }
-            else if (abc =="Tuesday")
+            else if (Day == "Tuesday")
             {
                // Heading = "TUESDAY";
                 Caption = "Viva la fiesta, viva la noche! It’s Chicas Night every Tuesday, ladies! ";
                 Pic = "TUESDAY.jpg";
             }
-            else if (abc == "Wednesday")
+            else if (Day == "Wednesday")
             {
                // Heading = "WEDNESDAY";
                 Caption = "Old school tunes are here to beat your weekday blues – Soul Juice ";
                 Pic = "WEDNESDAY.jpg";
             }
-            else if (abc == "Friday")
+            else if (Day == "Friday")
             {
                // Heading = "FRIDAY";
                 Caption = "Step up your weekend game with the Red Madness brunch on Friday. ";
                 Pic = "FRIDAY.jpg";
             }
-            else if (abc == "Thursday")
+            else if (Day == "Thursday")
             {
                // Heading = "THURSDAY";
                 Caption = "Begin your weekend with the Takeover Brunch on Thursday. ";
@@ -100,7 +100,7 @@ namespace Vii.Views
         {
             return new List<Event>()
             {
-                new Event{  Date = new DateTime(DateTime.Now.Ticks + new TimeSpan(11, 07, 45, 59).Ticks)},
+                new Event{  Date = new DateTime(DateTime.Now.Ticks + new TimeSpan(9, 07, 45, 59).Ticks)},
                
             };
         }

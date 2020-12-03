@@ -10,7 +10,7 @@
                     <StackLayout HorizontalOptions="FillAndExpand" Margin="10,10,10,10" MinimumWidthRequest="500">
                         <Label Text="Login" FontSize="20" HorizontalOptions="Center" FontFamily="Cooper Hewitt" TextColor="White"/>
                         <Entry Placeholder="Username" PlaceholderColor="White" TextColor="White" FontSize="16"/>
-                        <Entry Placeholder="Password" PlaceholderColor="White" TextColor="White" FontSize="16"/>
+                        <Entry Placeholder="Password" PlaceholderColor="White" TextColor="White" FontSize="16" IsPassword="True"/>
                         <Label Text="Forgot Password?" HorizontalOptions="EndAndExpand" FontSize="14" TextColor="white" TextDecorations="underline">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="forgotPassword_tapped" />

@@ -96,7 +96,12 @@
     <FlyoutItem Title="EVENT" Icon="events_white.png">
         <ShellContent Route="EventPage" ContentTemplate="{DataTemplate local:EventPage}" />
     </FlyoutItem>
-
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" >
+        <ShellContent Icon="food_menulogo.png" Title="Food Menu" Route="FoodMenuPage" ContentTemplate="{DataTemplate local:FoodMenuPage}"/>
+        <ShellContent Title="Uptown Monday Platter Menu" Route="UptownMonday" ContentTemplate="{DataTemplate local:UptownMonday}"/>
+        <ShellContent Title="Takeover Thursday Brunch Menu" Route="TakeoverThursday" ContentTemplate="{DataTemplate local:TakeoverThursday}"/>
+        <ShellContent Title="Redmadness Friday Brunch menu" Route="RedmadnessFriday" ContentTemplate="{DataTemplate local:RedmadnessFriday}"/>
+    </FlyoutItem>
     <FlyoutItem Title="RESERVATION" Icon="reservations_white.png">
         <ShellContent Route="ReservationPage" ContentTemplate="{DataTemplate local:ReservationPage}" />
     </FlyoutItem>

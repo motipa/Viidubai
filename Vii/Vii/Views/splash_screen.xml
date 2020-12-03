@@ -5,11 +5,11 @@
 	</item>
 	<item>
 		<ImageView
-			android:src="@drawable/AMBER_HALL_logo"
+			android:src="@drawable/merged_logos"
 			android:tileMode="disabled"
 			android:gravity="center"
 			android:layout_width = "10dp"
-			android:layout_height="50dp"
+			android:layout_height="20dp"
 			android:scaleType="fitXY"
 			 />
 		<!--<ImageView

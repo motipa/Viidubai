@@ -191,11 +191,7 @@
                     </StackLayout>
                 </Frame>
                 <Image Source="food_image14.png" Aspect="AspectFill"/>
-                <Label Text="Our special brunch menus:" HorizontalTextAlignment="Center" />
                 <!--<ImageButton Source="takeover_thursday.pdf" Style="{StaticResource buttonStyle}" Clicked="takeoverthursday_Button_Clicked"/>-->
-                <Button Text="Takeover thursday" Clicked="takeoverthursday_Button_Clicked" Style="{StaticResource buttonStyle}" Margin="70,10,70,0"/>
-                <Button Text="Red Madness Friday" Clicked="redmadnessfriday_Button_Clicked" Style="{StaticResource buttonStyle}" Margin="70,10,70,0"/>
-                <Button Text="Uptown Monday" Clicked="uptown_monday_Button_Clicked" Style="{StaticResource buttonStyle}" Margin="70,10,70,10"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

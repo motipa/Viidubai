@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Vii.Views.AboutPage"
-             xmlns:vm="clr-namespace:Vii.ViewModels"
+          
              Title="ABOUT US"  BackgroundColor="Black">
     
     <!--<ContentPage.BindingContext>

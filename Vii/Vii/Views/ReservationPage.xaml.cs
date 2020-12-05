@@ -32,6 +32,7 @@ namespace Vii.Views
         List<string> array = new List<string>();
         void OnImageButtonClicked(object sender, EventArgs e)
         {
+
             Button btnTable = (Button)sender;
             string tid = btnTable.ClassId;
             if (array.Contains(tid))
@@ -184,6 +185,10 @@ namespace Vii.Views
         {
 
         }
-        
+
+        private void OnAmber_ImageButtonClicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -9,11 +9,11 @@
         <vm:AboutViewModel />
     </ContentPage.BindingContext>-->
     
-    <ContentPage.Resources>
+    <!--<ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Accent">#96d1ff</Color>
         </ResourceDictionary>
-    </ContentPage.Resources>
+    </ContentPage.Resources>-->
     <ScrollView VerticalOptions="Center" HorizontalOptions="Center" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Always">
         <StackLayout>
            

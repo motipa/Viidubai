@@ -29,6 +29,7 @@
             Default Styles for all Flyout Items
             https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyoutitem-and-menuitem-style-classes
             -->
+           
             <Style Class="FlyoutItemLabelStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="White"></Setter>
                
@@ -83,11 +84,14 @@
     <!--<FlyoutItem Title="SIGN UP " >
         <ShellContent Route="SignUp"   ContentTemplate="{DataTemplate local:SignUp}" />
     </FlyoutItem>-->
-    <FlyoutItem Title="SIGN IN" >
+    <!--<FlyoutItem Title="SIGN IN" >
         <ShellContent Route="SignInPage" ContentTemplate="{DataTemplate local:SignInPage}" />
-    </FlyoutItem>
+    </FlyoutItem>-->
     <FlyoutItem Title="HOME" Icon="home_white.png" >
         <ShellContent Route="HomePage" ContentTemplate="{DataTemplate local:HomePage}"  />
+    </FlyoutItem>
+    <FlyoutItem Title="SIGN UP" >
+        <ShellContent Route="SignUp" ContentTemplate="{DataTemplate local:SignUp}" />
     </FlyoutItem>
     <FlyoutItem Title="ABOUT US" Icon="about_us_whitepng.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
@@ -111,6 +115,10 @@
     <FlyoutItem Title="CONTACT US" Icon="phone_white.png">
         <ShellContent Route="ContactPage" ContentTemplate="{DataTemplate local:ContactPage}" />
     </FlyoutItem>
+    <FlyoutItem Title="FOOD MENU" Icon="food_white.png">
+        <ShellContent Route="FoodMenuPage" ContentTemplate="{DataTemplate local:FoodMenuPage}" />
+    </FlyoutItem>
+   
     <!--<FlyoutItem Title="SIGN UP" >
         <ShellContent Route="SignUp" ContentTemplate="{DataTemplate local:SignUp}" />
     </FlyoutItem>
@@ -133,6 +141,9 @@
         content you can do so by calling 
         await Shell.Current.GoToAsync("//LoginPage");
     -->
+    <TabBar>
+        <Tab Title="SignIn">
+            <ShellContent Route="SignInPage" ContentTemplate="{DataTemplate local:SignInPage}" />
     <!--<TabBar>
         <Tab Title="Home">
             <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Vii.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,7 +14,9 @@ namespace Vii.Views
     {
         public SignInPage()
         {
-            InitializeComponent();
+            InitializeComponent();            
+            LoginViewModel log = new LoginViewModel(this);
+            this.BindingContext = log;
         }
         private void menu_Button_Clicked(object sender, EventArgs e)
         {
@@ -24,19 +26,14 @@ namespace Vii.Views
         private void signup_Button_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new SignUp());
-        }
-        private void forgotPassword_tapped(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new ForgetPasswordPage());
-        }
+        }       
         private void privacypolicy_tapped(object sender, EventArgs e)
         {
             Navigation.PushAsync(new PrivacyPolicyPage());
         }
-
-        async void signinsubmit_Button_Clicked(object sender, EventArgs e)
+        private void link_button(object sender, EventArgs e)
         {
-            await DisplayAlert("Success", "Sign In successfull", "OK");
+            Navigation.PushAsync(new ForgetPasswordPage());
         }
     }
 }

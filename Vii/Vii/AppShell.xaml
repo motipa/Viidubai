@@ -17,10 +17,10 @@
                 <Setter Property="Shell.TitleColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="White" />
                 <Setter Property="Shell.UnselectedColor" Value="White" />
-                <Setter Property="Shell.TabBarBackgroundColor" Value="White" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="Black" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="black"/>
                 <Setter Property="Shell.TabBarUnselectedColor" Value="#b29476"/>
-                <Setter Property="Shell.TabBarTitleColor" Value="Black"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
             </Style>
             <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
             <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
@@ -100,11 +100,11 @@
     <FlyoutItem Title="EVENT" Icon="events_white.png">
         <ShellContent Route="EventPage" ContentTemplate="{DataTemplate local:EventPage}" />
     </FlyoutItem>
-    <FlyoutItem Icon="food_menulogo.png" Title="Food Menu" FlyoutDisplayOptions="AsSingleItem" IsTabStop="True" Shell.TabBarBackgroundColor="Black">
-        <ShellContent Title="Food Menu" Route="FoodMenuPage" ContentTemplate="{DataTemplate local:FoodMenuPage}" Shell.TabBarTitleColor="White"/>
-        <ShellContent Title="Monday Platter Menu" Route="UptownMonday" ContentTemplate="{DataTemplate local:UptownMonday}" Shell.TabBarTitleColor="White"/>
-        <ShellContent Title="Thursday Brunch Menu" Route="TakeoverThursday" ContentTemplate="{DataTemplate local:TakeoverThursday}" Shell.TabBarTitleColor="White"/>
-        <ShellContent Title="Friday Brunch menu" Route="RedmadnessFriday" ContentTemplate="{DataTemplate local:RedmadnessFriday}" Shell.TabBarTitleColor="White"/>
+    <FlyoutItem Icon="food_white.png" Title="FOOD MENU" FlyoutDisplayOptions="AsSingleItem" IsTabStop="True" >
+        <ShellContent Title="Food Menu" Route="FoodMenuPage" ContentTemplate="{DataTemplate local:FoodMenuPage}" />
+        <ShellContent Title="Monday Platter Menu" Route="UptownMonday" ContentTemplate="{DataTemplate local:UptownMonday}"/>
+        <ShellContent Title="Thursday Brunch Menu" Route="TakeoverThursday" ContentTemplate="{DataTemplate local:TakeoverThursday}" />
+        <ShellContent Title="Friday Brunch menu" Route="RedmadnessFriday" ContentTemplate="{DataTemplate local:RedmadnessFriday}" />
     </FlyoutItem>
     <FlyoutItem Title="RESERVATION" Icon="reservations_white.png">
         <ShellContent Route="ReservationPage" ContentTemplate="{DataTemplate local:ReservationPage}" />
@@ -119,16 +119,19 @@
         <ShellContent Route="FoodMenuPage" ContentTemplate="{DataTemplate local:FoodMenuPage}" />
     </FlyoutItem>
    
+    <!--<FlyoutItem Title="SIGN UP" >
+        <ShellContent Route="SignUp" ContentTemplate="{DataTemplate local:SignUp}" />
+    </FlyoutItem>
     <FlyoutItem Title="PRIVACY POLICY" >
         <ShellContent Route="PrivacyPolicyPage" ContentTemplate="{DataTemplate local:PrivacyPolicyPage}" />
-    </FlyoutItem>
+    </FlyoutItem>-->
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
     <!--<MenuItem Text="Terms and Conditions" StyleClass="MenuItemLayoutStyle" Command="{Binding TermsandconditionsPageCommand}"/>-->
 
     <!--<MenuItem Text="HELP?" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
     </MenuItem>-->
-    <MenuItem Text="LogOut" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
+    <MenuItem Text="LOG OUT" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
     </MenuItem>
 
     <!--
@@ -141,8 +144,11 @@
     <TabBar>
         <Tab Title="SignIn">
             <ShellContent Route="SignInPage" ContentTemplate="{DataTemplate local:SignInPage}" />
+    <!--<TabBar>
+        <Tab Title="Home">
+            <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
         </Tab>
-    </TabBar>
+    </TabBar>-->
 </Shell>
     
 <!-- Optional Templates 

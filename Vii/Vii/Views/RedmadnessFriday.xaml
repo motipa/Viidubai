@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Vii.Views.RedmadnessFriday">
+             x:Class="Vii.Views.RedmadnessFriday"
+             BackgroundColor="Black">
     <ContentPage.Content>
-        <StackLayout>
-            <Image Source="menu_redmadness" Aspect="AspectFill"/>
-        </StackLayout>
+        <Image Source="menu_redmadness" Aspect="AspectFit"/>
     </ContentPage.Content>
 </ContentPage>

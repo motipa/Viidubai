@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Vii.Views.HomePage"
-             xmlns:vm="clr-namespace:Vii.ViewModels"
+             x:Class="Vii.Views.HomePage" Title=" HOME" BackgroundColor="Black"  >
+             <!--xmlns:vm="clr-namespace:Vii.ViewModels"
                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
-             xmlns:forms11="http://xamarin.com/schemas/2014/forms/design"
-             Title=" HOME" BackgroundColor="Black"  >
+             xmlns:forms11="http://xamarin.com/schemas/2014/forms/design"-->
+            
 
     <!--<ContentPage.BindingContext>
         <vm:HomeViewModel />
@@ -19,18 +19,18 @@
             <Grid   RowSpacing="1" ColumnSpacing="9">
                       <Grid.RowDefinitions>
                     <RowDefinition Height="40"/>
-                    <RowDefinition Height="105"/>
+                    <RowDefinition Height="118"/>
                     <RowDefinition Height="35"/>
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="500"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="150"/>
                            
                 </Grid.RowDefinitions>
                       <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="105"/>
-                    <ColumnDefinition Width="105"/>
-                    <ColumnDefinition Width="105"/>
+                    <ColumnDefinition Width="118"/>
+                    <ColumnDefinition Width="118"/>
+                    <ColumnDefinition Width="118"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
@@ -77,9 +77,9 @@
 
                             <Label TextColor="White" FontSize="Subtitle" Text="Todays Red Room &amp; Secret Garden " HorizontalTextAlignment="Center"   />
                         
-                        <Image  Source="{Binding Pic}" Aspect="AspectFill"  HeightRequest="400"  WidthRequest="390" />
+                        <Image  Source="{Binding Pic}" Aspect="AspectFill"  HeightRequest="400"  WidthRequest="400" />
 
-                        <Label Text="{Binding Caption}"   HorizontalOptions="Fill" VerticalOptions="Fill" TextColor="White">
+                        <Label Text="{Binding Caption}"   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="White">
 
                         </Label>
                         <Label Text="Read More" TextColor="White" HorizontalTextAlignment="Center" TextDecorations="Underline"  HorizontalOptions="Fill" VerticalOptions="Fill" >
@@ -99,36 +99,36 @@
                             <Label Text="COMING SOON." HorizontalTextAlignment="Center" FontSize="Subtitle"  HorizontalOptions="Fill" VerticalOptions="Fill" TextColor="White" />
                         </StackLayout>
                      
-                        <StackLayout Grid.Row="6" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Center">
+                        <StackLayout Grid.Row="6" Grid.ColumnSpan="3"  Orientation="Horizontal"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                         <CollectionView x:Name="eventList"  >
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
                                     <ContentView>                                       
                                             <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                                                 <Grid.RowDefinitions>
-                                                    <RowDefinition Height="auto"/>
-                                                    <RowDefinition Height="100"/>
+                                                    <RowDefinition Height="*"/>
+                                                  
                                                 </Grid.RowDefinitions>
                                                 <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="400"/>
+                                                    <ColumnDefinition Width="*"/>
                                                 </Grid.ColumnDefinitions>
-                                                <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="3" HorizontalOptions="Center" Margin="10,0,110,0" Spacing="15">
+                                                <StackLayout Orientation="Horizontal"  Grid.ColumnSpan="3" HorizontalOptions="CenterAndExpand"  Spacing="15">
                                                    
                                                     <StackLayout>
-                                                        <Label Text="{Binding Days}" FontSize="45" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
-                                                        <Label Text="DAYS" FontSize="10" TextColor="White" Opacity="0.5" HorizontalOptions="Center" Margin="0"/>
+                                                        <Label Text="{Binding Days}" FontSize="45" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                                                        <Label Text="DAYS" FontSize="10" TextColor="White" Opacity="0.5" HorizontalOptions="CenterAndExpand" Margin="0"/>
                                                     </StackLayout>
                                                     <StackLayout>
-                                                        <Label Text="{Binding Hours}" FontSize="45" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
-                                                        <Label Text="HOURS" FontSize="10" TextColor="White" Opacity="0.5" HorizontalOptions="Center" Margin="0"/>
+                                                        <Label Text="{Binding Hours}" FontSize="45" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                                                        <Label Text="HOURS" FontSize="10" TextColor="White" Opacity="0.5" HorizontalOptions="CenterAndExpand" Margin="0"/>
                                                     </StackLayout>
                                                     <StackLayout>
-                                                        <Label Text="{Binding Minutes}" FontSize="45" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
-                                                        <Label Text="MINUTES" FontSize="10" TextColor="White" Opacity="0.5" HorizontalOptions="Center" Margin="0"/>
+                                                        <Label Text="{Binding Minutes}" FontSize="45" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                                                        <Label Text="MINUTES" FontSize="10" TextColor="White" Opacity="0.5" HorizontalOptions="CenterAndExpand" Margin="0"/>
                                                     </StackLayout>
                                                     <StackLayout>
-                                                        <Label Text="{Binding Seconds}" FontSize="45" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
-                                                        <Label Text="SECONDS" FontSize="10" TextColor="White" Opacity="0.5" HorizontalOptions="Center" Margin="0"/>
+                                                        <Label Text="{Binding Seconds}" FontSize="45" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                                                        <Label Text="SECONDS" FontSize="10" TextColor="White" Opacity="0.5" HorizontalOptions="CenterAndExpand" Margin="0"/>
                                                     </StackLayout>
                                                 </StackLayout>
                                             </Grid>

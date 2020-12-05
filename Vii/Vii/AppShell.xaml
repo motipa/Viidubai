@@ -100,11 +100,11 @@
     <FlyoutItem Title="EVENT" Icon="events_white.png">
         <ShellContent Route="EventPage" ContentTemplate="{DataTemplate local:EventPage}" />
     </FlyoutItem>
-    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" >
-        <ShellContent Icon="food_menulogo.png" Title="Food Menu" Route="FoodMenuPage" ContentTemplate="{DataTemplate local:FoodMenuPage}"/>
-        <ShellContent Title="Uptown Monday Platter Menu" Route="UptownMonday" ContentTemplate="{DataTemplate local:UptownMonday}"/>
-        <ShellContent Title="Takeover Thursday Brunch Menu" Route="TakeoverThursday" ContentTemplate="{DataTemplate local:TakeoverThursday}"/>
-        <ShellContent Title="Redmadness Friday Brunch menu" Route="RedmadnessFriday" ContentTemplate="{DataTemplate local:RedmadnessFriday}"/>
+    <FlyoutItem Icon="food_menulogo.png" Title="Food Menu" FlyoutDisplayOptions="AsSingleItem" IsTabStop="True" Shell.TabBarBackgroundColor="Black">
+        <ShellContent Title="Food Menu" Route="FoodMenuPage" ContentTemplate="{DataTemplate local:FoodMenuPage}" Shell.TabBarTitleColor="White"/>
+        <ShellContent Title="Monday Platter Menu" Route="UptownMonday" ContentTemplate="{DataTemplate local:UptownMonday}" Shell.TabBarTitleColor="White"/>
+        <ShellContent Title="Thursday Brunch Menu" Route="TakeoverThursday" ContentTemplate="{DataTemplate local:TakeoverThursday}" Shell.TabBarTitleColor="White"/>
+        <ShellContent Title="Friday Brunch menu" Route="RedmadnessFriday" ContentTemplate="{DataTemplate local:RedmadnessFriday}" Shell.TabBarTitleColor="White"/>
     </FlyoutItem>
     <FlyoutItem Title="RESERVATION" Icon="reservations_white.png">
         <ShellContent Route="ReservationPage" ContentTemplate="{DataTemplate local:ReservationPage}" />

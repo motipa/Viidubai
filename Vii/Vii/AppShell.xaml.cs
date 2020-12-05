@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Vii.Helper;
 using Vii.ViewModels;
 using Vii.Views;
 using Xamarin.Forms;
@@ -17,7 +18,9 @@ namespace Vii
 
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("//LoginPage");
+            Settings.UserName = null;
+            // await Shell.Current.GoToAsync("//LoginPage");
+            Application.Current.MainPage = new SignInPage();
            
            // Application.Current.MainPage = new HomePage();
 

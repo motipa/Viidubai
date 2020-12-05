@@ -1,19 +1,245 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Vii.Views.ReservationPage"
+             x:Class="Vii.Views.ReservationPage" 
              xmlns:vm="clr-namespace:Vii.ViewModels"
-             Title="RESERVATION" BackgroundColor="Black">
+             Title="" BackgroundColor="Black">
 
     <!--<ContentPage.BindingContext>
         <vm:ReservationViewModel />
     </ContentPage.BindingContext>-->
-    
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        
+    <ScrollView BackgroundColor="Black">  
+        
+        <StackLayout VerticalOptions="Start" HorizontalOptions="Start">
+            
+            <ImageButton Source="home_white" VerticalOptions="Start" HorizontalOptions="Start" Margin="0,0,0,0"  Padding="0,0,0,0" WidthRequest="30" HeightRequest="25"
+                         Clicked="HomeClick"></ImageButton>
+               
+                <Frame BorderColor="#b29476" BackgroundColor="black" Margin="5,5,5,5" Padding="0,0,0,0">
+                
+                <StackLayout VerticalOptions="CenterAndExpand" Padding="7">
+                    <Label Text="Table Reservation" HorizontalOptions="Center" TextDecorations="Underline" FontSize="20" FontAttributes="Bold" TextColor="#b29476" Margin="0,10,0,0"/>
+                    <Entry Placeholder="Name" x:Name="CustName" TextColor="White" PlaceholderColor="White"></Entry>
+                    <!--<Entry Placeholder="Email"></Entry>
+        <Entry Placeholder="Password" IsPassword="True"></Entry>
+        <Entry Placeholder="Confirm Password" IsPassword="True"></Entry>-->
+                    <Label Text="Booking Date And Time" FontSize="16" TextDecorations="Underline" TextColor="white"></Label>
+                    <StackLayout>
+                        <Label Text="From" FontSize="14" TextColor="WhiteSmoke"></Label>
+                        
+                        <vm:DateTimePicker2 x:Name="FromDate" BackgroundColor="#b578"></vm:DateTimePicker2>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="To" FontSize="14" TextColor="WhiteSmoke"></Label>
+                        <vm:DateTimePicker2 x:Name="ToDate" BackgroundColor="#b578"></vm:DateTimePicker2>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Picker x:Name="Venue" TextColor="White"
+        Title="Select Venue" 
+        TitleColor="White">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Venue-1</x:String>
+                                    <x:String>Venue-2</x:String>
+
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+
+                        <!--<Picker ItemsSource="{x:Binding VenueViewDetailsModel.VenueTest}"
+                                ItemDisplayBinding="{Binding DisplayMember}" 
+                                SelectedItem="{Binding VenueViewDetailsModel.VenueTest}"
+                                x:Name="thePicker" />-->
+
+                    </StackLayout>
+
+
+
+                    <StackLayout Orientation="Horizontal" Spacing="50">
+                        <Label Text="Do You Want Shisha?" TextColor="White"></Label>
+                        <Switch IsToggled="False" x:Name="shisha" BackgroundColor="#b578" OnColor="OrangeRed"></Switch>
+                    </StackLayout>
+                    <!--image-->
+                    <StackLayout>
+                        <Label Text="Reserve Table"  TextColor="White" FontAttributes="Bold"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Spacing="40">
+                        <Label Text="Secret Garden Map" x:Name="Secretmap" TextDecorations="Underline" TextColor="White">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ClickSecretGarden_Tapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label Text="Red Room Map" x:Name="Redmap" TextDecorations="Underline" TextColor="White">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="RedRoom_Tapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                    </StackLayout>
+                    <ContentView x:Name="SecretGardenView" IsVisible="true"
+                            AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                        <Frame BorderColor="#b29476"  BackgroundColor="black" WidthRequest="550"  Margin="5,5,0,5"  Padding="0,0,30,10">
+
+                            <StackLayout Spacing="10" WidthRequest="550">
+
+                                <ScrollView Orientation="Both" WidthRequest="500">
+                                    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                                        <Button Text="24" x:Name="table24" Margin="1,30,0,0" HorizontalOptions="Center" 
+                                            BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="60" CornerRadius="3" TextColor="Black" ClassId="24" Clicked="OnImageButtonClicked"></Button>
+                                        <Button Text="25" x:Name="table25" Margin="50,16,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="25" Clicked="OnImageButtonClicked"></Button>
+                                        <Button Text="26" x:Name="table26" Margin="100,16,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="26" Clicked="OnImageButtonClicked"></Button>
+
+                                        <Image Source="Actop.PNG" Margin="145,1,0,0" WidthRequest="48" HeightRequest="30"></Image>
+                                        <Button Text="15" x:Name="table15" Margin="195,16,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="15" Clicked="OnImageButtonClicked"></Button>
+                                        <Button Text="16" x:Name="table16" Margin="245,16,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="16" Clicked="OnImageButtonClicked"></Button>
+                                        <Button Text="17" x:Name="table17" Margin="295,16,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="17" Clicked="OnImageButtonClicked"></Button>
+
+                                        <Image Source="Actop.PNG" Margin="345,1,0,0" WidthRequest="48" HeightRequest="30"></Image>
+                                        <Button Text="8" x:Name="table8" Margin="400,16,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="8" Clicked="OnImageButtonClicked"></Button>
+                                        <Button Text="9" x:Name="table9" Margin="480,16,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="9"></Button>
+                                        <Button Text="3" x:Name="table3" Margin="560,16,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="3" Clicked="OnImageButtonClicked"></Button>
+
+                                        <Image Source="Actop.PNG" Margin="620,1,0,0" WidthRequest="48" HeightRequest="30"></Image>
+
+                                        <Label Margin="670,1,0,0" HorizontalTextAlignment="Center" BackgroundColor="White"
+                                            WidthRequest="10" HeightRequest="45" ></Label>
+                                        <Button Text="2" x:Name="table2" Margin="690,16,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="2" Clicked="OnImageButtonClicked"></Button>
+                                        <Button Text="1" x:Name="table1" Margin="740,16,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="1" Clicked="OnImageButtonClicked"></Button>
+                                        <Label Margin="790,1,0,0" HorizontalTextAlignment="Center" BackgroundColor="White"
+                                            WidthRequest="10" HeightRequest="45" ></Label>
+                                        <Image Source="picentrance.PNG" Margin="780,100,0,0" WidthRequest="60" HeightRequest="120"></Image>
+
+                                        <Button Text="4" x:Name="table4" Margin="730,120,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="4" Clicked="OnImageButtonClicked"></Button>
+
+                                        <Image Margin="605,115,0,0" Source="bar.PNG" WidthRequest="90" HeightRequest="60"></Image>
+                                        <Button Text="10" x:Name="table10" Margin="550,120,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="10" Clicked="OnImageButtonClicked"></Button>
+                                        <Button Text="11" x:Name="table11" Margin="480,120,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="11" Clicked="OnImageButtonClicked"></Button>
+                                        <Button Text="12" x:Name="table12" Margin="410,120,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="12" Clicked="OnImageButtonClicked"></Button>
+                                        <Button Text="14" x:Name="table14" Margin="360,120,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="14" Clicked="OnImageButtonClicked"></Button>
+
+                                        <Image Margin="290,115,0,0" Source="DJimg" WidthRequest="70" HeightRequest="60" ></Image>
+                                        <Button Text="29" x:Name="table29" Margin="240,120,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="29" Clicked="OnImageButtonClicked"></Button>
+                                        <Image Source="pic.png" Margin="183,115,0,0" WidthRequest="50" HeightRequest="50"></Image>
+                                        <Button Text="28" x:Name="table28" Margin="140,120,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="28" Clicked="OnImageButtonClicked"></Button>
+                                        <Button Text="27" x:Name="table27" Margin="80,120,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="27" Clicked="OnImageButtonClicked"></Button>
+                                        <Button Text="23" x:Name="table23" Margin="20,120,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="23" Clicked="OnImageButtonClicked"></Button>
+                                        <Button Text="22" x:Name="table22" Margin="1,180,0,0" HorizontalOptions="Center" 
+                                            BackgroundColor="#a08058" WidthRequest="40" ClassId="22" HeightRequest="60" 
+                                            TextColor="Black" Clicked="OnImageButtonClicked"></Button>
+                                        <Button Text="21" x:Name="table21" Margin="70,210,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="21" Clicked="OnImageButtonClicked"></Button>
+                                        <Button Text="20" x:Name="table20" Margin="120,210,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="20" Clicked="OnImageButtonClicked"></Button>
+
+                                        <Image Margin="170,240,0,0" Source="acbottom.PNG" WidthRequest="60" HeightRequest="30"></Image>
+
+                                        <Button Text="19" x:Name="table19" Margin="230,210,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="19" Clicked="OnImageButtonClicked"></Button>
+                                        <Button Text="18" x:Name="table18" Margin="280,210,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="18" Clicked="OnImageButtonClicked"></Button>
+
+                                        <Image Source="serviceroom.PNG" Margin="330,240,0,0" WidthRequest="80" HeightRequest="30"></Image>
+
+
+                                        <Image Source="acbottom.PNG" Margin="410,240,0,0" WidthRequest="60" HeightRequest="30"></Image>
+
+                                        <Button Text="7" x:Name="table7" Margin="490,210,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="7" Clicked="OnImageButtonClicked"></Button>
+                                        <Button Text="6" x:Name="table6" Margin="560,210,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="6" Clicked="OnImageButtonClicked"></Button>
+
+                                        <Image Margin="620,240,0,0" Source="acbottom.PNG" WidthRequest="60" HeightRequest="30"></Image>
+                                        <Button Text="5" x:Name="table5" Margin="690,210,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
+                                            HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="5" Clicked="OnImageButtonClicked" ></Button>
+
+                                        <Image Margin="750,240,0,0" Source="sushibar.PNG" WidthRequest="90" HeightRequest="30"></Image>
+
+
+                                    </AbsoluteLayout>
+                                </ScrollView>
+                            </StackLayout>
+
+
+                        </Frame>
+                    </ContentView>
+                    <ContentView x:Name="RedRoomView" IsVisible="False"
+                            AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                        <Frame BorderColor="#b29476"  BackgroundColor="black" WidthRequest="550"  Margin="5,5,0,5"  Padding="0,0,30,10">
+
+                            <ScrollView Orientation="Both" WidthRequest="500">
+                                <StackLayout>
+                                    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                                        <Button Margin="150,25,0,0" HorizontalOptions="Start" ClassId="830" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="830" TextColor="Black" Clicked="OnImageButtonClicked" HeightRequest="34" />
+                                        <Button Margin="110,55,0,0" HorizontalOptions="Start" ClassId="900" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="900" TextColor="Black" Clicked="OnImageButtonClicked" HeightRequest="34" />
+                                        <Button Margin="80,90,0,0" HorizontalOptions="Start" ClassId="910" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="910" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked" />
+                                        <Button Margin="40,125,0,0" HorizontalOptions="Start" ClassId="920" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="920" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked" />
+                                        <Button Margin="5,165,0,0" HorizontalOptions="Start" ClassId="925" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="925" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked" />
+                                        <Image Margin="240,5,0,0" Source="djred" WidthRequest="100" ></Image>
+                                        <Button Margin="350,10,0,0" HorizontalOptions="Start" ClassId="820" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="820" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked" />
+                                        <Button Margin="410,10,0,0" HorizontalOptions="Start" ClassId="815" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="815" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked"/>
+                                        <Button Margin="470,10,0,0" HorizontalOptions="Start" ClassId="810" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="810" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked"/>
+                                        <Button Margin="540,10,0,0" HorizontalOptions="Start" ClassId="800" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="800" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked" />
+                                        <Image Margin="600,5,0,0" Source="barred" WidthRequest="100" ></Image>
+                                        <Image Margin="660,80,0,0" Source="entrancered" HeightRequest="80" ></Image>
+                                        <Button Margin="600,150,0,0" HorizontalOptions="Start" ClassId="870" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="870" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked" />
+                                        <Button Margin="520,150,0,0" HorizontalOptions="Start" ClassId="860" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="860" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked"/>
+                                        <Button Margin="450,150,0,0" HorizontalOptions="Start" ClassId="850" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="850" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked"/>
+                                        <Button Margin="340,200,0,0" HorizontalOptions="Start" ClassId="840" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="840" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked"/>
+                                        <Button Margin="290,240,0,0" HorizontalOptions="Start" ClassId="960" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="960" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked"/>
+                                        <Button Margin="230,280,0,0" HorizontalOptions="Start" ClassId="950" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="950" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked"/>
+                                        <Button Margin="120,290,0,0" HorizontalOptions="Start" ClassId="940" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="940" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked"/>
+                                        <Button Margin="40,290,0,0" HorizontalOptions="Start" ClassId="930" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="930" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked"/>
+                                        <Label Margin="40,330,0,0" HorizontalOptions="Start" BackgroundColor="Black" WidthRequest="150" HeightRequest="20"/>
+
+                                    </AbsoluteLayout>
+                                </StackLayout>
+                            </ScrollView>
+                        </Frame>
+
+                    </ContentView>
+                    <StackLayout Orientation="Horizontal" Spacing="30">
+                        <Label Text="Reserved Table" TextColor="White"/>
+                        <Entry x:Name="tableDetails" WidthRequest="250"    
+               FontSize="Medium" BackgroundColor="#b578" TextColor="White"
+               HorizontalOptions="Start" 
+               VerticalOptions="CenterAndExpand" />
+                    </StackLayout>
+                    <StackLayout>
+                        <Editor Placeholder="Special Request Notes" PlaceholderColor="White" TextColor="White" x:Name="SpecialNotes" BackgroundColor="#b578" HeightRequest="100" />
+
+                    </StackLayout>
+
+                    <Button Text="Reserve" Clicked="Button_Clicked" Style="{StaticResource buttonStyle}" CornerRadius="25" Margin="0,10,0,10"></Button>
+
+
+                </StackLayout>
+            </Frame>
         </StackLayout>
+    </ScrollView>
     </ContentPage.Content>
 </ContentPage>

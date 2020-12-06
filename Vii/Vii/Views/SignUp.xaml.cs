@@ -47,7 +47,7 @@ namespace Vii.Views
         }
         async void Createaccount_Button_Clicked(object sender, EventArgs e)
         {
-            if (password == Confirmpassword)
+            if (password.Text == Confirmpassword.Text)
             {
                 _signUp.userModel.FirstName = firstName.Text;
                 _signUp.userModel.LastName = lastName.Text;

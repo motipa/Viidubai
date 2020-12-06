@@ -60,9 +60,6 @@ namespace Vii.ViewModels
 
                     if (LoginModel.Username != null && LoginModel.Password != null)
                     {
-
-                        Settings.UserName = LoginModel.Username;
-
                         IsBusy = true;
                         try
                         {
@@ -70,6 +67,7 @@ namespace Vii.ViewModels
 
                             if (res.AccessToken != string.Empty)
                             {
+                                Settings.UserName = LoginModel.Username;
 
                                 Settings.AccessToken = res.AccessToken;
                                 Settings.RefreshToken = res.RefreshToken;

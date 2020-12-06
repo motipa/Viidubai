@@ -43,8 +43,9 @@ namespace Vii.Views
             {
                 if (tid != null)
                 {
+                    string td = tableDetails.Text;
                     array.Add(tid);
-                    if (tableDetails.Text != null)
+                    if (td != "")
                     {
                         tableDetails.Text += ",";
                     }
@@ -75,7 +76,7 @@ namespace Vii.Views
             }
             else
             {
-                tableDetails.Text = null;
+                tableDetails.Text = "";
                 _book.SelectedTags = null;
                 array.Clear();
             }
@@ -88,9 +89,10 @@ namespace Vii.Views
             DateTime current = DateTime.Now;
             if (Venue.SelectedItem != null)
             {
+                string td = tableDetails.Text;
                 if (current < f)
                 {
-                    if (tableDetails.Text != null)
+                    if (td != "")
                     {
                         if (f > t)
                         {
@@ -118,7 +120,7 @@ namespace Vii.Views
                             {
                                 DisplayAlert("Reservation", "Table Reservation Successfull", "OK");
                                 shisha.IsToggled = false;
-                                tableDetails.Text = null;
+                                tableDetails.Text = "";
                                 SpecialNotes.Text = "";
                                 array.Clear();
                             }
@@ -135,7 +137,7 @@ namespace Vii.Views
                 }
                 else
                 {
-                    DisplayAlert("Error", "Invalid Time", "OK");
+                    DisplayAlert("Error", "Invalid Date or Time", "OK");
                 }
             }
 
@@ -165,10 +167,14 @@ namespace Vii.Views
             RedRoomView.IsVisible = true;
             Redmap.TextColor = Color.Red;
             Secretmap.TextColor = Color.White;
+            AmberHallview.IsVisible = false;
+            Amberhall.TextColor = Color.White;
         }
         private void ClickSecretGarden_Tapped(object sender, EventArgs e)
         {
             SecretGardenView.IsVisible = true;
+            AmberHallview.IsVisible = false;
+            Amberhall.TextColor = Color.White;
             Secretmap.TextColor = Color.Red;
             Redmap.TextColor = Color.White;
             RedRoomView.IsVisible = false;
@@ -188,7 +194,47 @@ namespace Vii.Views
 
         private void OnAmber_ImageButtonClicked(object sender, EventArgs e)
         {
+            ImageButton btnTables = (ImageButton)sender;
+            string tids = btnTables.ClassId;
+            if (array.Contains(tids))
+            {
+                DisplayAlert("Reservation", "Table-" + tids + " is Alraedy Reserved", "OK");
+            }
+            else
+            {
+                if (tids != null)
+                {
+                    string tds = tableDetails.Text;
+                    array.Add(tids);
+                    if ( tds != "")
+                    {
+                        tableDetails.Text += ",";
+                    }
+                    if (_book.SelectedTags != null)
+                    {
+                        _book.SelectedTags += ",";
+                    }
+                    tableDetails.Text += "Table-" + tids;
+                    _book.SelectedTags += "Table-" + tids;
+                    TotalCount++;
 
+                    if (_canClose)
+                    {
+                        ShowExitDialog();
+                    }
+                    //return _canClose;
+                }
+            }
+        }
+
+        private void Amberhall_Tapped(object sender, EventArgs e)
+        {
+            SecretGardenView.IsVisible = false;
+            Secretmap.TextColor = Color.White;
+            Redmap.TextColor = Color.White;
+            RedRoomView.IsVisible = false;
+            AmberHallview.IsVisible = true;
+            Amberhall.TextColor = Color.Red;
         }
     }
 }

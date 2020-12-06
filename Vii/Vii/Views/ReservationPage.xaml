@@ -66,7 +66,7 @@
                     <StackLayout>
                         <Label Text="Reserve Table"  TextColor="White" FontAttributes="Bold"></Label>
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal" Spacing="40">
+                    <StackLayout Orientation="Horizontal" Spacing="20">
                         <Label Text="Secret Garden Map" x:Name="Secretmap" TextDecorations="Underline" TextColor="White">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="ClickSecretGarden_Tapped" />
@@ -77,9 +77,14 @@
                                 <TapGestureRecognizer Tapped="RedRoom_Tapped" />
                             </Label.GestureRecognizers>
                         </Label>
+                        <Label Text="Amber Hall Map" x:Name="Amberhall" TextDecorations="Underline" TextColor="White">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Amberhall_Tapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
 
                     </StackLayout>
-                    <ContentView x:Name="SecretGardenView" IsVisible="False"
+                    <ContentView x:Name="SecretGardenView" IsVisible="True"
                             AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
                         <Frame BorderColor="#b29476"  BackgroundColor="black" WidthRequest="550"  Margin="5,5,0,5"  Padding="0,0,30,10">
 
@@ -223,7 +228,7 @@
 
                     </ContentView>
                     <!--New-->
-                        <ContentView x:Name="AmberHall" IsVisible="true"
+                        <ContentView x:Name="AmberHallview" IsVisible="False"
                             AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
                             <Frame BorderColor="#b29476"  BackgroundColor="black" WidthRequest="550"  Margin="5,5,0,5"  Padding="0,0,30,10">
 
@@ -233,10 +238,46 @@
 
                                             <ImageButton Margin="100,25,0,0" HorizontalOptions="Start" Source="amb_93" ClassId="93" CornerRadius="5"  WidthRequest="80" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
                                             <ImageButton Margin="210,25,0,0" HorizontalOptions="Start" Source="am_92" ClassId="92" CornerRadius="5"  WidthRequest="80" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
-                                            <ImageButton Margin="310,25,0,0" HorizontalOptions="Start" Source="am_91" ClassId="91" CornerRadius="5"  WidthRequest="70" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
-                                            <ImageButton Margin="400,25,0,0" HorizontalOptions="Start" Source="am_90" ClassId="91" CornerRadius="5"  WidthRequest="70" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
-
+                                            <ImageButton Margin="350,25,0,0" HorizontalOptions="Start" Source="am_91" ClassId="91" CornerRadius="5"  WidthRequest="70" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
+                                            <ImageButton Margin="450,25,0,0" HorizontalOptions="Start" Source="am_90" ClassId="90" CornerRadius="5"  WidthRequest="70" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
+                                            <ImageButton Margin="70,65,0,0" HorizontalOptions="Start"   CornerRadius="5"  WidthRequest="110"  HeightRequest="15"></ImageButton>
+                                            <ImageButton Margin="210,65,0,0" HorizontalOptions="Start"  CornerRadius="5"  WidthRequest="210"  HeightRequest="15"></ImageButton>
+                                            <ImageButton Margin="450,65,0,0" HorizontalOptions="Start"   CornerRadius="5"  WidthRequest="110"  HeightRequest="15"></ImageButton>
+                                            <ImageButton Margin="100,105,0,0" HorizontalOptions="Start" Source="am_83" ClassId="83" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="190,105,0,0" HorizontalOptions="Start" Source="am_82" ClassId="82" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="280,105,0,0" HorizontalOptions="Start" Source="am_81" ClassId="81" CornerRadius="5"  WidthRequest="55" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="360,105,0,0" HorizontalOptions="Start" Source="am_80" ClassId="80" CornerRadius="5"  WidthRequest="55" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="430,105,0,0" HorizontalOptions="Start" Source="am_104" ClassId="104" CornerRadius="5"  WidthRequest="55" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="450,155,0,0" HorizontalOptions="Start" Source="am_103_l"  CornerRadius="5"  WidthRequest="35" HeightRequest="35"></ImageButton>
+                                            <ImageButton Margin="440,205,0,0" HorizontalOptions="Start" Source="am_104_l" CornerRadius="5"  WidthRequest="65" HeightRequest="75"></ImageButton>
                                             
+                                            <ImageButton Margin="500,145,0,0" HorizontalOptions="Start" Source="am_103" ClassId="103" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="520,220,0,0" HorizontalOptions="Start" Source="am_102" ClassId="102" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="440,285,0,0" HorizontalOptions="Start" Source="am_102_l" CornerRadius="5"  WidthRequest="55" HeightRequest="75"></ImageButton>
+                                            <ImageButton Margin="490,295,0,0" HorizontalOptions="Start" Source="am_101" ClassId="101" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="430,355,0,0" HorizontalOptions="Start" Source="am_100" ClassId="100" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="350,355,0,0" HorizontalOptions="Start" Source="am_60" ClassId="60" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="270,355,0,0" HorizontalOptions="Start" Source="am_61" ClassId="61" CornerRadius="5"  WidthRequest="60" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="190,355,0,0" HorizontalOptions="Start" Source="am_62" ClassId="62" CornerRadius="5"  WidthRequest="55" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="100,355,0,0" HorizontalOptions="Start" Source="am_63" ClassId="63" CornerRadius="5"  WidthRequest="55" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="100,220,0,0" HorizontalOptions="Start" Source="am_74" ClassId="74" CornerRadius="5"  WidthRequest="45" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="180,220,0,0" HorizontalOptions="Start" Source="am_73" ClassId="73" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="250,220,0,0" HorizontalOptions="Start" Source="am_72" ClassId="72" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="310,220,0,0" HorizontalOptions="Start" Source="am_71" ClassId="71" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="360,220,0,0" HorizontalOptions="Start" Source="am_70" ClassId="70" CornerRadius="5"  WidthRequest="51" Clicked="OnAmber_ImageButtonClicked" HeightRequest="68"></ImageButton>
+                                            <ImageButton Margin="100,400,0,0" HorizontalOptions="Start"  CornerRadius="5"  WidthRequest="150"  HeightRequest="15"></ImageButton>
+                                            <ImageButton Margin="320,400,0,0" HorizontalOptions="Start"  CornerRadius="5"  WidthRequest="250"  HeightRequest="15"></ImageButton>
+                                            <ImageButton Margin="110,430,0,0" HorizontalOptions="Start" Source="am_54" ClassId="54" CornerRadius="5"  WidthRequest="80" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
+                                            <ImageButton Margin="190,430,0,0" HorizontalOptions="Start" Source="am_53" ClassId="53" CornerRadius="5"  WidthRequest="75" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
+                                            <ImageButton Margin="320,430,0,0" HorizontalOptions="Start" Source="am_52" ClassId="52" CornerRadius="5"  WidthRequest="70" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
+                                            <ImageButton Margin="420,430,0,0" HorizontalOptions="Start" Source="am_51" ClassId="51" CornerRadius="5"  WidthRequest="65" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
+                                            <ImageButton Margin="500,430,0,0" HorizontalOptions="Start" Source="am_50" ClassId="50" CornerRadius="5"  WidthRequest="65" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
+                                            <ImageButton Margin="590,430,0,0" HorizontalOptions="Start" Source="am_entrance" ClassId="50" CornerRadius="5"  WidthRequest="40" Clicked="OnAmber_ImageButtonClicked" HeightRequest="45"></ImageButton>
+                                            <ImageButton Margin="590,200,0,0" HorizontalOptions="Start" Source="am_bar"  WidthRequest="40" HeightRequest="120"></ImageButton>
+                                            <ImageButton Margin="0,190,0,0" HorizontalOptions="Start" Source="am_stage"  WidthRequest="35" HeightRequest="120"></ImageButton>
+                                            <ImageButton Margin="25,0,0,0" HorizontalOptions="Start" Source="am_light"  WidthRequest="40" HeightRequest="30"></ImageButton>
+
+
                                         </AbsoluteLayout>
                                     </StackLayout>
                                 </ScrollView>
@@ -246,11 +287,12 @@
                         <!---dsf-->
                     <StackLayout Orientation="Horizontal" Spacing="30">
                         <Label Text="Reserved Table" TextColor="White"/>
-                        <Entry x:Name="tableDetails" WidthRequest="250"    
+                        <!--<Entry x:Name="tableDetails" WidthRequest="250"     
                FontSize="Medium" BackgroundColor="#b578" TextColor="White"
                HorizontalOptions="Start" 
-               VerticalOptions="CenterAndExpand" />
-                    </StackLayout>
+               VerticalOptions="CenterAndExpand" />-->
+                            <Label x:Name="tableDetails" WidthRequest="250" FontSize="Medium" TextColor="White"/>
+                        </StackLayout>
                     <StackLayout>
                         <Editor Placeholder="Special Request Notes" PlaceholderColor="White" TextColor="White" x:Name="SpecialNotes" BackgroundColor="#b578" HeightRequest="100" />
 

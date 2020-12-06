@@ -145,6 +145,7 @@ namespace Vii.Views
             {
                 DisplayAlert("Error", "Select Venue", "OK");
             }
+        
         }
         protected override async void OnAppearing()
         {

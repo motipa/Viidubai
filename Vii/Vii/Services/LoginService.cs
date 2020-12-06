@@ -19,9 +19,9 @@ namespace Vii.Services
         public LoginService()
         {// set URL for central IAM for debug to dev console, prod in release mode.  Put this in so I dont have to keep switching the endpoint when flipping between prod and dev
 #if DEBUG
-            _apiBaseUrl = "https://bbe09c75dbff.ngrok.io/";
+            _apiBaseUrl = "https://1a2bd2b37f7a.ngrok.io/";
 #else
-              //  _apiBaseUrl = "https:///";
+            //  _apiBaseUrl = "https:///";
 
 #endif
         }

@@ -15,10 +15,10 @@ namespace Vii.Services
         public UserDetails()
         {
 #if DEBUG
-            _apiBaseUrl = "https://bbe09c75dbff.ngrok.io/";
+            _apiBaseUrl = "https://1a2bd2b37f7a.ngrok.io/";
 
 #else
-              //  _apiBaseUrl = "https:///";
+            //  _apiBaseUrl = "https:///";
 #endif
         }
         public async Task<UserModel> GetCustomerDetails(string Email)

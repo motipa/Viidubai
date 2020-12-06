@@ -206,7 +206,7 @@ namespace Vii.Views
                 {
                     string tds = tableDetails.Text;
                     array.Add(tids);
-                    if ( tds != null)
+                    if ( tds != "")
                     {
                         tableDetails.Text += ",";
                     }

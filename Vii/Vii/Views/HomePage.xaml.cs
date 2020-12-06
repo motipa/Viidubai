@@ -9,6 +9,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Timers;
 using System.ComponentModel;
+using Vii.Helper;
 
 namespace Vii.Views
 {
@@ -19,53 +20,55 @@ namespace Vii.Views
         public string Heading { get; set; }
         public string Caption { get; set; }
         public ImageSource Pic { get; set; }
+        string Username = Settings.UserName;
         public HomePage()
         {
             InitializeComponent();
             Setup();
             DateTime objdate = DateTime.Today;
             string Day = DateTime.Now.DayOfWeek.ToString();
-           
+
             if (Day == "Sunday")
             {
-               // Heading = "SUNDAY";
+                // Heading = "SUNDAY";
                 Caption = "Begin the week with some upbeat HipHop and RnB tunes by Khaleeji, DJ MadH, DJ Sam B and DJ MGK all night. ";
                 Pic = "SUNDAY.jpg";
 
             }
             else if (Day == "Monday")
             {
-              //Heading = "MONDAY";
-              Caption = "Mondays, we’re taking you Uptown! Enjoy some fantastic hip hop and RnB tunes ";
-              Pic = "MONDAY.jpg";
+                //Heading = "MONDAY";
+                Caption = "Mondays, we’re taking you Uptown! Enjoy some fantastic hip hop and RnB tunes ";
+                Pic = "MONDAY.jpg";
             }
             else if (Day == "Tuesday")
             {
-               // Heading = "TUESDAY";
+                // Heading = "TUESDAY";
                 Caption = "Viva la fiesta, viva la noche! It’s Chicas Night every Tuesday, ladies! ";
                 Pic = "TUESDAY.jpg";
             }
             else if (Day == "Wednesday")
             {
-               // Heading = "WEDNESDAY";
+                // Heading = "WEDNESDAY";
                 Caption = "Old school tunes are here to beat your weekday blues – Soul Juice ";
                 Pic = "WEDNESDAY.jpg";
             }
             else if (Day == "Friday")
             {
-               // Heading = "FRIDAY";
+                // Heading = "FRIDAY";
                 Caption = "Step up your weekend game with the Red Madness brunch on Friday. ";
                 Pic = "FRIDAY.jpg";
             }
             else if (Day == "Thursday")
             {
-               // Heading = "THURSDAY";
+                // Heading = "THURSDAY";
                 Caption = "Begin your weekend with the Takeover Brunch on Thursday. ";
                 Pic = "FRIDAY.jpg";
             }
 
-            else {
-               // Heading = "SATURDAY";
+            else
+            {
+                // Heading = "SATURDAY";
                 Caption = "Yala Habibi! Venture into a Maylay Garden themed experience at the Secret Garden. ";
                 Pic = "SATURDAY1.jpg";
             }
@@ -76,22 +79,32 @@ namespace Vii.Views
 
         private void Caption_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new EventPage());
+            if (Username != "")
+            {
+                Navigation.PushAsync(new EventPage());
+            }
+            
         }
 
         private void SecretGarden_Tapped(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new AboutPage());
+        {            
+                Navigation.PushAsync(new AboutPage());
+           
+            
         }
 
         private void RedRoom_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new AboutPage());
+            
+                Navigation.PushAsync(new AboutPage());
+            
+            
         }
 
         private void AmberHall_Tapped(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new AboutPage());
+        {            
+              Navigation.PushAsync(new AboutPage());            
+            
         }
 
         private List<Event> AllEvents { get; set; }
@@ -101,7 +114,7 @@ namespace Vii.Views
             return new List<Event>()
             {
                 new Event{  Date = new DateTime(DateTime.Now.Ticks + new TimeSpan(9, 07, 45, 59).Ticks)},
-               
+
             };
         }
 
@@ -132,7 +145,7 @@ namespace Vii.Views
             public string Hours => Timespan.Hours.ToString("00");
             public string Minutes => Timespan.Minutes.ToString("00");
             public string Seconds => Timespan.Seconds.ToString("00");
-          
+
         }
 
 

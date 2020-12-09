@@ -16,7 +16,7 @@ namespace Vii.Services
         public SignUp()
         {
 #if DEBUG
-            _apiBaseUrl = "https://736de388413a.ngrok.io/";
+            _apiBaseUrl = "https://2107b862141d.ngrok.io/";
 #else
               //  _apiBaseUrl = "https:///";
 #endif

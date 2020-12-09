@@ -13,7 +13,7 @@ namespace Vii.Views
         {
             InitializeComponent();
         }
-        protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
             if (username != "")
             {
@@ -22,7 +22,8 @@ namespace Vii.Views
             }
             else
             {
-                 Application.Current.MainPage = new SignInPage();
+                //  Application.Current.MainPage = new SignInPage();
+               await Navigation.PushAsync(new Vii.Views.SignInPage());
 
             }
         }

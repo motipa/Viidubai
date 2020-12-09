@@ -90,9 +90,7 @@
     <FlyoutItem Title="HOME" Icon="home_white.png" >
         <ShellContent Route="HomePage" ContentTemplate="{DataTemplate local:HomePage}"  />
     </FlyoutItem>
-    <FlyoutItem Title="SIGN IN" >
-        <ShellContent Route="SignInPage" ContentTemplate="{DataTemplate local:SignInPage}" />
-    </FlyoutItem>
+   
     <FlyoutItem Title="ABOUT US" Icon="about_us_whitepng.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
@@ -115,8 +113,10 @@
     <FlyoutItem Title="CONTACT US" Icon="phone_white.png">
         <ShellContent Route="ContactPage" ContentTemplate="{DataTemplate local:ContactPage}" />
     </FlyoutItem>
-    
-   
+    <FlyoutItem Title="SIGN IN" >
+        <ShellContent Route="SignInPage" ContentTemplate="{DataTemplate local:SignInPage}" />
+    </FlyoutItem>
+
     <!--<FlyoutItem Title="SIGN UP" >
         <ShellContent Route="SignUp" ContentTemplate="{DataTemplate local:SignUp}" />
     </FlyoutItem>

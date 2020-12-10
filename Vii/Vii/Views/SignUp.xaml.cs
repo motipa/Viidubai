@@ -58,7 +58,7 @@ namespace Vii.Views
                 if (s == 1)
                 {
                     await DisplayAlert("Registration", "Successfull", "OK");
-                    await Navigation.PushAsync(new SignInPage());
+                    Application.Current.MainPage = new SignInPage();
                 }
             }
             else

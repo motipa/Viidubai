@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Vii.Helper;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,6 +12,7 @@ namespace Vii.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GalleryPage : ContentPage
     {
+
         public GalleryPage()
         {
             InitializeComponent();
@@ -21,15 +22,15 @@ namespace Vii.Views
             BackgroundColor = Color.Black,// Color.FromHex("#00F0F8FF"),
             Padding = new Thickness(20, 20, 20, 20),
             WidthRequest = 50,
-            HeightRequest = 80    
-    };
+            HeightRequest = 80
+        };
         private async void image_click_gesture1(object sender, EventArgs e)
         {
-            
+
             detailsPage.Content = glryimg1;
             glryimg1.Aspect = Aspect.AspectFit;
             await Navigation.PushModalAsync(detailsPage, false);
-            
+
         }
 
         private async void image_click_gesture2(object sender, EventArgs e)

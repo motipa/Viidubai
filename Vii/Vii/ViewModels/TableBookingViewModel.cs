@@ -54,12 +54,13 @@ namespace Vii.ViewModels
                 _apiBookServices = new BookingStore();
                 BookingViewModel objBook = new BookingViewModel();
                 objBook.BookingDateTimeFrom = BookModel.fromDate;
-                objBook.BookingDateTimeTo = BookModel.toDate;
+                objBook.BookTime = BookModel.Time;
                 objBook.NumberOfBookedTable = BookModel.bookedCount;
                 objBook.TableNum = BookModel.bookedTable;
                 objBook.shisha = BookModel.shisha;
                 objBook.Venue = BookModel.venue;
                 objBook.CustId = _userViewModel.userDetails.Id;
+                objBook.NumberOfPerson = BookModel.numberOfPerson;
 
                 objBook.sendEmail = new ClubApp.Models.Email.SendEmail();
                 objBook.sendEmail.subject = "App-Table Reservation Request";

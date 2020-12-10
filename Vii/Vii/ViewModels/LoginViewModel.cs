@@ -76,7 +76,7 @@ namespace Vii.ViewModels
                                 Settings.AccessTokenExpirationDate = DateTime.UtcNow.AddMinutes(8);
                                 Debug.Write(res.AccessToken + "/------------------------------Access Token");
 
-                                Application.Current.MainPage = new ReservationPage();
+                                Application.Current.MainPage = new AppShell();
 
                             }
                             else

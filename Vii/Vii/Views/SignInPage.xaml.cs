@@ -18,22 +18,26 @@ namespace Vii.Views
             LoginViewModel log = new LoginViewModel(this);
             this.BindingContext = log;
         }
-        private void menu_Button_Clicked(object sender, EventArgs e)
+        private async void menu_Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new FoodMenuPage());
+           await Navigation.PushAsync(new Vii.Views.FoodMenuPage());
         }
 
-        private void signup_Button_Clicked(object sender, EventArgs e)
+        private async void signup_Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new SignUp());
+            //Application.Current.MainPage = new SignUp();
+            await Navigation.PushAsync(new Vii.Views.SignUp());
         }       
-        private void privacypolicy_tapped(object sender, EventArgs e)
+        private async void privacypolicy_tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new PrivacyPolicyPage());
+            //Navigation.PushAsync(new PrivacyPolicyPage());
+            await Navigation.PushAsync(new Vii.Views.PrivacyPolicyPage());
         }
-        private void link_button(object sender, EventArgs e)
+        private async void link_button(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ForgetPasswordPage());
+            // await Navigation.PushAsync(new ForgetPasswordPage());
+            await Navigation.PushAsync(new Vii.Views.ForgetPasswordPage());
+
         }
     }
 }

@@ -77,33 +77,31 @@ namespace Vii.Views
 
         }
 
-        private void Caption_Tapped(object sender, EventArgs e)
+        private async void Caption_Tapped(object sender, EventArgs e)
         {
             if (Username != "")
             {
-                Navigation.PushAsync(new EventPage());
+               await Navigation.PushAsync(new Vii.Views.EventPage());
             }
             
         }
 
-        private void SecretGarden_Tapped(object sender, EventArgs e)
+        private async void SecretGarden_Tapped(object sender, EventArgs e)
         {            
-                Navigation.PushAsync(new AboutPage());
-           
-            
+              await Navigation.PushAsync(new Vii.Views.AboutPage());   
         }
 
-        private void RedRoom_Tapped(object sender, EventArgs e)
+        private async void RedRoom_Tapped(object sender, EventArgs e)
         {
             
-                Navigation.PushAsync(new AboutPage());
+             await  Navigation.PushAsync(new Vii.Views.AboutPage());
             
             
         }
 
-        private void AmberHall_Tapped(object sender, EventArgs e)
+        private async void AmberHall_Tapped(object sender, EventArgs e)
         {            
-              Navigation.PushAsync(new AboutPage());            
+            await  Navigation.PushAsync(new Vii.Views.AboutPage());            
             
         }
 

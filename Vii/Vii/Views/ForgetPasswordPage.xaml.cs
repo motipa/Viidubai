@@ -37,7 +37,7 @@ namespace Vii.Views
             if (s == 1)
             {
                 await DisplayAlert("Success", "Your password has been changed successfully!", "OK");
-                await Navigation.PushAsync(new SignInPage());
+                Application.Current.MainPage = new SignInPage();
             }
         }
     }

@@ -5,18 +5,12 @@
              xmlns:vm="clr-namespace:Vii.ViewModels"
              Title="" BackgroundColor="Black">
 
-    <!--<ContentPage.BindingContext>
-        <vm:ReservationViewModel />
-    </ContentPage.BindingContext>-->
     <ContentPage.Content>
         
     <ScrollView BackgroundColor="Black">  
         
         <StackLayout VerticalOptions="Start" HorizontalOptions="Start">
             
-            <ImageButton Source="home_white" VerticalOptions="Start" HorizontalOptions="Start" Margin="0,0,0,0"  Padding="0,0,0,0" WidthRequest="30" HeightRequest="25"
-                         Clicked="HomeClick"></ImageButton>
-               
                 <Frame BorderColor="#b29476" BackgroundColor="black" Margin="5,5,5,5" Padding="0,0,0,0">
                 
                 <StackLayout VerticalOptions="CenterAndExpand" Padding="7">
@@ -25,39 +19,21 @@
                     <!--<Entry Placeholder="Email"></Entry>
         <Entry Placeholder="Password" IsPassword="True"></Entry>
         <Entry Placeholder="Confirm Password" IsPassword="True"></Entry>-->
-                    <Label Text="Booking Date And Time" FontSize="16" TextDecorations="Underline" TextColor="white"></Label>
                     <StackLayout>
-                        <Label Text="From" FontSize="14" TextColor="WhiteSmoke"></Label>
-                        
-                        <vm:DateTimePicker2 x:Name="FromDate" BackgroundColor="#b578"></vm:DateTimePicker2>
+                        <Label Text="Date" FontSize="14" TextColor="WhiteSmoke"></Label>
+                            <!--<DatePicker x:Name="FromDate" BackgroundColor="White" TextColor="Black"
+                                        ></DatePicker>-->
+                            
+                            <vm:DateTimePicker2 x:Name="FromDate" BackgroundColor="White"></vm:DateTimePicker2>
                     </StackLayout>
                     <StackLayout>
-                        <Label Text="To" FontSize="14" TextColor="WhiteSmoke"></Label>
-                        <vm:DateTimePicker2 x:Name="ToDate" BackgroundColor="#b578"></vm:DateTimePicker2>
+                        <Label Text="Time" FontSize="14" TextColor="WhiteSmoke"></Label>
+                            <!--<TimePicker x:Name="timepick" BackgroundColor="White" TextColor="Black"
+                                       ></TimePicker>-->
+
+                            <vm:TimeViewModel x:Name="timepick" BackgroundColor="White"></vm:TimeViewModel>
                     </StackLayout>
-
-                    <StackLayout>
-                        <Picker x:Name="Venue" TextColor="White"
-        Title="Select Venue" 
-        TitleColor="White">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}">
-                                    <x:String>Venue-1</x:String>
-                                    <x:String>Venue-2</x:String>
-
-                                </x:Array>
-                            </Picker.ItemsSource>
-                        </Picker>
-
-                        <!--<Picker ItemsSource="{x:Binding VenueViewDetailsModel.VenueTest}"
-                                ItemDisplayBinding="{Binding DisplayMember}" 
-                                SelectedItem="{Binding VenueViewDetailsModel.VenueTest}"
-                                x:Name="thePicker" />-->
-
-                    </StackLayout>
-
-
-
+                     
                     <StackLayout Orientation="Horizontal" Spacing="50">
                         <Label Text="Do You Want Shisha?" TextColor="White"></Label>
                         <Switch IsToggled="False" x:Name="shisha" BackgroundColor="#b578" OnColor="OrangeRed"></Switch>
@@ -284,22 +260,35 @@
                             </Frame>
 
                         </ContentView>
+                    
                         <!---dsf-->
+                   
                     <StackLayout Orientation="Horizontal" Spacing="30">
                         <Label Text="Reserved Table" TextColor="White"/>
-                        <!--<Entry x:Name="tableDetails" WidthRequest="250"     
-               FontSize="Medium" BackgroundColor="#b578" TextColor="White"
-               HorizontalOptions="Start" 
-               VerticalOptions="CenterAndExpand" />-->
+                       
                             <Label x:Name="tableDetails" WidthRequest="250" FontSize="Medium" TextColor="White"/>
                         </StackLayout>
-                    <StackLayout>
-                        <Editor Placeholder="Special Request Notes" PlaceholderColor="White" TextColor="White" x:Name="SpecialNotes" BackgroundColor="#b578" HeightRequest="100" />
-
+                        <StackLayout Orientation="Horizontal" Spacing="30">
+                            <Label Text="Venue" TextColor="White"></Label>
+                            <Label x:Name="Venue" WidthRequest="250" TextColor="White"></Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="50">
+                            
+                            <Picker x:Name="NumberofPerson" Title="Number Of Person" ItemsSource="{Binding Person}" TitleColor="White" TextColor="White" WidthRequest="350"></Picker>
+                        </StackLayout>
+                        <StackLayout>
+                        <Editor Placeholder="Special Request Notes" PlaceholderColor="Black" TextColor="Black" x:Name="SpecialNotes" BackgroundColor="White" HeightRequest="100" />
                     </StackLayout>
+                        <!--===Display Alert===-->
+                        <ContentView x:Name="DisplayAlert" IsVisible="false"
+                            AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                            <StackLayout>
+                                <Label Style="{StaticResource stackStyle}" Text="Please be informed that filling and submitting the form above does not guarantee your reservation at Vii. All bookings must be confirmed by our Reservations Team. The validity of reservations depends on the venue's seating capacity."></Label>
 
-                    <Button Text="Reserve" Clicked="Button_Clicked" Style="{StaticResource buttonStyle}" CornerRadius="25" Margin="0,10,0,10"></Button>
-
+                            </StackLayout>
+                        </ContentView>
+                        <!--=========-->
+                        <Button Text="Reserve" Clicked="Button_Clicked" Style="{StaticResource buttonStyle}" CornerRadius="25" Margin="0,10,0,10"></Button>
 
                 </StackLayout>
             </Frame>

@@ -29,9 +29,9 @@
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>-->
-                        <Button Text="LOGIN" HorizontalOptions="Center" Style="{StaticResource buttonStyle}" 
+                        <Button Text="LOGIN" HorizontalOptions="CenterAndExpand" Style="{StaticResource buttonStyle}" 
                                 Command="{Binding   LoginCommand}"
-                                CornerRadius="25"/>
+                                />
                     </StackLayout>
 
                 </Frame>

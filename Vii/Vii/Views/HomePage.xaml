@@ -77,7 +77,7 @@
 
                             <Label TextColor="White" FontSize="Subtitle" Text="Todays Red Room &amp; Secret Garden " HorizontalTextAlignment="Center"   />
                         
-                        <Image  Source="{Binding Pic}" Aspect="AspectFill"  HeightRequest="400"  WidthRequest="400" />
+                        <Image  Source="{Binding Pic}" Aspect="AspectFill"  HeightRequest="400"  WidthRequest="300" />
 
                         <Label Text="{Binding Caption}"   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="White">
 

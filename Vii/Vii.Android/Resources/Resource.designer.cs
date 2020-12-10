@@ -10620,6 +10620,9 @@ namespace Vii.Droid
 			// aapt resource value: 0x7F0700C8
 			public const int hotel_white = 2131165384;
 			
+			// aapt resource value: 0x7F0700CC
+			public const int icon_close = 2131165388;
+			
 			// aapt resource value: 0x7F0700C9
 			public const int ic_mtrl_chip_checked_black = 2131165385;
 			
@@ -10629,185 +10632,185 @@ namespace Vii.Droid
 			// aapt resource value: 0x7F0700CB
 			public const int ic_mtrl_chip_close_circle = 2131165387;
 			
-			// aapt resource value: 0x7F0700CC
-			public const int IG_white = 2131165388;
-			
 			// aapt resource value: 0x7F0700CD
-			public const int Insta = 2131165389;
+			public const int IG_white = 2131165389;
 			
 			// aapt resource value: 0x7F0700CE
-			public const int mail_white = 2131165390;
+			public const int Insta = 2131165390;
 			
 			// aapt resource value: 0x7F0700CF
-			public const int MAWLAY = 2131165391;
+			public const int mail_white = 2131165391;
 			
 			// aapt resource value: 0x7F0700D0
-			public const int menu_redmadness = 2131165392;
+			public const int MAWLAY = 2131165392;
 			
 			// aapt resource value: 0x7F0700D1
-			public const int menu_takeoverthursday = 2131165393;
+			public const int menu_redmadness = 2131165393;
 			
 			// aapt resource value: 0x7F0700D2
-			public const int menu_uptown_monday = 2131165394;
+			public const int menu_takeoverthursday = 2131165394;
 			
 			// aapt resource value: 0x7F0700D3
-			public const int merged_logos = 2131165395;
+			public const int menu_uptown_monday = 2131165395;
 			
 			// aapt resource value: 0x7F0700D4
-			public const int mobile_white = 2131165396;
+			public const int merged_logos = 2131165396;
 			
 			// aapt resource value: 0x7F0700D5
-			public const int MONDAY = 2131165397;
+			public const int mobile_white = 2131165397;
 			
 			// aapt resource value: 0x7F0700D6
-			public const int mtrl_snackbar_background = 2131165398;
+			public const int MONDAY = 2131165398;
 			
 			// aapt resource value: 0x7F0700D7
-			public const int mtrl_tabs_default_indicator = 2131165399;
+			public const int mtrl_snackbar_background = 2131165399;
 			
 			// aapt resource value: 0x7F0700D8
-			public const int navigation_empty_icon = 2131165400;
+			public const int mtrl_tabs_default_indicator = 2131165400;
 			
 			// aapt resource value: 0x7F0700D9
-			public const int Next = 2131165401;
+			public const int navigation_empty_icon = 2131165401;
 			
 			// aapt resource value: 0x7F0700DA
-			public const int notification_action_background = 2131165402;
+			public const int Next = 2131165402;
 			
 			// aapt resource value: 0x7F0700DB
-			public const int notification_bg = 2131165403;
+			public const int notification_action_background = 2131165403;
 			
 			// aapt resource value: 0x7F0700DC
-			public const int notification_bg_low = 2131165404;
+			public const int notification_bg = 2131165404;
 			
 			// aapt resource value: 0x7F0700DD
-			public const int notification_bg_low_normal = 2131165405;
+			public const int notification_bg_low = 2131165405;
 			
 			// aapt resource value: 0x7F0700DE
-			public const int notification_bg_low_pressed = 2131165406;
+			public const int notification_bg_low_normal = 2131165406;
 			
 			// aapt resource value: 0x7F0700DF
-			public const int notification_bg_normal = 2131165407;
+			public const int notification_bg_low_pressed = 2131165407;
 			
 			// aapt resource value: 0x7F0700E0
-			public const int notification_bg_normal_pressed = 2131165408;
+			public const int notification_bg_normal = 2131165408;
 			
 			// aapt resource value: 0x7F0700E1
-			public const int notification_icon_background = 2131165409;
+			public const int notification_bg_normal_pressed = 2131165409;
 			
 			// aapt resource value: 0x7F0700E2
-			public const int notification_template_icon_bg = 2131165410;
+			public const int notification_icon_background = 2131165410;
 			
 			// aapt resource value: 0x7F0700E3
-			public const int notification_template_icon_low_bg = 2131165411;
+			public const int notification_template_icon_bg = 2131165411;
 			
 			// aapt resource value: 0x7F0700E4
-			public const int notification_tile_bg = 2131165412;
+			public const int notification_template_icon_low_bg = 2131165412;
 			
 			// aapt resource value: 0x7F0700E5
-			public const int notify_panel_notification_icon_bg = 2131165413;
+			public const int notification_tile_bg = 2131165413;
 			
 			// aapt resource value: 0x7F0700E6
-			public const int phone_white = 2131165414;
+			public const int notify_panel_notification_icon_bg = 2131165414;
 			
 			// aapt resource value: 0x7F0700E7
-			public const int pic = 2131165415;
+			public const int phone_white = 2131165415;
 			
 			// aapt resource value: 0x7F0700E8
-			public const int picentrance = 2131165416;
+			public const int pic = 2131165416;
 			
 			// aapt resource value: 0x7F0700E9
-			public const int Prev = 2131165417;
-			
-			// aapt resource value: 0x7F0700EB
-			public const int RedMadness = 2131165419;
-			
-			// aapt resource value: 0x7F0700EC
-			public const int RedRoom = 2131165420;
-			
-			// aapt resource value: 0x7F0700ED
-			public const int RedRoom1 = 2131165421;
-			
-			// aapt resource value: 0x7F0700EE
-			public const int REDROOMLOGO = 2131165422;
+			public const int picentrance = 2131165417;
 			
 			// aapt resource value: 0x7F0700EA
-			public const int Red_Room = 2131165418;
+			public const int Prev = 2131165418;
+			
+			// aapt resource value: 0x7F0700EC
+			public const int RedMadness = 2131165420;
+			
+			// aapt resource value: 0x7F0700ED
+			public const int RedRoom = 2131165421;
+			
+			// aapt resource value: 0x7F0700EE
+			public const int RedRoom1 = 2131165422;
 			
 			// aapt resource value: 0x7F0700EF
-			public const int reservations_white = 2131165423;
+			public const int REDROOMLOGO = 2131165423;
+			
+			// aapt resource value: 0x7F0700EB
+			public const int Red_Room = 2131165419;
 			
 			// aapt resource value: 0x7F0700F0
-			public const int Rozay = 2131165424;
+			public const int reservations_white = 2131165424;
 			
 			// aapt resource value: 0x7F0700F1
-			public const int SATURDAY = 2131165425;
+			public const int Rozay = 2131165425;
 			
 			// aapt resource value: 0x7F0700F2
-			public const int SATURDAY1 = 2131165426;
+			public const int SATURDAY = 2131165426;
 			
 			// aapt resource value: 0x7F0700F3
-			public const int SECRECTGARDENLOGO = 2131165427;
-			
-			// aapt resource value: 0x7F0700F5
-			public const int SecretGarden = 2131165429;
-			
-			// aapt resource value: 0x7F0700F6
-			public const int SecretSunday = 2131165430;
+			public const int SATURDAY1 = 2131165427;
 			
 			// aapt resource value: 0x7F0700F4
-			public const int Secret_Garden = 2131165428;
+			public const int SECRECTGARDENLOGO = 2131165428;
+			
+			// aapt resource value: 0x7F0700F6
+			public const int SecretGarden = 2131165430;
 			
 			// aapt resource value: 0x7F0700F7
-			public const int serviceroom = 2131165431;
+			public const int SecretSunday = 2131165431;
+			
+			// aapt resource value: 0x7F0700F5
+			public const int Secret_Garden = 2131165429;
 			
 			// aapt resource value: 0x7F0700F8
-			public const int SoulJuice = 2131165432;
+			public const int serviceroom = 2131165432;
 			
 			// aapt resource value: 0x7F0700F9
-			public const int soundcloud = 2131165433;
+			public const int SoulJuice = 2131165433;
 			
 			// aapt resource value: 0x7F0700FA
-			public const int SUNDAY = 2131165434;
+			public const int soundcloud = 2131165434;
 			
 			// aapt resource value: 0x7F0700FB
-			public const int sushibar = 2131165435;
+			public const int SUNDAY = 2131165435;
 			
 			// aapt resource value: 0x7F0700FC
-			public const int TakeoverThursdays = 2131165436;
+			public const int sushibar = 2131165436;
 			
 			// aapt resource value: 0x7F0700FD
-			public const int tooltip_frame_dark = 2131165437;
+			public const int TakeoverThursdays = 2131165437;
 			
 			// aapt resource value: 0x7F0700FE
-			public const int tooltip_frame_light = 2131165438;
+			public const int tooltip_frame_dark = 2131165438;
 			
 			// aapt resource value: 0x7F0700FF
-			public const int TUESDAY = 2131165439;
+			public const int tooltip_frame_light = 2131165439;
 			
 			// aapt resource value: 0x7F070100
-			public const int Up = 2131165440;
+			public const int TUESDAY = 2131165440;
 			
 			// aapt resource value: 0x7F070101
-			public const int UptownMonday = 2131165441;
+			public const int Up = 2131165441;
 			
 			// aapt resource value: 0x7F070102
-			public const int vii_logo = 2131165442;
+			public const int UptownMonday = 2131165442;
 			
 			// aapt resource value: 0x7F070103
-			public const int WEDNESDAY = 2131165443;
+			public const int vii_logo = 2131165443;
 			
 			// aapt resource value: 0x7F070104
-			public const int white_map = 2131165444;
+			public const int WEDNESDAY = 2131165444;
 			
 			// aapt resource value: 0x7F070105
-			public const int xamarin_logo = 2131165445;
+			public const int white_map = 2131165445;
 			
 			// aapt resource value: 0x7F070106
-			public const int Youtube = 2131165446;
+			public const int xamarin_logo = 2131165446;
 			
 			// aapt resource value: 0x7F070107
-			public const int youtube_square_brands = 2131165447;
+			public const int Youtube = 2131165447;
+			
+			// aapt resource value: 0x7F070108
+			public const int youtube_square_brands = 2131165448;
 			
 			static Drawable()
 			{

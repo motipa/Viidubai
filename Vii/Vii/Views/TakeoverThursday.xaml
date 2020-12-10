@@ -4,6 +4,6 @@
              x:Class="Vii.Views.TakeoverThursday"
              BackgroundColor="Black">
     <ContentPage.Content>
-        <Image Source="menu_takeoverthursday" Aspect="AspectFit"/>
+        <Image Source="menu_takeoverthursday.jpg" Aspect="AspectFit"/>
     </ContentPage.Content>
 </ContentPage>

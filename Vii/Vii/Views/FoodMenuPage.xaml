@@ -10,7 +10,7 @@
     <ContentPage.Content>
         <ScrollView BackgroundColor="Black">
             <StackLayout>
-                <Image Source="food_image5.png" Aspect="AspectFill" Margin="0,-30,0,0"/>
+                <Image Source="food_image5.jpg" Aspect="AspectFill" Margin="0,-30,0,0"/>
                 <Frame BackgroundColor="Black" Margin="0,-80,0,0">
                     <StackLayout>
                         <Label Text="Vii Dubai has grown to become one of the most popular exotic nightlife spots of Dubai. Not just for the wild vibes, we're passionate about food as well. Our dishes and drinks have been inspired by different cultures all over the globe that aim to tingle your every taste bud. We have curated a special menu filled with dishes full of flavor &amp; piquancy." 
@@ -19,133 +19,133 @@
                                HorizontalTextAlignment="Center" TextColor="White" Padding="5,20,5,20" FontFamily="Cooper Hewitt" FontSize="13"/>
                     </StackLayout>
                 </Frame>
-                <Image Source="food_image2.png" Aspect="AspectFill" Margin="0,-20,0,0"/>
+                <Image Source="food_image2.jpg" Aspect="AspectFill" Margin="0,-20,0,0"/>
                 <Frame BackgroundColor="Black" BorderColor="#b29476" Margin="0,-40,0,0">
                     <StackLayout>
                         <Label Text="SALADS" TextColor="#b29476" FontSize="Title" Padding="20,10,20,10" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Cooper Hewitt"/>
                         <Label Text="BURRATA SALAD" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Mix of luscious burrata with freshly cut lettuce, olives, radish, cherry tomatoes &amp; cucumber slices." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Mix of luscious burrata with freshly cut lettuce, olives, radish, cherry tomatoes &amp; cucumber slices." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="GARDEN QUINOA SALAD" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Quinoa combined with freshly cut lettuce, ripe avocado, bell peppers, sliced olives, cherry tomatoes. Topped with flavorful feta &amp; parmesan cheese crumbles" HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Quinoa combined with freshly cut lettuce, ripe avocado, bell peppers, sliced olives, cherry tomatoes. Topped with flavorful feta &amp; parmesan cheese crumbles" HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                     </StackLayout>
                 </Frame>
-                <Image Source="food_image4.png" Aspect="AspectFill"/>
+                <Image Source="food_image4.jpg" Aspect="AspectFill"/>
                 <Frame BackgroundColor="Black" BorderColor="#b29476" Margin="0,-40,0,0">
                     <StackLayout>
                         <Label Text="APPETIZERS" TextColor="#b29476" FontSize="Title" Padding="20,10,20,10" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Cooper Hewitt"/>
                         <Label Text="PANKO COATED JUMBO SHRIMPS" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Fried jumbo shrimps coated in Panko bread crumbs are cooked until golden &amp; crispy.Served with fresh homemade thousand island dressing." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Fried jumbo shrimps coated in Panko bread crumbs are cooked until golden &amp; crispy.Served with fresh homemade thousand island dressing." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="SPINACH FALAFEL" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Fried spinach falafel dipped in creamy beetroot hummus &amp; topped with spicy red pepper salsa." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Fried spinach falafel dipped in creamy beetroot hummus &amp; topped with spicy red pepper salsa." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="HOMEMADE BBQ CHICKEN SKEWERS" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Marinated chicken breast blended with tangy barbeque seasonings stacked on a skewer. Topped with grilled baby spinach &amp; parmesan sour cream." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Marinated chicken breast blended with tangy barbeque seasonings stacked on a skewer. Topped with grilled baby spinach &amp; parmesan sour cream." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                     </StackLayout>
                 </Frame>
-                <Image Source="food_image3.png" Aspect="AspectFill"/>
+                <Image Source="food_image3.jpg" Aspect="AspectFill"/>
                 <Frame BackgroundColor="Black" BorderColor="#b29476" Margin="0,-50,0,0">
                     <StackLayout>
                         <Label Text="SPRING ROLLS" TextColor="#b29476" FontSize="Title" Padding="20,10,20,10" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Cooper Hewitt"/>
                         <Label Text="VEGETARIAN SPRING ROLLS" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Authentic spring rolls filled with a variety of freshly chopped broccoli, carrots, cabbage, walnuts, mushrooms &amp; creamy feta cheese. Served with a traditional Asian salad &amp; hoi sweet-sour sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Authentic spring rolls filled with a variety of freshly chopped broccoli, carrots, cabbage, walnuts, mushrooms &amp; creamy feta cheese. Served with a traditional Asian salad &amp; hoi sweet-sour sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="CRISPY DUCK SPRING ROLLS" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Crispy spring rolls filled with shredded duck meat. Served with an authentic Asian salad &amp; hoi sweet-sour sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Crispy spring rolls filled with shredded duck meat. Served with an authentic Asian salad &amp; hoi sweet-sour sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                     </StackLayout>
                 </Frame>
-                <Image Source="food_image5.png" Aspect="AspectFill"/>
+                <Image Source="food_image5.jpg" Aspect="AspectFill"/>
                 <Frame BackgroundColor="Black" BorderColor="#b29476" Margin="0,-50,0,0">
                     <StackLayout>
                         <Label Text="SLIDERS" TextColor="#b29476" FontSize="Title" Padding="20,10,20,10" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Cooper Hewitt"/>
                         <Label Text="BEEF TENDERLOIN SLIDERS" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Scrumptious seasoned beef tenderloin slices topped with creamy double cheese melted sauce, grilled onions &amp; tomatoes. Wrapped in between two golden freshly-baked slider buns." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Scrumptious seasoned beef tenderloin slices topped with creamy double cheese melted sauce, grilled onions &amp; tomatoes. Wrapped in between two golden freshly-baked slider buns." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="CHICKEN SLIDERS" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Scrumptious seasoned grilled chicken slices topped with creamy double cheese melted sauce, grilled onions &amp; tomatoes. Wrapped in between two golden freshly-baked slider buns." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Scrumptious seasoned grilled chicken slices topped with creamy double cheese melted sauce, grilled onions &amp; tomatoes. Wrapped in between two golden freshly-baked slider buns." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                     </StackLayout>
                 </Frame>
-                <Image Source="food_image7.png" Aspect="AspectFill"/>
+                <Image Source="food_image7.jpg" Aspect="AspectFill"/>
                 <Frame BackgroundColor="Black" BorderColor="#b29476" Margin="0,-50,0,0">
                     <StackLayout>
                         <Label Text="MAIN COURSES" TextColor="#b29476" FontSize="Title" Padding="20,10,20,10" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Cooper Hewitt"/>
                         <Label Text="PAN GRILLED SALMON" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Pan grilled salmon cooked in garlic butter layered with sautéed baby spinach and asparagus. Served with a side of creamy mashed potatoes with some zesty lemon butter garlic sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Pan grilled salmon cooked in garlic butter layered with sautéed baby spinach and asparagus. Served with a side of creamy mashed potatoes with some zesty lemon butter garlic sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="SPINACH RICOTTA CANNELLONI" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Oven baked juicy spinach, mushrooms, sun-dried tomatoes and ricotta filling layered with the cannelloni pasta combined with a tangy tomato sauce &amp; basil." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Oven baked juicy spinach, mushrooms, sun-dried tomatoes and ricotta filling layered with the cannelloni pasta combined with a tangy tomato sauce &amp; basil." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="PAN-SEARED SEA BASS WITH MUSTARD BEURRE BLANC" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Grilled Marinated Sea Bass fillet served with lettuce salad, herb rice. With a side of zesty butter garlic lemon mustard sauce on the side." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Grilled Marinated Sea Bass fillet served with lettuce salad, herb rice. With a side of zesty butter garlic lemon mustard sauce on the side." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="PESTO GRILLED CHICKEN" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Grilled marinated pesto chicken breast served with sautéed baby asparagus, mashed potatoes, cherry tomatoes. With a side of mustard seed sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Grilled marinated pesto chicken breast served with sautéed baby asparagus, mashed potatoes, cherry tomatoes. With a side of mustard seed sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="SPAGHETTI CHICKEN ROULADE" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Grilled Chicken Roulade mixed with spinach, mushroom ricotta cheese, black olives, parmesan cheese, combined with a tangy tomato-based sauce with boiled spaghetti." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Grilled Chicken Roulade mixed with spinach, mushroom ricotta cheese, black olives, parmesan cheese, combined with a tangy tomato-based sauce with boiled spaghetti." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="PERI-PERI TIGER PRAWNS" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Jumbo grilled marinated prawns served with lettuce salad, herb rice. With a side of  peri peri spicy sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Jumbo grilled marinated prawns served with lettuce salad, herb rice. With a side of  peri peri spicy sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="SHRIMP AND GRITS" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Butter flavored couscous with saffron bell peppers, sautéed baby spinach and grilled shrimps." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Butter flavored couscous with saffron bell peppers, sautéed baby spinach and grilled shrimps." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="BBQ CHAR SIU CHICKEN" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="BBQ Char Siu Chicken breast marinated and served with lettuce salad, jalapeños, mushroom rice and tangy char siu sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="BBQ Char Siu Chicken breast marinated and served with lettuce salad, jalapeños, mushroom rice and tangy char siu sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                     </StackLayout>
                 </Frame>
-                <Image Source="food_image9.png" Aspect="AspectFill"/>
+                <Image Source="food_image9.jpg" Aspect="AspectFill"/>
                 <Frame BackgroundColor="Black" BorderColor="#b29476" Margin="0,-50,0,0">
                     <StackLayout>
                         <Label Text="RISOTTO" TextColor="#b29476" FontSize="Title" Padding="20,10,20,10" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Cooper Hewitt"/>
                         <Label Text="WILD MUSHROOM RISOTTO" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Risotto cooked with wild enoki mushrooms topped with crispy parmesan cheese and fresh thyme." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Risotto cooked with wild enoki mushrooms topped with crispy parmesan cheese and fresh thyme." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="MUSHROOM &amp; ASPARAGUS RISOTTO" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Risotto made with enoki mushrooms and asparagus and topped with crispy parmesan cheese and fresh thyme." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Risotto made with enoki mushrooms and asparagus and topped with crispy parmesan cheese and fresh thyme." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                     </StackLayout>
                 </Frame>
-                <Image Source="food_image10.png" Aspect="AspectFill"/>
+                <Image Source="food_image10.jpg" Aspect="AspectFill"/>
                 <Frame BackgroundColor="Black" BorderColor="#b29476" Margin="0,-50,0,0">
                     <StackLayout>
                         <Label Text="SUSHI" TextColor="#b29476" FontSize="Title" Padding="20,10,20,10" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Cooper Hewitt"/>
                         <Label Text="HOSOMAKI ROLLS" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
                         <Label Text="AVOCADO" TextColor="White" FontSize="Caption" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Vegetarian sushi rolled with white sushi rice, sliced avocado, pickled ginger, wasabi and lemon wrapped in a nori sheet. Served with Japanese soy sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Vegetarian sushi rolled with white sushi rice, sliced avocado, pickled ginger, wasabi and lemon wrapped in a nori sheet. Served with Japanese soy sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="SALMON-SAKE" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Rolled sushi rice with a layer of marinated salmon slice with pickled ginger, wasabi and lemon wrapped in a nori sheet. Served with Japanese soy sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Rolled sushi rice with a layer of marinated salmon slice with pickled ginger, wasabi and lemon wrapped in a nori sheet. Served with Japanese soy sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="TUNA-MAGURO" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Rolled sushi rice with a layer of freshly sliced salmon with pickled ginger, wasabi and lemon wrapped in a nori sheet. Served with Japanese soy sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Rolled sushi rice with a layer of freshly sliced salmon with pickled ginger, wasabi and lemon wrapped in a nori sheet. Served with Japanese soy sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="CRAB-KANI" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Rolled sushi rice with a layer of crab slice with pickled ginger, wasabi and lemon wrapped in a nori sheet. Served with Japanese soy sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Rolled sushi rice with a layer of crab slice with pickled ginger, wasabi and lemon wrapped in a nori sheet. Served with Japanese soy sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                     </StackLayout>
                 </Frame>
-                <Image Source="food_image6.png" Aspect="AspectFill"/>
+                <Image Source="food_image6.jpg" Aspect="AspectFill"/>
                 <Frame BackgroundColor="Black" BorderColor="#b29476" Margin="0,-50,0,0">
                     <StackLayout>
                         <Label Text="SASHIMI" TextColor="#b29476" FontSize="Title" Padding="20,10,20,10" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Cooper Hewitt"/>
                         <Label Text="SALMON-SAKE" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Fresh slice of Salmon served with pickled ginger, wasabi, and lemon and Japanese soy sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Fresh slice of Salmon served with pickled ginger, wasabi, and lemon and Japanese soy sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="TUNA-MAGURO" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Fresh slice of Tuna served with pickled ginger, wasabi and lemon and Japanese soy sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Fresh slice of Tuna served with pickled ginger, wasabi and lemon and Japanese soy sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="EEL-UNAGI" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Fresh Slice of Eel topped with sesame seeds and served with pickled ginger, wasabi and lemon and Japanese soy sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Fresh Slice of Eel topped with sesame seeds and served with pickled ginger, wasabi and lemon and Japanese soy sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="PRAWN-EBI" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Fresh slice of Prawn served with pickled ginger, wasabi and lemon and Japanese soy sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Fresh slice of Prawn served with pickled ginger, wasabi and lemon and Japanese soy sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                     </StackLayout>
                 </Frame>
-                <Image Source="food_image15.png" Aspect="AspectFill"/>
+                <Image Source="food_image15.jpg" Aspect="AspectFill"/>
                 <Frame BackgroundColor="Black" BorderColor="#b29476" Margin="0,-50,0,0">
                     <StackLayout>
                         <Label Text="NIGIRI" TextColor="#b29476" FontSize="Title" Padding="20,10,20,10" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Cooper Hewitt"/>
                         <Label Text="SALMON-SAKE" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Slice of fresh Salmon combined with a layer of white rice. Served with pickled ginger, wasabi and lemon and Japanese soy sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Slice of fresh Salmon combined with a layer of white rice. Served with pickled ginger, wasabi and lemon and Japanese soy sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="TUNA-MAGURO" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Slice of fresh Tuna combined with a layer of white rice. Served with pickled ginger, wasabi and lemon and Japanese soy sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Slice of fresh Tuna combined with a layer of white rice. Served with pickled ginger, wasabi and lemon and Japanese soy sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="EEL-UNAGI" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Slice of fresh Eel combined with a layer of white rice. Served with pickled ginger, wasabi and lemon and Japanese soy sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Slice of fresh Eel combined with a layer of white rice. Served with pickled ginger, wasabi and lemon and Japanese soy sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="PRAWN-EBI" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Slice of fresh Prawn combined with a layer of white rice. Served with pickled ginger, wasabi and lemon, and Japanese soy sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Slice of fresh Prawn combined with a layer of white rice. Served with pickled ginger, wasabi and lemon, and Japanese soy sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                     </StackLayout>
                 </Frame>
-                <Image Source="food_image1.png" Aspect="AspectFill"/>
+                <Image Source="food_image1.jpg" Aspect="AspectFill"/>
                 <Frame BackgroundColor="Black" BorderColor="#b29476" Margin="0,-50,0,0">
                     <StackLayout>
                         <Label Text="SPECIAL ROLLS" TextColor="#b29476" FontSize="Title" Padding="20,10,20,10" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Cooper Hewitt"/>
                         <Label Text="CALIFORNIA ORANGE" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Fried Sushi rolled with rice, avocado, crab stick, cucumber and tobiko fish eggs. Served with Japanese soy sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Fried Sushi rolled with rice, avocado, crab stick, cucumber and tobiko fish eggs. Served with Japanese soy sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="VOLCANO MAKI ROLL" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Fried Maki sushi rolled with sushi rice with tuna, cucumber, salmon and crab stick. Served with Japanese soy sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Fried Maki sushi rolled with sushi rice with tuna, cucumber, salmon and crab stick. Served with Japanese soy sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="VEGETARIAN ROLL" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
-                        <Label Text="Vegetarian sushi rice rolled with asparagus, cucumber, carrot, avocado, coated with sesame seeds and served with Japanese soy sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
+                        <Label Text="Vegetarian sushi rice rolled with asparagus, cucumber, carrot, avocado, coated with sesame seeds and served with Japanese soy sauce." HorizontalTextAlignment="Center" FontSize="13" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="TROPICAL SEAFOOD ROLL" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
                         <Label Text="Fried sushi rolled with slices of mango, prawn, crab stick and a layer of Philadelphia cheese and herbs. Served with Japanese soy sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                         <Label Text="VII SPECIAL" TextColor="#b29476" FontSize="Subtitle" HorizontalTextAlignment="Center" FontFamily="Cooper Hewitt"/>
@@ -164,7 +164,7 @@
                         <Label Text="Sushi rolled with rice, avocado, Philadelphia and tobiko fish eggs. Served with Japanese soy sauce." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                     </StackLayout>
                 </Frame>
-                <Image Source="food_image12.png" Aspect="AspectFill"/>
+                <Image Source="food_image12.jpg" Aspect="AspectFill"/>
                 <Frame BackgroundColor="Black" BorderColor="#b29476" Margin="0,-50,0,0">
                     <StackLayout>
                         <Label Text="PLATTERS" TextColor="#b29476" FontSize="Title" Padding="20,10,20,10" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Cooper Hewitt"/>
@@ -174,7 +174,7 @@
                         <Label Text="A juicy mix of sliced flavorful seasonal fruits - mangoes, pineapples, pears, jicama and melon." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                     </StackLayout>
                 </Frame>
-                <Image Source="food_image13.png" Aspect="AspectFill"/>
+                <Image Source="food_image13.jpg" Aspect="AspectFill"/>
                 <Frame BackgroundColor="Black" BorderColor="#b29476" Margin="0,-50,0,0">
                     <StackLayout>
                         <Label Text="DESSERTS" TextColor="#b29476" FontSize="Title" Padding="20,10,20,10" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Cooper Hewitt"/>
@@ -190,7 +190,7 @@
                         <Label Text="Sweet creamy tartlet made with flavorful ripe berries and topped with juicy raspberries." HorizontalTextAlignment="Center" TextColor="White" Padding="5,5,5,5" FontFamily="Cooper Hewitt"/>
                     </StackLayout>
                 </Frame>
-                <Image Source="food_image14.png" Aspect="AspectFill"/>
+                <Image Source="food_image14.jpg" Aspect="AspectFill"/>
                 <!--<ImageButton Source="takeover_thursday.pdf" Style="{StaticResource buttonStyle}" Clicked="takeoverthursday_Button_Clicked"/>-->
             </StackLayout>
         </ScrollView>

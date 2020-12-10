@@ -24,29 +24,123 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Image Grid.Row="0" Grid.Column="0" Source="gallery_image1.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="0" Grid.Column="1" Source="gallery_image2.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="0" Grid.Column="2" Source="gallery_image3.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="0" Grid.Column="3" Source="gallery_image4.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="1" Grid.Column="0" Source="gallery_image5.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="1" Grid.Column="1" Source="gallery_image6.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="1" Grid.Column="2" Source="gallery_image7.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="1" Grid.Column="3" Source="gallery_image8.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="2" Grid.Column="0" Source="gallery_image9.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="2" Grid.Column="1" Source="gallery_image10.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="2" Grid.Column="2" Source="gallery_image11.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="2" Grid.Column="3" Source="gallery_image12.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="3" Grid.Column="0" Source="gallery_image13.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="3" Grid.Column="1" Source="gallery_image14.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="3" Grid.Column="2" Source="gallery_image15.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="3" Grid.Column="3" Source="gallery_image16.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="4" Grid.Column="0" Source="gallery_image17.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="4" Grid.Column="1" Source="gallery_image18.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="4" Grid.Column="2" Source="gallery_image19.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="4" Grid.Column="3" Source="gallery_image20.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="5" Grid.Column="0" Source="gallery_image21.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="5" Grid.Column="1" Source="gallery_image22.jpg" Aspect="AspectFill"/>
-                <Image Grid.Row="5" Grid.Column="2" Source="gallery_image23.jpg" Aspect="AspectFill"/>
+                <Image Grid.Row="0" Grid.Column="0" Source="gallery_image1.jpg" Aspect="AspectFill" x:Name="glryimg1">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture1" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image Grid.Row="0" Grid.Column="1" Source="gallery_image2.jpg" Aspect="AspectFill" x:Name="glryimg2">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture2" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image Grid.Row="0" Grid.Column="2" Source="gallery_image3.jpg" Aspect="AspectFill" x:Name="glryimg3">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture3" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="0" Grid.Column="3" Source="gallery_image4.jpg" Aspect="AspectFill" x:Name="glryimg4">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture4" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="1" Grid.Column="0" Source="gallery_image5.jpg" Aspect="AspectFill" x:Name="glryimg5">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture5" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="1" Grid.Column="1" Source="gallery_image6.jpg" Aspect="AspectFill" x:Name="glryimg6">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture6" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="1" Grid.Column="2" Source="gallery_image7.jpg" Aspect="AspectFill" x:Name="glryimg7">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture7" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="1" Grid.Column="3" Source="gallery_image8.jpg" Aspect="AspectFill" x:Name="glryimg8">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture8" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="2" Grid.Column="0" Source="gallery_image9.jpg" Aspect="AspectFill" x:Name="glryimg9">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture9" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="2" Grid.Column="1" Source="gallery_image10.jpg" Aspect="AspectFill" x:Name="glryimg10">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture10" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="2" Grid.Column="2" Source="gallery_image11.jpg" Aspect="AspectFill" x:Name="glryimg11">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture11" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="2" Grid.Column="3" Source="gallery_image12.jpg" Aspect="AspectFill" x:Name="glryimg12">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture12" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="3" Grid.Column="0" Source="gallery_image13.jpg" Aspect="AspectFill" x:Name="glryimg13">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture13" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="3" Grid.Column="1" Source="gallery_image14.jpg" Aspect="AspectFill" x:Name="glryimg14">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture14" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="3" Grid.Column="2" Source="gallery_image15.jpg" Aspect="AspectFill" x:Name="glryimg15">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture15" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="3" Grid.Column="3" Source="gallery_image16.jpg" Aspect="AspectFill" x:Name="glryimg16">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture16" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="4" Grid.Column="0" Source="gallery_image17.jpg" Aspect="AspectFill" x:Name="glryimg17">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture17" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="4" Grid.Column="1" Source="gallery_image18.jpg" Aspect="AspectFill" x:Name="glryimg18">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture18" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="4" Grid.Column="2" Source="gallery_image19.jpg" Aspect="AspectFill" x:Name="glryimg19">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture19" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="4" Grid.Column="3" Source="gallery_image20.jpg" Aspect="AspectFill" x:Name="glryimg20">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture20" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="5" Grid.Column="0" Source="gallery_image21.jpg" Aspect="AspectFill" x:Name="glryimg21">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture21" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="5" Grid.Column="1" Source="gallery_image22.jpg" Aspect="AspectFill" x:Name="glryimg22">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture22" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Row="5" Grid.Column="2" Source="gallery_image23.jpg" Aspect="AspectFill" x:Name="glryimg23">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="image_click_gesture23" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
             </Grid>
 
 

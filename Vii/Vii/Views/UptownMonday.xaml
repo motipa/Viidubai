@@ -5,6 +5,6 @@
              BackgroundColor="Black"
              >
     <ContentPage.Content>
-        <Image Source="menu_uptown_monday" Aspect="AspectFit"/>
+        <Image Source="menu_uptown_monday.jpg" Aspect="AspectFit"/>
     </ContentPage.Content>
 </ContentPage>

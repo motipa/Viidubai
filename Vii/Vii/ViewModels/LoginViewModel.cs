@@ -65,7 +65,7 @@ namespace Vii.ViewModels
                         {
                             var res = await _apiServices.LoginAsync(authorization);
 
-                            if (res.AccessToken != string.Empty)
+                            if (res.AccessToken != null)
                             {
                                 Settings.UserName = LoginModel.Username;
 

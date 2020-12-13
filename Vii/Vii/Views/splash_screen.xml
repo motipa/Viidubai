@@ -5,7 +5,7 @@
 	</item>
 	<item>
 		<ImageView
-			android:src="@drawable/merged_logos"
+			android:src="@drawable/merged_logos.png"
 			android:tileMode="disabled"
 			android:gravity="center"
 			android:layout_width = "10dp"

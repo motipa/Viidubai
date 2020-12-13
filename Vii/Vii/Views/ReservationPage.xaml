@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Vii.Views.ReservationPage" 
-             xmlns:vm="clr-namespace:Vii.ViewModels"
+             xmlns:vm="clr-namespace:Vii.ViewModels" xmlns:controls="clr-namespace:Vii.Helper"
              Title="" BackgroundColor="Black">
 
     <ContentPage.Content>
@@ -11,58 +11,57 @@
         
         <StackLayout VerticalOptions="Start" HorizontalOptions="Start">
             
-                <Frame BorderColor="#b29476" BackgroundColor="black" Margin="5,5,5,5" Padding="0,0,0,0">
+                <Frame BorderColor="#b29476" BackgroundColor="black" HorizontalOptions="FillAndExpand" Margin="5,5,5,5" Padding="0,0,0,0">
                 
-                <StackLayout VerticalOptions="CenterAndExpand" Padding="7">
-                    <Label Text="Table Reservation" HorizontalOptions="Center" TextDecorations="Underline" FontSize="20" FontAttributes="Bold" TextColor="#b29476" Margin="0,10,0,0"/>
-                    <Entry Placeholder="Name" x:Name="CustName" TextColor="White" PlaceholderColor="White"></Entry>
-                    <!--<Entry Placeholder="Email"></Entry>
-        <Entry Placeholder="Password" IsPassword="True"></Entry>
-        <Entry Placeholder="Confirm Password" IsPassword="True"></Entry>-->
+                <StackLayout VerticalOptions="FillAndExpand" Padding="7">
+                        <Label Text="Table Reservation" FontFamily="Cooper Hewitt" HorizontalOptions="Center" TextDecorations="Underline" FontSize="20" FontAttributes="Bold" TextColor="#b29476" Margin="0,10,0,0"/>                   
+                    
+                            <Label Text="Name" FontFamily="Cooper Hewitt" FontAttributes="Bold"  TextColor="WhiteSmoke"></Label>
+                            <Entry Placeholder="Name" WidthRequest="250" x:Name="CustName" TextColor="White" PlaceholderColor="White"></Entry>
                     <StackLayout>
-                        <Label Text="Date" FontSize="14" TextColor="WhiteSmoke"></Label>
-                            <!--<DatePicker x:Name="FromDate" BackgroundColor="White" TextColor="Black"
-                                        ></DatePicker>-->
-                            
-                            <vm:DateTimePicker2 x:Name="FromDate" BackgroundColor="White"></vm:DateTimePicker2>
+                            <Label Text="Date" FontFamily="Cooper Hewitt" FontAttributes="Bold" FontSize="14" TextColor="WhiteSmoke"></Label>
+                             <vm:DateTimePicker2 x:Name="FromDate" BackgroundColor="White" HeightRequest="40"></vm:DateTimePicker2>
                     </StackLayout>
                     <StackLayout>
-                        <Label Text="Time" FontSize="14" TextColor="WhiteSmoke"></Label>
-                            <!--<TimePicker x:Name="timepick" BackgroundColor="White" TextColor="Black"
-                                       ></TimePicker>-->
-
-                            <vm:TimeViewModel x:Name="timepick" BackgroundColor="White"></vm:TimeViewModel>
-                    </StackLayout>
-                     
+                            <Label Text="Time" FontFamily="Cooper Hewitt" FontAttributes="Bold" FontSize="14" TextColor="WhiteSmoke"></Label>
+                            <vm:TimeViewModel x:Name="timepick" HeightRequest="40" BackgroundColor="White"></vm:TimeViewModel>
+                    </StackLayout>                     
                     <StackLayout Orientation="Horizontal" Spacing="50">
-                        <Label Text="Do You Want Shisha?" TextColor="White"></Label>
+                            <Label Text="Do You Want Shisha?" FontFamily="Cooper Hewitt" TextColor="White"></Label>
                         <Switch IsToggled="False" x:Name="shisha" BackgroundColor="#b578" OnColor="OrangeRed"></Switch>
                     </StackLayout>
                     <!--image-->
                     <StackLayout>
-                        <Label Text="Reserve Table"  TextColor="White" FontAttributes="Bold"></Label>
+                            <Label Text="Reserve Table" FontFamily="Cooper Hewitt"  TextColor="White" FontAttributes="Bold"></Label>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" Spacing="20">
-                        <Label Text="Secret Garden Map" x:Name="Secretmap" TextDecorations="Underline" TextColor="White">
+                            <Label Text="Secret Garden Map" FontFamily="Cooper Hewitt" x:Name="Secretmap" TextDecorations="Underline" TextColor="White">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="ClickSecretGarden_Tapped" />
                             </Label.GestureRecognizers>
                         </Label>
-                        <Label Text="Red Room Map" x:Name="Redmap" TextDecorations="Underline" TextColor="White">
+                            <Label Text="Red Room Map" FontFamily="Cooper Hewitt" x:Name="Redmap" TextDecorations="Underline" TextColor="White">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="RedRoom_Tapped" />
                             </Label.GestureRecognizers>
                         </Label>
-                        <Label Text="Amber Hall Map" x:Name="Amberhall" TextDecorations="Underline" TextColor="White">
+                            <Label Text="Amber Hall Map" FontFamily="Cooper Hewitt" x:Name="Amberhall" TextDecorations="Underline" TextColor="White">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="Amberhall_Tapped" />
                             </Label.GestureRecognizers>
                         </Label>
 
                     </StackLayout>
-                    <ContentView x:Name="SecretGardenView" IsVisible="True"
+                        <ContentView x:Name="SecretGardenViewImage" IsVisible="True">
+                            <Image Source="secretgardenpng.PNG" HorizontalOptions="Fill">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="image_click_SecretGardenViewImage"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </ContentView>
+                    <ContentView x:Name="SecretGardenView" IsVisible="False"
                             AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
-                        <Frame BorderColor="#b29476"  BackgroundColor="black" WidthRequest="550"  Margin="5,5,0,5"  Padding="0,0,30,10">
+                            <Frame  BorderColor="#b29476" HorizontalOptions="FillAndExpand"  BackgroundColor="black" WidthRequest="550"  Margin="5,5,0,5"  Padding="0,0,30,10">
 
                             <StackLayout Spacing="10" WidthRequest="550">
 
@@ -118,7 +117,7 @@
                                         <Button Text="14" x:Name="table14" Margin="360,120,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
                                             HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="14" Clicked="OnImageButtonClicked"></Button>
 
-                                        <Image Margin="290,115,0,0" Source="DJimg" WidthRequest="70" HeightRequest="60" ></Image>
+                                            <Image Margin="290,115,0,0" Source="DJimg.PNG" WidthRequest="70" HeightRequest="60" ></Image>
                                         <Button Text="29" x:Name="table29" Margin="240,120,0,0" HorizontalOptions="Center" BackgroundColor="#a08058" WidthRequest="40"
                                             HeightRequest="40" CornerRadius="5" TextColor="Black" ClassId="29" Clicked="OnImageButtonClicked"></Button>
                                         <Image Source="pic.png" Margin="183,115,0,0" WidthRequest="50" HeightRequest="50"></Image>
@@ -167,9 +166,16 @@
 
                         </Frame>
                     </ContentView>
-                    <ContentView x:Name="RedRoomView" IsVisible="False"
+                        <ContentView x:Name="RedRoomViewImage" IsVisible="False">
+                            <Image Source="redroompng.PNG" HorizontalOptions="Fill">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="image_click_RedRoomnViewImage"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </ContentView>
+                        <ContentView x:Name="RedRoomView" IsVisible="False"
                             AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
-                        <Frame BorderColor="#b29476"  BackgroundColor="black" WidthRequest="550"  Margin="5,5,0,5"  Padding="0,0,30,10">
+                            <Frame BorderColor="#b29476" HorizontalOptions="FillAndExpand"  BackgroundColor="black" WidthRequest="550"  Margin="5,5,0,5"  Padding="0,0,30,10">
 
                             <ScrollView Orientation="Both" WidthRequest="500">
                                 <StackLayout>
@@ -180,13 +186,13 @@
                                         <Button Margin="80,90,0,0" HorizontalOptions="Start" ClassId="910" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="910" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked" />
                                         <Button Margin="40,125,0,0" HorizontalOptions="Start" ClassId="920" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="920" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked" />
                                         <Button Margin="5,165,0,0" HorizontalOptions="Start" ClassId="925" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="925" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked" />
-                                        <Image Margin="240,5,0,0" Source="djred" WidthRequest="100" ></Image>
+                                            <Image Margin="240,5,0,0" Source="djred.PNG" WidthRequest="100" ></Image>
                                         <Button Margin="350,10,0,0" HorizontalOptions="Start" ClassId="820" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="820" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked" />
                                         <Button Margin="410,10,0,0" HorizontalOptions="Start" ClassId="815" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="815" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked"/>
                                         <Button Margin="470,10,0,0" HorizontalOptions="Start" ClassId="810" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="810" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked"/>
                                         <Button Margin="540,10,0,0" HorizontalOptions="Start" ClassId="800" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="800" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked" />
-                                        <Image Margin="600,5,0,0" Source="barred" WidthRequest="100" ></Image>
-                                        <Image Margin="660,80,0,0" Source="entrancered" HeightRequest="80" ></Image>
+                                            <Image Margin="600,5,0,0" Source="barred.PNG" WidthRequest="100" ></Image>
+                                            <Image Margin="660,80,0,0" Source="entrancered.PNG" HeightRequest="80" ></Image>
                                         <Button Margin="600,150,0,0" HorizontalOptions="Start" ClassId="870" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="870" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked" />
                                         <Button Margin="520,150,0,0" HorizontalOptions="Start" ClassId="860" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="860" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked"/>
                                         <Button Margin="450,150,0,0" HorizontalOptions="Start" ClassId="850" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="850" TextColor="Black" HeightRequest="34" Clicked="OnImageButtonClicked"/>
@@ -204,56 +210,61 @@
 
                     </ContentView>
                     <!--New-->
+                        <ContentView x:Name="AmberHallImage" IsVisible="False">
+                            <Image Source="amberhallpng.PNG" HorizontalOptions="Fill">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="image_click_AmberHallImage"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </ContentView>
                         <ContentView x:Name="AmberHallview" IsVisible="False"
                             AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
-                            <Frame BorderColor="#b29476"  BackgroundColor="black" WidthRequest="550"  Margin="5,5,0,5"  Padding="0,0,30,10">
+                            <Frame BorderColor="#b29476" HorizontalOptions="FillAndExpand"  BackgroundColor="black" WidthRequest="550"  Margin="5,5,0,5"  Padding="0,0,30,10">
 
                                 <ScrollView Orientation="Both" WidthRequest="500">
                                     <StackLayout>
                                         <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-                                            <ImageButton Margin="100,25,0,0" HorizontalOptions="Start" Source="amb_93" ClassId="93" CornerRadius="5"  WidthRequest="80" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
-                                            <ImageButton Margin="210,25,0,0" HorizontalOptions="Start" Source="am_92" ClassId="92" CornerRadius="5"  WidthRequest="80" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
-                                            <ImageButton Margin="350,25,0,0" HorizontalOptions="Start" Source="am_91" ClassId="91" CornerRadius="5"  WidthRequest="70" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
-                                            <ImageButton Margin="450,25,0,0" HorizontalOptions="Start" Source="am_90" ClassId="90" CornerRadius="5"  WidthRequest="70" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
+                                            <ImageButton Margin="100,25,0,0" HorizontalOptions="Start" Source="amb_93.PNG" ClassId="93" CornerRadius="5"  WidthRequest="80" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
+                                            <ImageButton Margin="210,25,0,0" HorizontalOptions="Start" Source="am_92.PNG" ClassId="92" CornerRadius="5"  WidthRequest="80" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
+                                            <ImageButton Margin="350,25,0,0" HorizontalOptions="Start" Source="am_91.PNG" ClassId="91" CornerRadius="5"  WidthRequest="70" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
+                                            <ImageButton Margin="450,25,0,0" HorizontalOptions="Start" Source="am_90.PNG" ClassId="90" CornerRadius="5"  WidthRequest="70" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
                                             <ImageButton Margin="70,65,0,0" HorizontalOptions="Start"   CornerRadius="5"  WidthRequest="110"  HeightRequest="15"></ImageButton>
                                             <ImageButton Margin="210,65,0,0" HorizontalOptions="Start"  CornerRadius="5"  WidthRequest="210"  HeightRequest="15"></ImageButton>
                                             <ImageButton Margin="450,65,0,0" HorizontalOptions="Start"   CornerRadius="5"  WidthRequest="110"  HeightRequest="15"></ImageButton>
-                                            <ImageButton Margin="100,105,0,0" HorizontalOptions="Start" Source="am_83" ClassId="83" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
-                                            <ImageButton Margin="190,105,0,0" HorizontalOptions="Start" Source="am_82" ClassId="82" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
-                                            <ImageButton Margin="280,105,0,0" HorizontalOptions="Start" Source="am_81" ClassId="81" CornerRadius="5"  WidthRequest="55" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
-                                            <ImageButton Margin="360,105,0,0" HorizontalOptions="Start" Source="am_80" ClassId="80" CornerRadius="5"  WidthRequest="55" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
-                                            <ImageButton Margin="430,105,0,0" HorizontalOptions="Start" Source="am_104" ClassId="104" CornerRadius="5"  WidthRequest="55" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
-                                            <ImageButton Margin="450,155,0,0" HorizontalOptions="Start" Source="am_103_l"  CornerRadius="5"  WidthRequest="35" HeightRequest="35"></ImageButton>
-                                            <ImageButton Margin="440,205,0,0" HorizontalOptions="Start" Source="am_104_l" CornerRadius="5"  WidthRequest="65" HeightRequest="75"></ImageButton>
-                                            
-                                            <ImageButton Margin="500,145,0,0" HorizontalOptions="Start" Source="am_103" ClassId="103" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
-                                            <ImageButton Margin="520,220,0,0" HorizontalOptions="Start" Source="am_102" ClassId="102" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
-                                            <ImageButton Margin="440,285,0,0" HorizontalOptions="Start" Source="am_102_l" CornerRadius="5"  WidthRequest="55" HeightRequest="75"></ImageButton>
-                                            <ImageButton Margin="490,295,0,0" HorizontalOptions="Start" Source="am_101" ClassId="101" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
-                                            <ImageButton Margin="430,355,0,0" HorizontalOptions="Start" Source="am_100" ClassId="100" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
-                                            <ImageButton Margin="350,355,0,0" HorizontalOptions="Start" Source="am_60" ClassId="60" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
-                                            <ImageButton Margin="270,355,0,0" HorizontalOptions="Start" Source="am_61" ClassId="61" CornerRadius="5"  WidthRequest="60" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
-                                            <ImageButton Margin="190,355,0,0" HorizontalOptions="Start" Source="am_62" ClassId="62" CornerRadius="5"  WidthRequest="55" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
-                                            <ImageButton Margin="100,355,0,0" HorizontalOptions="Start" Source="am_63" ClassId="63" CornerRadius="5"  WidthRequest="55" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
-                                            <ImageButton Margin="100,220,0,0" HorizontalOptions="Start" Source="am_74" ClassId="74" CornerRadius="5"  WidthRequest="45" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
-                                            <ImageButton Margin="180,220,0,0" HorizontalOptions="Start" Source="am_73" ClassId="73" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
-                                            <ImageButton Margin="250,220,0,0" HorizontalOptions="Start" Source="am_72" ClassId="72" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
-                                            <ImageButton Margin="310,220,0,0" HorizontalOptions="Start" Source="am_71" ClassId="71" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
-                                            <ImageButton Margin="360,220,0,0" HorizontalOptions="Start" Source="am_70" ClassId="70" CornerRadius="5"  WidthRequest="51" Clicked="OnAmber_ImageButtonClicked" HeightRequest="68"></ImageButton>
+                                            <ImageButton Margin="100,105,0,0" HorizontalOptions="Start" Source="am_83.PNG" ClassId="83" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="190,105,0,0" HorizontalOptions="Start" Source="am_82.PNG" ClassId="82" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="280,105,0,0" HorizontalOptions="Start" Source="am_81.PNG" ClassId="81" CornerRadius="5"  WidthRequest="55" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="360,105,0,0" HorizontalOptions="Start" Source="am_80.PNG" ClassId="80" CornerRadius="5"  WidthRequest="55" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="430,105,0,0" HorizontalOptions="Start" Source="am_104.PNG" ClassId="104" CornerRadius="5"  WidthRequest="55" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="450,155,0,0" HorizontalOptions="Start" Source="am_103_l.PNG"  CornerRadius="5"  WidthRequest="35" HeightRequest="35"></ImageButton>
+                                            <ImageButton Margin="440,205,0,0" HorizontalOptions="Start" Source="am_104_l.PNG" CornerRadius="5"  WidthRequest="65" HeightRequest="75"></ImageButton>
+
+                                            <ImageButton Margin="500,145,0,0" HorizontalOptions="Start" Source="am_103.PNG" ClassId="103" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="520,220,0,0" HorizontalOptions="Start" Source="am_102.PNG" ClassId="102" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="440,285,0,0" HorizontalOptions="Start" Source="am_102_l.PNG" CornerRadius="5"  WidthRequest="55" HeightRequest="75"></ImageButton>
+                                            <ImageButton Margin="490,295,0,0" HorizontalOptions="Start" Source="am_101.PNG" ClassId="101" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="430,355,0,0" HorizontalOptions="Start" Source="am_100.PNG" ClassId="100" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="350,355,0,0" HorizontalOptions="Start" Source="am_60.PNG" ClassId="60" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="270,355,0,0" HorizontalOptions="Start" Source="am_61.PNG" ClassId="61" CornerRadius="5"  WidthRequest="60" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="190,355,0,0" HorizontalOptions="Start" Source="am_62.PNG" ClassId="62" CornerRadius="5"  WidthRequest="55" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="100,355,0,0" HorizontalOptions="Start" Source="am_63.PNG" ClassId="63" CornerRadius="5"  WidthRequest="55" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="100,220,0,0" HorizontalOptions="Start" Source="am_74.PNG" ClassId="74" CornerRadius="5"  WidthRequest="45" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="180,220,0,0" HorizontalOptions="Start" Source="am_73.PNG" ClassId="73" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="250,220,0,0" HorizontalOptions="Start" Source="am_72.PNG" ClassId="72" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="310,220,0,0" HorizontalOptions="Start" Source="am_71.PNG" ClassId="71" CornerRadius="5"  WidthRequest="50" Clicked="OnAmber_ImageButtonClicked" HeightRequest="50"></ImageButton>
+                                            <ImageButton Margin="360,220,0,0" HorizontalOptions="Start" Source="am_70.PNG" ClassId="70" CornerRadius="5"  WidthRequest="51" Clicked="OnAmber_ImageButtonClicked" HeightRequest="68"></ImageButton>
                                             <ImageButton Margin="100,400,0,0" HorizontalOptions="Start"  CornerRadius="5"  WidthRequest="150"  HeightRequest="15"></ImageButton>
                                             <ImageButton Margin="320,400,0,0" HorizontalOptions="Start"  CornerRadius="5"  WidthRequest="250"  HeightRequest="15"></ImageButton>
-                                            <ImageButton Margin="110,430,0,0" HorizontalOptions="Start" Source="am_54" ClassId="54" CornerRadius="5"  WidthRequest="80" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
-                                            <ImageButton Margin="190,430,0,0" HorizontalOptions="Start" Source="am_53" ClassId="53" CornerRadius="5"  WidthRequest="75" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
-                                            <ImageButton Margin="320,430,0,0" HorizontalOptions="Start" Source="am_52" ClassId="52" CornerRadius="5"  WidthRequest="70" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
-                                            <ImageButton Margin="420,430,0,0" HorizontalOptions="Start" Source="am_51" ClassId="51" CornerRadius="5"  WidthRequest="65" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
-                                            <ImageButton Margin="500,430,0,0" HorizontalOptions="Start" Source="am_50" ClassId="50" CornerRadius="5"  WidthRequest="65" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
-                                            <ImageButton Margin="590,430,0,0" HorizontalOptions="Start" Source="am_entrance" ClassId="50" CornerRadius="5"  WidthRequest="40" Clicked="OnAmber_ImageButtonClicked" HeightRequest="45"></ImageButton>
-                                            <ImageButton Margin="590,200,0,0" HorizontalOptions="Start" Source="am_bar"  WidthRequest="40" HeightRequest="120"></ImageButton>
-                                            <ImageButton Margin="0,190,0,0" HorizontalOptions="Start" Source="am_stage"  WidthRequest="35" HeightRequest="120"></ImageButton>
-                                            <ImageButton Margin="25,0,0,0" HorizontalOptions="Start" Source="am_light"  WidthRequest="40" HeightRequest="30"></ImageButton>
-
-
+                                            <ImageButton Margin="110,430,0,0" HorizontalOptions="Start" Source="am_54.PNG" ClassId="54" CornerRadius="5"  WidthRequest="80" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
+                                            <ImageButton Margin="190,430,0,0" HorizontalOptions="Start" Source="am_53.PNG" ClassId="53" CornerRadius="5"  WidthRequest="75" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
+                                            <ImageButton Margin="320,430,0,0" HorizontalOptions="Start" Source="am_52.PNG" ClassId="52" CornerRadius="5"  WidthRequest="70" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
+                                            <ImageButton Margin="420,430,0,0" HorizontalOptions="Start" Source="am_51.PNG" ClassId="51" CornerRadius="5"  WidthRequest="65" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
+                                            <ImageButton Margin="500,430,0,0" HorizontalOptions="Start" Source="am_50.PNG" ClassId="50" CornerRadius="5"  WidthRequest="65" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
+                                            <ImageButton Margin="590,430,0,0" HorizontalOptions="Start" Source="am_entrance.PNG" ClassId="50" CornerRadius="5"  WidthRequest="40" Clicked="OnAmber_ImageButtonClicked" HeightRequest="45"></ImageButton>
+                                            <ImageButton Margin="590,200,0,0" HorizontalOptions="Start" Source="am_bar.PNG"  WidthRequest="40" HeightRequest="120"></ImageButton>
+                                            <ImageButton Margin="0,190,0,0" HorizontalOptions="Start" Source="am_stage.PNG"  WidthRequest="35" HeightRequest="120"></ImageButton>
+                                            <ImageButton Margin="25,0,0,0" HorizontalOptions="Start" Source="am_light.PNG"  WidthRequest="40" HeightRequest="30"></ImageButton>
                                         </AbsoluteLayout>
                                     </StackLayout>
                                 </ScrollView>
@@ -264,17 +275,18 @@
                         <!---dsf-->
                    
                     <StackLayout Orientation="Horizontal" Spacing="30">
-                        <Label Text="Reserved Table" TextColor="White"/>
-                       
-                            <Label x:Name="tableDetails" WidthRequest="250" FontSize="Medium" TextColor="White"/>
+                            <Label Text="Reserved Table" FontFamily="Cooper Hewitt" TextColor="White"/>
+
+                            <Label x:Name="tableDetails" FontFamily="Cooper Hewitt" WidthRequest="250" FontSize="Medium" TextColor="White"/>
                         </StackLayout>
-                        <StackLayout Orientation="Horizontal" Spacing="30">
-                            <Label Text="Venue" TextColor="White"></Label>
+                        <StackLayout Orientation="Horizontal" Spacing="80">
+                            <Label Text="Venue" FontFamily="Cooper Hewitt" TextColor="White"></Label>
                             <Label x:Name="Venue" WidthRequest="250" TextColor="White"></Label>
                         </StackLayout>
-                        <StackLayout Orientation="Horizontal" Spacing="50">
+                        <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="20">
                             
-                            <Picker x:Name="NumberofPerson" Title="Number Of Person" ItemsSource="{Binding Person}" TitleColor="White" TextColor="White" WidthRequest="350"></Picker>
+                            <Label Text="Number Of Person" FontFamily="Cooper Hewitt" TextColor="White"></Label>
+                            <Picker x:Name="NumberofPerson" Title="--Select--" ItemsSource="{Binding Person}" TitleColor="White" TextColor="White" WidthRequest="100"></Picker>
                         </StackLayout>
                         <StackLayout>
                         <Editor Placeholder="Special Request Notes" PlaceholderColor="Black" TextColor="Black" x:Name="SpecialNotes" BackgroundColor="White" HeightRequest="100" />
@@ -283,7 +295,7 @@
                         <ContentView x:Name="DisplayAlert" IsVisible="false"
                             AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
                             <StackLayout>
-                                <Label Style="{StaticResource stackStyle}" Text="Please be informed that filling and submitting the form above does not guarantee your reservation at Vii. All bookings must be confirmed by our Reservations Team. The validity of reservations depends on the venue's seating capacity."></Label>
+                                <Label Style="{StaticResource stackStyle}" FontFamily="Cooper Hewitt" Text="Please be informed that filling and submitting the form above does not guarantee your reservation at Vii. All bookings must be confirmed by our Reservations Team. The validity of reservations depends on the venue's seating capacity."></Label>
 
                             </StackLayout>
                         </ContentView>

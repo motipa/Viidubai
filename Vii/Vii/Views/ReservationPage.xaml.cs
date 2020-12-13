@@ -167,6 +167,7 @@ namespace Vii.Views
                 base.OnAppearing();
                 await _book._userViewModel.LoadCustAsync();
                 CustName.Text = _book._userViewModel.userDetails.FirstName;
+                tableDetails.Text = "";
                 // imgName.Source = ImageSource.FromResource("tablebook2.jpg");
                 Venue.Text = "SECRET GARDEN";
 
@@ -190,6 +191,12 @@ namespace Vii.Views
             Amberhall.TextColor = Color.White;
             Venue.Text = "RED ROOM";
             tableDetails.Text = "";
+            SecretGardenViewImage.IsVisible = false;
+            SecretGardenView.IsVisible = false;
+            RedRoomView.IsVisible = false;
+            RedRoomViewImage.IsVisible = true;
+            AmberHallImage.IsVisible = false;
+            AmberHallview.IsVisible = false;
         }
         private void ClickSecretGarden_Tapped(object sender, EventArgs e)
         {
@@ -201,6 +208,12 @@ namespace Vii.Views
             RedRoomView.IsVisible = false;
             Venue.Text = "SECRET GARDEN";
             tableDetails.Text = "";
+            SecretGardenViewImage.IsVisible = true;
+            SecretGardenView.IsVisible = false;
+            RedRoomView.IsVisible = false;
+            RedRoomViewImage.IsVisible = false;
+            AmberHallImage.IsVisible = false;
+            AmberHallview.IsVisible = false;
         }
         private void OnAmber_ImageButtonClicked(object sender, EventArgs e)
         {
@@ -248,11 +261,47 @@ namespace Vii.Views
             Amberhall.TextColor = Color.Gold;
             Venue.Text = "AMBER HALL";
             tableDetails.Text = "";
+            SecretGardenViewImage.IsVisible = false;
+            SecretGardenView.IsVisible = false;
+            RedRoomView.IsVisible = false;
+            RedRoomViewImage.IsVisible = false;
+            AmberHallImage.IsVisible = true;
+            AmberHallview.IsVisible = false;
         }
 
         private void Button_Clicked_1(object sender, EventArgs e)
         {
             DisplayAlert.IsVisible = false;
+        }
+
+        private void image_click_SecretGardenViewImage(object sender, EventArgs e)
+        {
+            SecretGardenViewImage.IsVisible = false;
+            SecretGardenView.IsVisible = true;
+            RedRoomView.IsVisible = false;
+            RedRoomViewImage.IsVisible = false;
+            AmberHallImage.IsVisible = false;
+            AmberHallview.IsVisible = false;
+        }
+
+        private void image_click_RedRoomnViewImage(object sender, EventArgs e)
+        {
+            SecretGardenViewImage.IsVisible = false;
+            SecretGardenView.IsVisible = false;
+            RedRoomView.IsVisible = true;
+            RedRoomViewImage.IsVisible = false;
+            AmberHallImage.IsVisible = false;
+            AmberHallview.IsVisible = false;
+
+        }
+        private void image_click_AmberHallImage(object sender, EventArgs e)
+        {
+            SecretGardenViewImage.IsVisible = false;
+            SecretGardenView.IsVisible = false;
+            RedRoomView.IsVisible = false;
+            RedRoomViewImage.IsVisible = false;
+            AmberHallImage.IsVisible = false;
+            AmberHallview.IsVisible = true;
         }
     }
 }

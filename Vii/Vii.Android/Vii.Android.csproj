@@ -61,6 +61,8 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassEntryBox.cs" />
+    <Compile Include="ClassTimePicker.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="RenderAndroid\MyEntry.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -555,6 +557,24 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\am_72.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\amberhallmap.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\RedRoomMap.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Secretgardenmap.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\secretgardenpng.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\amberhallpng.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\redroompng.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

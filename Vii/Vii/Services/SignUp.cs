@@ -16,7 +16,8 @@ namespace Vii.Services
         public SignUp()
         {
 #if DEBUG
-            _apiBaseUrl = "https://2107b862141d.ngrok.io/";
+            //_apiBaseUrl = "https://clubappapi20201206152856.azurewebsites.net/";
+            _apiBaseUrl = "https://8d570789f71c.ngrok.io/";
 #else
               //  _apiBaseUrl = "https:///";
 #endif

@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:Vii.Helper"
              x:Class="Vii.Views.SignUp">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="Black">
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Black">
+       
             <Label Text="Create your VII DUBAI account" HorizontalOptions="Center" FontSize="22" FontAttributes="Bold" TextColor="#b29476" Margin="0,10,0,10"/>
             <Label TextColor="White" HorizontalOptions="Center">
                 <Label.FormattedText>
@@ -17,23 +18,44 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Frame BorderColor="#b29476" BackgroundColor="black" Margin="5,5,5,5" Padding="0,10,0,10">
-                <StackLayout HorizontalOptions="FillAndExpand" Margin="10,10,10,10">
-                    <Entry Placeholder="First Name" TextColor="White" PlaceholderColor="White" x:Name="firstName"/>
-                    <Entry Placeholder="Last Name" TextColor="White" PlaceholderColor="White" x:Name="lastName"/>
-                    <Entry Placeholder="Phone Number" TextColor="White" PlaceholderColor="White" x:Name="phone"/>
-                    <Entry Placeholder="Email address" TextColor="White" PlaceholderColor="White" x:Name="email"/>
-                    <Entry Placeholder="Password" TextColor="White" PlaceholderColor="White" IsPassword="True" x:Name="password"/>
-                    <Entry Placeholder="Confirm Password" TextColor="White" PlaceholderColor="White" TextChanged="HandleTextChanged" x:Name="Confirmpassword" IsPassword="True"/>
+        
+            
+            <StackLayout>
+                <Frame BorderColor="#b29476" WidthRequest="550" BackgroundColor="black" Margin="5,5,5,5" Padding="0,10,0,10">
+
+                    <ContentView x:Name="SignUpView" IsVisible="True"
+                            AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                        <ScrollView>
+                            <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                    <StackLayout Margin="10,0,10,0">
+                                    <Label x:Name="LabelFname" TextColor="White" IsVisible="false"></Label>
+                                    <Entry WidthRequest="250" TextChanged="fnamChange" Placeholder="First Name" TextColor="White" PlaceholderColor="White" x:Name="firstName"></Entry>
+                                    <Label x:Name="LabelLname"  TextColor="White" IsVisible="false"></Label>
+                                    <Entry WidthRequest="250" TextChanged="lnamChange" Placeholder="Last Name" TextColor="White" PlaceholderColor="White" x:Name="lastName"></Entry>
+                                    <Label x:Name="lblphone" TextColor="White" IsVisible="false"></Label>
+                                    <Entry WidthRequest="250" TextChanged="phoneChange" Placeholder="Phone Number" TextColor="White" PlaceholderColor="White" x:Name="phone"></Entry>
+                                    <Label x:Name="lblemail" TextColor="White" IsVisible="false"></Label>
+                                    <Entry WidthRequest="250" TextChanged="emailChange" Placeholder="Email address" TextColor="White" PlaceholderColor="White" x:Name="email"></Entry>
+                                    <Label x:Name="lblpassword" TextColor="White" IsVisible="false"></Label>
+                                    <Entry WidthRequest="250" TextChanged="passchanged" Placeholder="Password" TextColor="White" PlaceholderColor="White" IsPassword="True" x:Name="password"></Entry>
+                                    <Label x:Name="lblConfirm"  TextColor="White" IsVisible="false"></Label>
+                                    <Entry WidthRequest="250" Placeholder="Confirm Password" TextColor="White" PlaceholderColor="White" TextChanged="HandleTextChanged" x:Name="Confirmpassword" IsPassword="True"></Entry>
+
+                                        <Label Text="Privacy Policy" TextDecorations="Underline" TextColor="White" FontSize="12">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="privacypolicy_tapped"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                        <Button Text="Create" IsEnabled="False" x:Name="btnSignup" Clicked="Createaccount_Button_Clicked" Style="{StaticResource buttonStyle}" Margin="60,10,60,10"/>
+                                    </StackLayout>
+                                
+                            </AbsoluteLayout>
+                        </ScrollView>
+
+                    </ContentView>
                     
-                    <Label Text="Privacy Policy" TextDecorations="Underline" TextColor="White" FontSize="12">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="privacypolicy_tapped"/>
-                        </Label.GestureRecognizers>
-                    </Label>
-                    <Button Text="Create" Clicked="Createaccount_Button_Clicked" Style="{StaticResource buttonStyle}" Margin="60,10,60,10"/>
-                </StackLayout>
-            </Frame>
+                </Frame>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

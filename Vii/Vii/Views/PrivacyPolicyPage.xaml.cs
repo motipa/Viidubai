@@ -17,20 +17,7 @@ namespace Vii.Views
         {
             InitializeComponent();
         }
-        protected override async void OnAppearing()
-        {
-            if (username != "")
-            {
-                base.OnAppearing();
-                // imgName.Source = ImageSource.FromResource("tablebook2.jpg");
-            }
-            else
-            {
-                //Application.Current.MainPage = new SignInPage();
-                await Navigation.PushAsync(new Vii.Views.SignInPage());
-
-            }
-        }
+        
 
     }
 }

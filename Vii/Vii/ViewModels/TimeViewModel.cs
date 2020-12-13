@@ -6,14 +6,14 @@ using Xamarin.Forms;
 
 namespace Vii.ViewModels
 {
-    class TimeViewModel : ContentView, INotifyPropertyChanged
+   public class TimeViewModel : ContentView, INotifyPropertyChanged
     {
         public Entry _entry { get; private set; } = new Entry();
         
         //public DatePicker _datePicker { get; private set; } = new DatePicker() { MinimumDate = DateTime.Today, IsVisible = false };
-        public TimePicker _timePicker { get; private set; } = new TimePicker() { IsVisible = false,BackgroundColor=Color.White };
+        public TimePicker _timePicker { get; private set; } = new TimePicker() { IsVisible = false };
         string _stringFormat { get; set; }
-        public string StringFormat { get { return _stringFormat ?? "HH:mm"; } set { _stringFormat = value; } }
+        public string StringFormat { get { return _stringFormat ?? " hh:mm tt"; } set { _stringFormat = value; } }
         public DateTime DateTime
         {
             get { return (DateTime)GetValue(DateTimeProperty); }
@@ -95,8 +95,7 @@ namespace Vii.ViewModels
 
         static void DTPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
-            var timePicker = (bindable as TimeViewModel);
-            timePicker.BackgroundColor = Color.Gold;
+            var timePicker = (bindable as TimeViewModel);           
             timePicker.UpdateEntryText();
             
         }

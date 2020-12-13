@@ -17,7 +17,8 @@ namespace Vii.Services
         public BookingStore()
         {
 #if DEBUG
-            _apiBaseUrl = "https://2107b862141d.ngrok.io/";
+           _apiBaseUrl = "https://8d570789f71c.ngrok.io/";
+            //_apiBaseUrl = "https://clubappapi20201206152856.azurewebsites.net/";
 
 #else
               //  _apiBaseUrl = "https:///";

@@ -19,7 +19,7 @@ namespace Vii.Services
             //_apiBaseUrl = "https://clubappapi20201206152856.azurewebsites.net/";
             _apiBaseUrl = "https://8d570789f71c.ngrok.io/";
 #else
-              //  _apiBaseUrl = "https:///";
+            //  _apiBaseUrl = "https:///";
 #endif
         }
         public async Task SendActivationCode(string Email)

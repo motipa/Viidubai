@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <Reference Include="ClubApp.Models">
-      <HintPath>..\..\..\..\ClubApp_Git\V7App\ClubApp.Models\bin\Debug\netcoreapp3.1\ClubApp.Models.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\V7App-master\ClubApp.Models\bin\Debug\netcoreapp3.1\ClubApp.Models.dll</HintPath>
     </Reference>
   </ItemGroup>
 

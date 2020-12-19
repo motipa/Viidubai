@@ -71,8 +71,7 @@ namespace Vii.Views
             return isValid;
         }
         async void Createaccount_Button_Clicked(object sender, EventArgs e)
-        {
-            
+        {            
             if (Regex.Match(email.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success)
             {
                 if (IsPhoneNumber(phone.Text))

@@ -4,6 +4,6 @@
              x:Class="Vii.Views.RedmadnessFriday"
              BackgroundColor="Black">
     <ContentPage.Content>
-        <Image Source="menu_redmadness" Aspect="AspectFit"/>
+        <Image Source="menu_redmadness.jpg" Aspect="AspectFit"/>
     </ContentPage.Content>
 </ContentPage>

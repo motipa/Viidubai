@@ -10620,6 +10620,9 @@ namespace Vii.Droid
 			// aapt resource value: 0x7F0700C8
 			public const int help_white = 2131165384;
 			
+			// aapt resource value: 0x7F0700CC
+			public const int icon_close = 2131165388;
+			
 			// aapt resource value: 0x7F0700C9
 			public const int home_white = 2131165385;
 			

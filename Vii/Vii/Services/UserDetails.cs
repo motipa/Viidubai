@@ -19,7 +19,7 @@ namespace Vii.Services
             //_apiBaseUrl = "https://clubappapi20201206152856.azurewebsites.net/";
 
 #else
-              //  _apiBaseUrl = "https:///";
+            //  _apiBaseUrl = "https:///";
 #endif
         }
         public async Task<UserModel> GetCustomerDetails(string Email)

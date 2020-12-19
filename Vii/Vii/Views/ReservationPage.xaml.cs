@@ -123,8 +123,8 @@ namespace Vii.Views
                             int s = _book.OnAddItem();
                             if (s == 1)
                             {
-                                DisplayAlert("Reservation", "The Table Reservation Request is Success", "OK");
-                                DisplayAlert.IsVisible = true;
+                                DisplayAlert("Reservation", "The Table Reservation Request is OnProcess", "OK");
+                                DisplayAlertmsg.IsVisible = true;
                                 shisha.IsToggled = false;
                                 tableDetails.Text = "";
                                 SpecialNotes.Text = "";
@@ -269,11 +269,6 @@ namespace Vii.Views
             AmberHallview.IsVisible = false;
         }
 
-        private void Button_Clicked_1(object sender, EventArgs e)
-        {
-            DisplayAlert.IsVisible = false;
-        }
-
         private void image_click_SecretGardenViewImage(object sender, EventArgs e)
         {
             SecretGardenViewImage.IsVisible = false;
@@ -283,7 +278,6 @@ namespace Vii.Views
             AmberHallImage.IsVisible = false;
             AmberHallview.IsVisible = false;
         }
-
         private void image_click_RedRoomnViewImage(object sender, EventArgs e)
         {
             SecretGardenViewImage.IsVisible = false;
@@ -292,7 +286,6 @@ namespace Vii.Views
             RedRoomViewImage.IsVisible = false;
             AmberHallImage.IsVisible = false;
             AmberHallview.IsVisible = false;
-
         }
         private void image_click_AmberHallImage(object sender, EventArgs e)
         {

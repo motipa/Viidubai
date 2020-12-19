@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Vii.Views.PrivacyPolicyPage">
+             x:Class="Vii.Views.PrivacyPolicyPage" BackgroundColor="Black">
     <ContentPage.Content>
-        <ScrollView BackgroundColor="Black">
-            <StackLayout Margin="10,0,10,0">
+        <ScrollView BackgroundColor="Black" VerticalOptions="FillAndExpand">
+            <StackLayout Margin="10,5,0,0" VerticalOptions="FillAndExpand">
                 <Label Text="Privacy Policy" FontSize="Title" HorizontalTextAlignment="Center" TextColor="#b29476"/>
                 <Label Text="Daylight Restaurant Management LLC built the Vii Dubai app as a Free app. This SERVICE is provided by Daylight Restaurant Management LLC at no cost and is intended for use as is." TextColor="White" Margin="0,10,0,0" FontSize="13"/>
                 <Label Text="This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service." Margin="0,10,0,10" TextColor="White" FontSize="13"/>

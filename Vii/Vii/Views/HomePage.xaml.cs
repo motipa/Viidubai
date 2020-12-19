@@ -4,7 +4,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamd.ImageCarousel.Forms.Plugin.Abstractions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Timers;
@@ -88,19 +87,29 @@ namespace Vii.Views
 
         private async void SecretGarden_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Vii.Views.AboutPage());
+            //await Navigation.PushAsync(new Vii.Views.AboutPage());
+            var MyAppsFirstPage = new HomePage();
+            Application.Current.MainPage = new NavigationPage(MyAppsFirstPage);
+            await Application.Current.MainPage.Navigation.PopAsync(); //Remove the page currently on top.
+            await Application.Current.MainPage.Navigation.PushAsync(new AboutPage());
         }
 
         private async void RedRoom_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Vii.Views.AboutPage());
+            var MyAppsFirstPage = new HomePage();
+            Application.Current.MainPage = new NavigationPage(MyAppsFirstPage);
+            await Application.Current.MainPage.Navigation.PopAsync(); //Remove the page currently on top.
+            await Application.Current.MainPage.Navigation.PushAsync(new AboutPage());
 
         }
-
         private async void AmberHall_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Vii.Views.AboutPage());
+            var MyAppsFirstPage = new HomePage();
+            Application.Current.MainPage = new NavigationPage(MyAppsFirstPage);
+            await Application.Current.MainPage.Navigation.PopAsync(); //Remove the page currently on top.
+            await Application.Current.MainPage.Navigation.PushAsync(new AboutPage());
         }
+        
     }
 }
 

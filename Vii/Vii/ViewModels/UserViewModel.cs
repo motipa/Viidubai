@@ -37,12 +37,10 @@ namespace Vii.ViewModels
             {
                 return false;
             }
-
             IsBusy = true;
 
             try
             {
-
                 var d = await _userDetails.GetCustomerDetails(Settings.UserName);
                 // var d= await _userDetails.GetCustomerDetails("alihashimc@gmail.com");
                 userDetails.Email = d.Email;

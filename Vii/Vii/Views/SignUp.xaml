@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:Vii.Helper"
-             x:Class="Vii.Views.SignUp">
+             x:Class="Vii.Views.SignUp" BackgroundColor="Black">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Black">
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="5,0,0,0" BackgroundColor="Black">
        
             <Label Text="Create your VII DUBAI account" HorizontalOptions="Center" FontSize="22" FontAttributes="Bold" TextColor="#b29476" Margin="0,10,0,10"/>
             <Label TextColor="White" HorizontalOptions="Center">
@@ -21,13 +21,13 @@
         
             
             <StackLayout>
-                <Frame BorderColor="#b29476" WidthRequest="550" BackgroundColor="black" Margin="5,5,5,5" Padding="0,10,0,10">
+                <Frame BorderColor="#b29476" WidthRequest="550" BackgroundColor="black">
 
-                    <ContentView x:Name="SignUpView" IsVisible="True"
+                    <ContentView x:Name="SignUpView" IsVisible="True" Margin="5,5,0,0"
                             AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
                         <ScrollView>
                             <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                                    <StackLayout Margin="10,0,10,0">
+                                    <StackLayout>
                                     <Label x:Name="LabelFname" TextColor="White" IsVisible="false"></Label>
                                     <Entry WidthRequest="250" TextChanged="fnamChange" Placeholder="First Name" TextColor="White" PlaceholderColor="White" x:Name="firstName"></Entry>
                                     <Label x:Name="LabelLname"  TextColor="White" IsVisible="false"></Label>
@@ -35,18 +35,20 @@
                                     <Label x:Name="lblphone" TextColor="White" IsVisible="false"></Label>
                                     <Entry WidthRequest="250" TextChanged="phoneChange" Placeholder="Phone Number" TextColor="White" PlaceholderColor="White" x:Name="phone"></Entry>
                                     <Label x:Name="lblemail" TextColor="White" IsVisible="false"></Label>
-                                    <Entry WidthRequest="250" TextChanged="emailChange" Placeholder="Email address" TextColor="White" PlaceholderColor="White" x:Name="email"></Entry>
+                                    <Entry WidthRequest="250" TextChanged="emailChange" Placeholder="Email address" TextColor="White" PlaceholderColor="White" x:Name="EmailId"></Entry>
                                     <Label x:Name="lblpassword" TextColor="White" IsVisible="false"></Label>
                                     <Entry WidthRequest="250" TextChanged="passchanged" Placeholder="Password" TextColor="White" PlaceholderColor="White" IsPassword="True" x:Name="password"></Entry>
                                     <Label x:Name="lblConfirm"  TextColor="White" IsVisible="false"></Label>
-                                    <Entry WidthRequest="250" Placeholder="Confirm Password" TextColor="White" PlaceholderColor="White" TextChanged="HandleTextChanged" x:Name="Confirmpassword" IsPassword="True"></Entry>
+                                    <Entry WidthRequest="250" Placeholder="Confirm Password" TextColor="White" PlaceholderColor="White" TextChanged="CheckPasswordMatch" x:Name="Confirmpassword" IsPassword="True"></Entry>
 
-                                        <Label Text="Privacy Policy" TextDecorations="Underline" TextColor="White" FontSize="12">
+                                        <Label Text="Privacy Policy" TextDecorations="Underline" TextColor="White" Margin="5,5,0,0" FontSize="12">
                                             <Label.GestureRecognizers>
                                                 <TapGestureRecognizer Tapped="privacypolicy_tapped"/>
                                             </Label.GestureRecognizers>
                                         </Label>
-                                        <Button Text="Create" IsEnabled="False" x:Name="btnSignup" Clicked="Createaccount_Button_Clicked" Style="{StaticResource buttonStyle}" Margin="60,10,60,10"/>
+                                    <StackLayout Margin="100,5,0,0">
+                                        <Button Text="SignUp" IsEnabled="False" x:Name="btnSignup" Clicked="Createaccount_Button_Clicked" Style="{StaticResource buttonStyle}" HorizontalOptions="CenterAndExpand"/>
+                                    </StackLayout>
                                     </StackLayout>
                                 
                             </AbsoluteLayout>

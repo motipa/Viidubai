@@ -10,16 +10,13 @@ namespace Vii.Services
 {
     public class UserDetails
     {
-        private readonly string _apiBaseUrl;
-        private readonly string _BookingRelativeUrlTemplate = "api/reserve/";
+        private readonly string _apiBaseUrl;       
         public UserDetails()
         {
 #if DEBUG
-            _apiBaseUrl = "https://8d570789f71c.ngrok.io/";
-            //_apiBaseUrl = "https://clubappapi20201206152856.azurewebsites.net/";
-
+            _apiBaseUrl = "https://clubappapi20201206152856.azurewebsites.net/";
 #else
-            //  _apiBaseUrl = "https:///";
+            _apiBaseUrl = "https://clubappapi20201206152856.azurewebsites.net/";
 #endif
         }
         public async Task<UserModel> GetCustomerDetails(string Email)
@@ -29,16 +26,12 @@ namespace Vii.Services
                 var result = await _apiBaseUrl
                .AppendPathSegment("api/reserve/" + Email + "")
                .GetAsync()
-                .ReceiveJson<UserModel>();
-                //  .GetJsonAsync<string>();
+                .ReceiveJson<UserModel>();               
                 return result;
             }
             catch (FlurlHttpException fex)
             {
                 throw fex;
-                //var errorText = await fex.GetResponseStringAsync();
-                //Debug.WriteLine(errorText);
-                //return errorText;
             }
         }
     }

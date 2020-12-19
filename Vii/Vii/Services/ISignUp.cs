@@ -10,7 +10,8 @@ namespace Vii.Services
     public interface ISignUp
     {
         Task<UserViewModel> SignUpAsync(UserModel userModel);
-        Task SendActivationCode(string Email);
+        Task SendActivationCode(string Email);       
+        Task<UserModel> EmailVerification(string Email);
         Task<UserViewModel> UpdatePassword(UserModel userModel);
     }
 }

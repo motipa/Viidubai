@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Vii.Models;
 using Vii.Services;
 using Xamarin.Forms;
@@ -28,7 +29,7 @@ namespace Vii.ViewModels
         public async void SendCodeforActivation(string Email)
         {
             await _apiSignUpService.SendActivationCode(Email);
-        }
+        }        
         public int OnupdatePassword()
         {
             UserRegModel regModel = new UserRegModel();

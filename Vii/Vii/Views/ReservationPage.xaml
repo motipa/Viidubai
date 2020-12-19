@@ -7,52 +7,52 @@
 
     <ContentPage.Content>
         
-    <ScrollView BackgroundColor="Black">  
-        
-        <StackLayout VerticalOptions="Start" HorizontalOptions="Start">
+    <ScrollView BackgroundColor="Black">
+
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="5,5,0,0">
             
                 <Frame BorderColor="#b29476" BackgroundColor="black" HorizontalOptions="FillAndExpand" Margin="5,5,5,5" Padding="0,0,0,0">
-                
-                <StackLayout VerticalOptions="FillAndExpand" Padding="7">
-                        <Label Text="Table Reservation" FontFamily="Cooper Hewitt" HorizontalOptions="Center" TextDecorations="Underline" FontSize="20" FontAttributes="Bold" TextColor="#b29476" Margin="0,10,0,0"/>                   
-                    
-                            <Label Text="Name" FontFamily="Cooper Hewitt" FontAttributes="Bold"  TextColor="WhiteSmoke"></Label>
+
+                    <StackLayout VerticalOptions="FillAndExpand" Padding="7" Margin="5,5,0,0">
+                        <Label Text="Table Reservation" FontFamily="Cooper Hewitt" HorizontalOptions="Center" TextDecorations="Underline" FontSize="20" FontAttributes="Bold" TextColor="#b29476" Margin="0,10,0,0"/>
+
+                        <Label Text="Name" FontFamily="Cooper Hewitt" FontAttributes="Bold"  TextColor="WhiteSmoke" Margin="5,5,0,0"></Label>
                             <Entry Placeholder="Name" WidthRequest="250" x:Name="CustName" TextColor="White" PlaceholderColor="White"></Entry>
-                    <StackLayout>
+                        <StackLayout Margin="5,5,0,0">
                             <Label Text="Date" FontFamily="Cooper Hewitt" FontAttributes="Bold" FontSize="14" TextColor="WhiteSmoke"></Label>
                              <vm:DateTimePicker2 x:Name="FromDate" BackgroundColor="White" HeightRequest="40"></vm:DateTimePicker2>
                     </StackLayout>
-                    <StackLayout>
+                        <StackLayout Margin="5,5,0,0">
                             <Label Text="Time" FontFamily="Cooper Hewitt" FontAttributes="Bold" FontSize="14" TextColor="WhiteSmoke"></Label>
                             <vm:TimeViewModel x:Name="timepick" HeightRequest="40" BackgroundColor="White"></vm:TimeViewModel>
-                    </StackLayout>                     
-                    <StackLayout Orientation="Horizontal" Spacing="50">
+                    </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="50" Margin="5,5,0,0">
                             <Label Text="Do You Want Shisha?" FontFamily="Cooper Hewitt" TextColor="White"></Label>
                         <Switch IsToggled="False" x:Name="shisha" BackgroundColor="#b578" OnColor="OrangeRed"></Switch>
                     </StackLayout>
                     <!--image-->
-                    <StackLayout>
-                            <Label Text="Reserve Table" FontFamily="Cooper Hewitt"  TextColor="White" FontAttributes="Bold"></Label>
+                        <StackLayout Margin="5,5,0,0">
+                            <Label Text="Reserve Table" FontFamily="Cooper Hewitt" TextDecorations="Underline" HeightRequest="20" TextColor="White" FontAttributes="Bold"></Label>
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal" Spacing="20">
-                            <Label Text="Secret Garden Map" FontFamily="Cooper Hewitt" x:Name="Secretmap" TextDecorations="Underline" TextColor="White">
+                        <StackLayout Orientation="Horizontal" Spacing="20" Margin="5,5,0,0">
+                            <Label Text="Secret Garden" FontFamily="Cooper Hewitt" x:Name="Secretmap" TextDecorations="Underline" TextColor="White">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="ClickSecretGarden_Tapped" />
                             </Label.GestureRecognizers>
                         </Label>
-                            <Label Text="Red Room Map" FontFamily="Cooper Hewitt" x:Name="Redmap" TextDecorations="Underline" TextColor="White">
+                            <Label Text="Red Room" FontFamily="Cooper Hewitt" x:Name="Redmap" TextDecorations="Underline" TextColor="White">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="RedRoom_Tapped" />
                             </Label.GestureRecognizers>
                         </Label>
-                            <Label Text="Amber Hall Map" FontFamily="Cooper Hewitt" x:Name="Amberhall" TextDecorations="Underline" TextColor="White">
+                            <Label Text="Amber Hall" FontFamily="Cooper Hewitt" x:Name="Amberhall" TextDecorations="Underline" TextColor="White">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="Amberhall_Tapped" />
                             </Label.GestureRecognizers>
                         </Label>
 
                     </StackLayout>
-                        <ContentView x:Name="SecretGardenViewImage" IsVisible="True">
+                        <ContentView x:Name="SecretGardenViewImage" IsVisible="True" Margin="5,5,0,0">
                             <Image Source="secretgardenpng.PNG" HorizontalOptions="Fill">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="image_click_SecretGardenViewImage"/>
@@ -63,7 +63,7 @@
                             AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
                             <Frame  BorderColor="#b29476" HorizontalOptions="FillAndExpand"  BackgroundColor="black" WidthRequest="550"  Margin="5,5,0,5"  Padding="0,0,30,10">
 
-                            <StackLayout Spacing="10" WidthRequest="550">
+                                <StackLayout Spacing="10" WidthRequest="550" Margin="5,5,0,0">
 
                                 <ScrollView Orientation="Both" WidthRequest="500">
                                     <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
@@ -166,7 +166,7 @@
 
                         </Frame>
                     </ContentView>
-                        <ContentView x:Name="RedRoomViewImage" IsVisible="False">
+                        <ContentView x:Name="RedRoomViewImage" IsVisible="False" Margin="5,5,0,0">
                             <Image Source="redroompng.PNG" HorizontalOptions="Fill">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="image_click_RedRoomnViewImage"/>
@@ -178,7 +178,7 @@
                             <Frame BorderColor="#b29476" HorizontalOptions="FillAndExpand"  BackgroundColor="black" WidthRequest="550"  Margin="5,5,0,5"  Padding="0,0,30,10">
 
                             <ScrollView Orientation="Both" WidthRequest="500">
-                                <StackLayout>
+                                    <StackLayout Margin="5,5,0,0">
                                     <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
                                         <Button Margin="150,25,0,0" HorizontalOptions="Start" ClassId="830" CornerRadius="5" BackgroundColor="#a08058" WidthRequest="50" Text="830" TextColor="Black" Clicked="OnImageButtonClicked" HeightRequest="34" />
@@ -210,7 +210,7 @@
 
                     </ContentView>
                     <!--New-->
-                        <ContentView x:Name="AmberHallImage" IsVisible="False">
+                        <ContentView x:Name="AmberHallImage" IsVisible="False" Margin="5,5,0,0">
                             <Image Source="amberhallpng.PNG" HorizontalOptions="Fill">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="image_click_AmberHallImage"/>
@@ -222,7 +222,7 @@
                             <Frame BorderColor="#b29476" HorizontalOptions="FillAndExpand"  BackgroundColor="black" WidthRequest="550"  Margin="5,5,0,5"  Padding="0,0,30,10">
 
                                 <ScrollView Orientation="Both" WidthRequest="500">
-                                    <StackLayout>
+                                    <StackLayout Margin="5,5,0,0">
                                         <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
                                             <ImageButton Margin="100,25,0,0" HorizontalOptions="Start" Source="amb_93.PNG" ClassId="93" CornerRadius="5"  WidthRequest="80" Clicked="OnAmber_ImageButtonClicked" HeightRequest="38"></ImageButton>
@@ -273,33 +273,32 @@
                     
                         <!---dsf-->
                    
-                    <StackLayout Orientation="Horizontal" Spacing="30">
+                    <StackLayout Orientation="Horizontal" Margin="5,5,0,0" Spacing="20">
                             <Label Text="Reserved Table" FontFamily="Cooper Hewitt" TextColor="White"/>
 
-                            <Label x:Name="tableDetails" FontFamily="Cooper Hewitt" WidthRequest="250" FontSize="Medium" TextColor="White"/>
+                            <Label x:Name="tableDetails" FontFamily="Cooper Hewitt" WidthRequest="150" FontSize="Medium" TextColor="White"/>
                         </StackLayout>
-                        <StackLayout Orientation="Horizontal" Spacing="80">
+                        <StackLayout Orientation="Horizontal" Spacing="80" Margin="5,5,0,0">
                             <Label Text="Venue" FontFamily="Cooper Hewitt" TextColor="White"></Label>
-                            <Label x:Name="Venue" WidthRequest="250" TextColor="White"></Label>
+                            <Label x:Name="Venue" WidthRequest="150" TextColor="White"></Label>
                         </StackLayout>
-                        <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="20">
+                        <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="10" Margin="5,5,0,0">
                             
                             <Label Text="Number Of Person" FontFamily="Cooper Hewitt" TextColor="White"></Label>
                             <Picker x:Name="NumberofPerson" Title="--Select--" ItemsSource="{Binding Person}" TitleColor="White" TextColor="White" WidthRequest="100"></Picker>
                         </StackLayout>
-                        <StackLayout>
+                        <StackLayout Margin="5,5,0,0">
                         <Editor Placeholder="Special Request Notes" PlaceholderColor="Black" TextColor="Black" x:Name="SpecialNotes" BackgroundColor="White" HeightRequest="100" />
                     </StackLayout>
                         <!--===Display Alert===-->
-                        
-                            <StackLayout>
-                                <Label TextColor="White" x:Name="DisplayAlertmsg" IsVisible="true"  FontFamily="Cooper Hewitt" Text="Please be informed that filling and submitting the form above does not guarantee your reservation at Vii. All bookings must be confirmed by our Reservations Team. The validity of reservations depends on the venue's seating capacity."></Label>
 
+                        <StackLayout Margin="5,5,0,0">
+                            <Label TextColor="#b29476" x:Name="DisplayAlertmsg" IsVisible="False"  FontFamily="Cooper Hewitt" Text="Please be informed that filling and submitting the form above does not guarantee your reservation at Vii. All bookings must be confirmed by our Reservations Team. The validity of reservations depends on the venue's seating capacity."></Label>
                            
                         <!--=========-->
                         <Button Text="Reserve" Clicked="Button_Clicked" Style="{StaticResource buttonStyle}" CornerRadius="25" Margin="0,10,0,10"></Button>
-
-                </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
             </Frame>
         </StackLayout>
     </ScrollView>

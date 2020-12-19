@@ -12,16 +12,13 @@ namespace Vii.Services
 {
     public class BookingStore : IBookingStore
     {
-        private readonly string _apiBaseUrl;
-        private readonly string _BookingRelativeUrlTemplate = "api/reserve/";
+        private readonly string _apiBaseUrl;        
         public BookingStore()
         {
 #if DEBUG
-           _apiBaseUrl = "https://8d570789f71c.ngrok.io/";
-            //_apiBaseUrl = "https://clubappapi20201206152856.azurewebsites.net/";
-
+            _apiBaseUrl = "https://clubappapi20201206152856.azurewebsites.net/";
 #else
-            //  _apiBaseUrl = "https:///";
+            _apiBaseUrl = "https://clubappapi20201206152856.azurewebsites.net/";
 #endif
         }
         public async Task<TableBookingViewModel> BookingTables(BookingViewModel book)
@@ -31,16 +28,12 @@ namespace Vii.Services
                 var result = await _apiBaseUrl
                .AppendPathSegment("api/reserve/tablebooking")
                .PostJsonAsync(book)
-                .ReceiveJson<TableBookingViewModel>();
-                //  .GetJsonAsync<string>();
+                .ReceiveJson<TableBookingViewModel>();               
                 return result;
             }
             catch (FlurlHttpException fex)
             {
-                throw fex;
-                //var errorText = await fex.GetResponseStringAsync();
-                //Debug.WriteLine(errorText);
-                //return errorText;
+                throw fex;                
             }
         }
     }

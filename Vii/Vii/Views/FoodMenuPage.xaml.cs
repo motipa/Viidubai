@@ -20,14 +20,11 @@ namespace Vii.Views
         private void takeoverthursday_Button_Clicked(object sender, EventArgs e)
         {
 
-
         }
-
         private void redmadnessfriday_Button_Clicked(object sender, EventArgs e)
         {
 
         }
-
         private void uptown_monday_Button_Clicked(object sender, EventArgs e)
         {
 
@@ -37,12 +34,10 @@ namespace Vii.Views
             if (username != "")
             {
                 base.OnAppearing();
-                // imgName.Source = ImageSource.FromResource("tablebook2.jpg");
             }
             else
             {
                 Application.Current.MainPage = new SignInPage();
-
             }
         }
 

@@ -11,27 +11,12 @@ namespace Vii
     {
         public AppShell()
         {
-            InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            InitializeComponent();            
         }
-
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {
-            Settings.UserName = null;
-            // await Shell.Current.GoToAsync("//LoginPage");
+            Settings.UserName = null;           
             Application.Current.MainPage = new SignInPage();
-           
-           // Application.Current.MainPage = new HomePage();
-
-
-        }
-        //private async void OnMenuItemClicked1(object sender, EventArgs e)
-        //{
-         
-        //   // Application.Current.MainPage = new HomePage();
-
-
-        //}
+        }        
     }
 }

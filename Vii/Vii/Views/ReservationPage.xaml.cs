@@ -87,18 +87,19 @@ namespace Vii.Views
         {
             string fdate = FromDate.DateTime.ToString();
             DateTime t = Convert.ToDateTime(fdate);
+            string Choosedate = FromDate.DateTime.ToShortDateString();
             //DateTime t = ToDate.DateTime;
             TimeSpan selectTime = timepick._timePicker.Time;
             // DateTime selectDateTime = DateTime.ParseExact(fdate + " " + selectTime, "dd/MM/yy hh:mm:ss tt", CultureInfo.GetCultureInfo("en-IN"));
-
+            DateTime currentdate = System.DateTime.Now;
             string current = DateTime.Now.ToShortDateString();
             DateTime c = Convert.ToDateTime(current);
-            TimeSpan now = DateTime.Now.TimeOfDay;
-
+            string now = DateTime.Now.TimeOfDay.ToString();
+           DateTime selected= DateTime.Parse(Choosedate + " " + selectTime);
             string td = tableDetails.Text;
             if (c <= t)
             {
-                if (now < selectTime)
+                if (currentdate <= selected)
                 {
                     if (td != "")
                     {

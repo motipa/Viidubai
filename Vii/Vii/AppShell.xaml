@@ -116,6 +116,9 @@
     <FlyoutItem Title="SIGN IN" >
         <ShellContent Route="SignInPage" ContentTemplate="{DataTemplate local:SignInPage}" />
     </FlyoutItem>
+    <!--<FlyoutItem Title="Payment Test" >
+        <ShellContent Route="Payment" ContentTemplate="{DataTemplate local:PaymentPage}" />
+    </FlyoutItem>-->
 
     <!--<FlyoutItem Title="SIGN UP" >
         <ShellContent Route="SignUp" ContentTemplate="{DataTemplate local:SignUp}" />

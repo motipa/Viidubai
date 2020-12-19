@@ -11,15 +11,13 @@ namespace Vii.Services
 {
     public class SignUp : ISignUp
     {
-        private readonly string _apiBaseUrl;
-        private readonly string _BookingRelativeUrlTemplate = "api/registration/";
+        private readonly string _apiBaseUrl;        
         public SignUp()
         {
 #if DEBUG
-            //_apiBaseUrl = "https://clubappapi20201206152856.azurewebsites.net/";
-            _apiBaseUrl = "https://8d570789f71c.ngrok.io/";
+            _apiBaseUrl = "https://clubappapi20201206152856.azurewebsites.net/";           
 #else
-            //  _apiBaseUrl = "https:///";
+            _apiBaseUrl = "https://clubappapi20201206152856.azurewebsites.net/";
 #endif
         }
         public async Task SendActivationCode(string Email)
@@ -33,11 +31,8 @@ namespace Vii.Services
             catch (FlurlHttpException fex)
             {
                 throw fex;
-                //var errorText = await fex.GetResponseStringAsync();
-                //Debug.WriteLine(errorText);
-                //return errorText;
             }
-        }
+        }       
         public async Task<UserViewModel> SignUpAsync(UserModel userModel)
         {
             try
@@ -45,19 +40,14 @@ namespace Vii.Services
                 var result = await _apiBaseUrl
                .AppendPathSegment("api/registration/userregistration")
                .PostJsonAsync(userModel)
-                .ReceiveJson<UserViewModel>();
-                //  .GetJsonAsync<string>();
+                .ReceiveJson<UserViewModel>();               
                 return result;
             }
             catch (FlurlHttpException fex)
             {
                 throw fex;
-                //var errorText = await fex.GetResponseStringAsync();
-                //Debug.WriteLine(errorText);
-                //return errorText;
             }
         }
-
         public async Task<UserViewModel> UpdatePassword(UserModel userModel)
         {
             try
@@ -65,16 +55,27 @@ namespace Vii.Services
                 var result = await _apiBaseUrl
                .AppendPathSegment("api/registration/updatepassword")
                .PostJsonAsync(userModel)
-                .ReceiveJson<UserViewModel>();
-                //  .GetJsonAsync<string>();
+                .ReceiveJson<UserViewModel>();               
                 return result;
             }
             catch (FlurlHttpException fex)
             {
-                throw fex;
-                //var errorText = await fex.GetResponseStringAsync();
-                //Debug.WriteLine(errorText);
-                //return errorText;
+                throw fex;               
+            }
+        }
+        public async Task<UserModel> EmailVerification(string Email)
+        {
+            try
+            {
+                var success = await _apiBaseUrl
+               .AppendPathSegment("api/registration/newregister/" + Email)
+               .GetAsync()
+                .ReceiveJson<UserModel>();               
+                return success;
+            }
+            catch (FlurlHttpException fex)
+            {
+                throw fex;                
             }
         }
     }

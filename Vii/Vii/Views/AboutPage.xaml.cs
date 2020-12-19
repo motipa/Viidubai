@@ -17,14 +17,11 @@ namespace Vii.Views
         {
             if (username != "")
             {
-                base.OnAppearing();               
-                // imgName.Source = ImageSource.FromResource("tablebook2.jpg");
+                base.OnAppearing();
             }
             else
             {
-                //  Application.Current.MainPage = new SignInPage();
-               await Navigation.PushAsync(new Vii.Views.SignInPage());
-
+                Application.Current.MainPage = new SignInPage();
             }
         }
     }

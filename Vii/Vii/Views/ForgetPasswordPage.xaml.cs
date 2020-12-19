@@ -23,51 +23,71 @@ namespace Vii.Views
             BindingContext = _signUp;
         }
         async void sendlink_Button_Click(object sender, EventArgs e)
-        {           
-            if(Regex.Match(Email.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success)
+        {
+            try
             {
-                _signUp.userModel.Email = Email.Text;
-                _signUp.SendCodeforActivation(Email.Text);
-                await DisplayAlert("Success", "Password change link sent to your email", "OK");
-                UpdatePanel.IsVisible = true;
+                if (Regex.Match(Email.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success)
+                {
+                    _signUp.userModel.Email = Email.Text;
+                    _signUp.SendCodeforActivation(Email.Text);
+                    await DisplayAlert("Success", "Password change link sent to your email", "OK");
+                    UpdatePanel.IsVisible = true;
+                }
+                else
+                {
+                    lblError.Text = "Invalid Email Id";
+                }
             }
-            else
+            catch(Exception ex)
             {
-                lblError.Text = "Invalid Email Id";
+
             }
         }
         async void changepassword_Button_Clicked(object sender, EventArgs e)
         {
-            if (Password.Text == ConfirmPassword.Text)
+            try
             {
-                _signUp.userModel.ActivationCode = ActivationCode.Text;
-                _signUp.userModel.Password = Password.Text;
-
-                int s = _signUp.OnupdatePassword();
-                if (s == 1)
+                if (Password.Text == ConfirmPassword.Text)
                 {
-                    await DisplayAlert("Success", "Your password has been changed successfully!", "OK");
-                    Application.Current.MainPage = new SignInPage();
+                    _signUp.userModel.ActivationCode = ActivationCode.Text;
+                    _signUp.userModel.Password = Password.Text;
+
+                    int s = _signUp.OnupdatePassword();
+                    if (s > 0)
+                    {
+                        await DisplayAlert("Success", "Your password has been changed successfully!", "OK");
+                        Application.Current.MainPage = new SignInPage();
+                    }
+                }
+                else
+                {
+                   await DisplayAlert("Error", "Password Mismatch", "OK");
                 }
             }
-
-            else
+            catch(Exception ex)
             {
-                await DisplayAlert("Error", "Password Mismatch", "OK");
+                await DisplayAlert("Error", "Password Not Updated", "OK");
             }
         }
 
         private void HandleTextChanged(object sender, TextChangedEventArgs e)
         {
-            string theBase = Password.Text;
-            string confirmation = e.NewTextValue;
-            // here is the change
-            bool IsValid = (bool)theBase?.Equals(confirmation);
-
-            ((Entry)sender).TextColor = IsValid ? Color.White : Color.Red;
-            if(IsValid)
+            try
             {
-                btnChangePassword.IsEnabled = true;
+                string theBase = Password.Text;
+                string confirmation = e.NewTextValue;
+                // here is the change
+                bool IsValid = (bool)theBase?.Equals(confirmation);
+
+                ((Entry)sender).TextColor = IsValid ? Color.White : Color.Red;
+                if (IsValid)
+                {
+                    btnChangePassword.IsEnabled = true;
+                }
+            }
+            catch(Exception ex)
+            {
+
             }
         }
     }

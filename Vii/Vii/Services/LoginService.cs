@@ -19,10 +19,9 @@ namespace Vii.Services
         public LoginService()
         {// set URL for central IAM for debug to dev console, prod in release mode.  Put this in so I dont have to keep switching the endpoint when flipping between prod and dev
 #if DEBUG
-            //_apiBaseUrl = "https://clubappapi20201206152856.azurewebsites.net/";
-            _apiBaseUrl = "https://8d570789f71c.ngrok.io/";
+            _apiBaseUrl = "https://clubappapi20201206152856.azurewebsites.net/";           
 #else
-            //  _apiBaseUrl = "https:///";
+            _apiBaseUrl = "https://clubappapi20201206152856.azurewebsites.net/";
 
 #endif
         }
@@ -37,14 +36,19 @@ namespace Vii.Services
                 //  .GetJsonAsync<string>();
                 return result;
             }
-            catch (FlurlHttpException fex)
+            catch(Exception fex)
             {
                 AuthorizationResponseModel res = new AuthorizationResponseModel();
 
                 Debug.WriteLine(fex);
                 res.AccessToken = string.Empty;
-                throw fex;
+                res.Exception = fex.Message;
+                return res;
             }
+            //catch (FlurlHttpException fex)
+            //{
+               
+            //}
         }
         public async Task<AuthorizationResponseModel> RefreshAsync(RefreshRequest authorization)
         {

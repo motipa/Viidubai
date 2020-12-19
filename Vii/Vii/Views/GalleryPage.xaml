@@ -26,7 +26,7 @@
                 </Grid.RowDefinitions>
                 <Image Grid.Row="0" Grid.Column="0" Source="gallery_image1.jpg" Aspect="AspectFill" x:Name="glryimg1">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="image_click_gesture1" NumberOfTapsRequired="1"/>
+                        <TapGestureRecognizer Tapped="image_click_gesture1"/>
                     </Image.GestureRecognizers>
                 </Image>
 

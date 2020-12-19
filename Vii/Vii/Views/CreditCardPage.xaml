@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Vii.Views.CreditCardPage">
+    <ContentPage.Content>
+        <Frame Margin="40,10,40,30"
+                   Padding="20"
+                   Visual="Material"
+                   BackgroundColor="{Binding CardNumber, Converter={StaticResource CardColorConverter}}">
+            <StackLayout>
+                <Image Source="{Binding CardNumber, Converter={StaticResource CardLightConverter}}"
+                           HeightRequest="40"
+                           Grid.Row="0"
+                           Grid.Column="1"
+                           HorizontalOptions="EndAndExpand"/>
+            
+                <Label Text="Card Number"
+                           LineBreakMode="TailTruncation"
+                           FontSize="12"
+                           TextColor="{StaticResource Accent}"
+                           />
+
+                <Label Text="{Binding CardNumber}"
+                            FontSize="20"
+                            TextColor="{StaticResource Secondary}"
+                            />
+
+                <Label Text="Expiration"
+                           Margin="0,20,0,0"
+                           FontSize="12"
+                           TextColor="{StaticResource Accent}"
+                           />
+
+                <Label Text="{Binding CardExpirationDate}"
+                            FontSize="20"
+                            TextColor="{StaticResource Secondary}"
+                            />
+
+                <Label Text="Cvv"
+                            Margin="0,20,0,0"
+                           FontSize="12"
+                           TextColor="{StaticResource Accent}"
+                           />
+
+                <Label Text="{Binding CardCvv}"
+                            FontSize="20"
+                            TextColor="{StaticResource Secondary}"
+                            />
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

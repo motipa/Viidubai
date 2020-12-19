@@ -16,24 +16,30 @@ namespace Vii.Views
     {
         private SignUpViewModel _signUp;
         private ISignUp _isignup;
+        private UserDetails _userDetails;
 
         public SignUp()
         {
             InitializeComponent();
             SignUpViewModel signUp = new SignUpViewModel();
             _signUp = signUp;
+            UserDetails userDetails = new UserDetails();
+            _userDetails = userDetails;
             BindingContext = _signUp;
         }
         private async void privacypolicy_tapped(object sender, EventArgs e)
         {
-            //PageprivacyPolicy.IsVisible = true;
-            //SignUpView.IsVisible = false;
-            //Navigation.PushAsync(new Vii.Views.PrivacyPolicyPage());
-            var MyAppsFirstPage = new SignUp();
-            Application.Current.MainPage = new NavigationPage(MyAppsFirstPage);
-            await Application.Current.MainPage.Navigation.PopAsync(); //Remove the page currently on top.
-            await Application.Current.MainPage.Navigation.PushAsync(new PrivacyPolicyPage());
+            try
+            {
+                var MyAppsFirstPage = new SignUp();
+                Application.Current.MainPage = new NavigationPage(MyAppsFirstPage);
+                await Application.Current.MainPage.Navigation.PopAsync(); //Remove the page currently on top.
+                await Application.Current.MainPage.Navigation.PushAsync(new PrivacyPolicyPage());
+            }
+            catch(Exception ex)
+            {
 
+            }
         }
         private  void signin_tapped(object sender, EventArgs e)
         {
@@ -41,26 +47,23 @@ namespace Vii.Views
         }
         async void HandleTextChanged(object sender, TextChangedEventArgs e)
         {
-            Entry s = (Entry)sender;
+            try
+            {
+                Entry s = (Entry)sender;
 
-            if (!string.IsNullOrEmpty(s.Text))
-            {
-                lblConfirm.IsVisible = true;
-                lblConfirm.Text = s.Placeholder.ToString();
+                if (!string.IsNullOrEmpty(s.Text))
+                {
+                    lblConfirm.IsVisible = true;
+                    lblConfirm.Text = s.Placeholder.ToString();
+                }
+                else
+                {
+                    lblConfirm.IsVisible = false;
+                }
             }
-            else
+            catch(Exception ex)
             {
-                lblConfirm.IsVisible = false;
-            }
-            string theBase = password.Text;
-            string confirmation = e.NewTextValue;
-            // here is the change
-           bool IsValid = (bool)theBase?.Equals(confirmation);
 
-            ((Entry)sender).TextColor = IsValid ? Color.White : Color.Red;
-            if (IsValid)
-            {
-                btnSignup.IsEnabled = true;
             }
         }
         public bool IsPhoneNumber(string number)
@@ -71,41 +74,62 @@ namespace Vii.Views
             return isValid;
         }
         async void Createaccount_Button_Clicked(object sender, EventArgs e)
-        {            
-            if (Regex.Match(email.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success)
-            {
-                if (IsPhoneNumber(phone.Text))
+        {
+            try
+            {               
+                if (firstName.Text.Length > 0 && lastName.Text.Length > 0)
                 {
-                    if (password.Text == Confirmpassword.Text)
+                    if (Regex.Match(EmailId.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success)
                     {
-                        _signUp.userModel.FirstName = firstName.Text;
-                        _signUp.userModel.LastName = lastName.Text;
-                        _signUp.userModel.Email = email.Text;
-                        _signUp.userModel.Password = password.Text;
-                        _signUp.userModel.PhoneNumber = phone.Text;
-                        int s = _signUp.OnRegister();
-                        if (s == 1)
+                        var d = await _userDetails.GetCustomerDetails(EmailId.Text);
+                        if (d != null)
                         {
-                            await DisplayAlert("Registration", "Successfull", "OK");
-                            Application.Current.MainPage = new SignInPage();
+                            await DisplayAlert("Email", "This Email Already Exist", "Ok");
+                        }
+                        else
+                        {
+                            if (IsPhoneNumber(phone.Text))
+                            {
+                                if (password.Text == Confirmpassword.Text)
+                                {
+                                    _signUp.userModel.FirstName = firstName.Text;
+                                    _signUp.userModel.LastName = lastName.Text;
+                                    _signUp.userModel.Email = EmailId.Text;
+                                    _signUp.userModel.Password = password.Text;
+                                    _signUp.userModel.PhoneNumber = phone.Text;
+                                    int s = _signUp.OnRegister();
+                                    if (s > 0)
+                                    {
+                                        await DisplayAlert("Registration", "Successfull", "OK");
+                                        Application.Current.MainPage = new SignInPage();
+                                    }
+                                }
+                                else
+                                {
+                                    await DisplayAlert("Password", "Password Mismatch", "Ok");
+                                }
+                            }
+                            else
+                            {
+                                await DisplayAlert("Phone", "Invalid Phone", "Ok");
+                            }
                         }
                     }
                     else
-                    {   
-                        await DisplayAlert("Password", "Password Mismatch", "Ok");
+                    {
+                        await DisplayAlert("Email", "Invalid Email", "Ok");
                     }
                 }
                 else
                 {
-                    await DisplayAlert("Phone", "Invalid Phone", "Ok");
+                    await DisplayAlert("Error", "Name is Required", "Ok");
                 }
             }
-            else
+            catch(Exception ex)
             {
-                await DisplayAlert("Email", "Invalid Email", "Ok");
+                await DisplayAlert("Error", "Invalid Data", "Ok");
             }
         }
-
         private void fnamChange(object sender, TextChangedEventArgs e)
         {
             Entry s = (Entry)sender;
@@ -120,7 +144,6 @@ namespace Vii.Views
                 LabelFname.IsVisible = false;
             }
         }
-
         private void lnamChange(object sender, TextChangedEventArgs e)
         {
             Entry s = (Entry)sender;
@@ -135,49 +158,99 @@ namespace Vii.Views
                 LabelLname.IsVisible = false;
             }
         }
-
         private void phoneChange(object sender, TextChangedEventArgs e)
         {
-            Entry s = (Entry)sender;
-
-            if (!string.IsNullOrEmpty(s.Text))
+            try
             {
-                lblphone.IsVisible = true;
-                lblphone.Text = s.Placeholder.ToString();
+                Entry s = (Entry)sender;
+                if (!string.IsNullOrEmpty(s.Text))
+                {
+                    lblphone.IsVisible = true;
+                    lblphone.Text = s.Placeholder.ToString();
+                }
+                else
+                {
+                    lblphone.IsVisible = false;
+                }
             }
-            else
+            catch(Exception ex)
             {
-                lblphone.IsVisible = false;
+
             }
         }
 
         private void emailChange(object sender, TextChangedEventArgs e)
         {
-            Entry s = (Entry)sender;
-
-            if (!string.IsNullOrEmpty(s.Text))
+            try
             {
-                lblemail.IsVisible = true;
-                lblemail.Text = s.Placeholder.ToString();
+                Entry s = (Entry)sender;
+                if (!string.IsNullOrEmpty(s.Text))
+                {
+                    lblemail.IsVisible = true;
+                    lblemail.Text = s.Placeholder.ToString();
+                }
+                else
+                {
+                    lblemail.IsVisible = false;
+                }
             }
-            else
+            catch(Exception ex)
             {
-                lblemail.IsVisible = false;
+
             }
         }
 
         private void passchanged(object sender, TextChangedEventArgs e)
         {
-            Entry s = (Entry)sender;
-
-            if (!string.IsNullOrEmpty(s.Text))
+            try
             {
-                lblpassword.IsVisible = true;
-                lblpassword.Text = s.Placeholder.ToString();
+                Entry s = (Entry)sender;
+                if (!string.IsNullOrEmpty(s.Text))
+                {
+                    lblpassword.IsVisible = true;
+                    lblpassword.Text = s.Placeholder.ToString();
+                }
+                else
+                {
+                    lblpassword.IsVisible = false;
+                }
             }
-            else
+            catch(Exception ex)
             {
-                lblpassword.IsVisible = false;
+
+            }
+        }
+        private void CheckPasswordMatch(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                Entry s = (Entry)sender;
+                if (!string.IsNullOrEmpty(s.Text))
+                {
+                    lblConfirm.IsVisible = true;
+                    lblConfirm.Text = s.Placeholder.ToString();
+                    string Password = password.Text;
+                    string Confirmation = e.NewTextValue;
+                    // here is the change
+                    bool IsValid = (bool)Password?.Equals(Confirmation);
+
+                    ((Entry)sender).TextColor = IsValid ? Color.White : Color.Red;
+                    if (IsValid)
+                    {
+                        btnSignup.IsEnabled = true;
+                    }
+                }
+                else
+                {
+                    lblpassword.IsVisible = false;
+                    btnSignup.IsEnabled = false;
+                }
+
+                
+            }
+            catch(Exception ex)
+            {
+
             }
         }
     }

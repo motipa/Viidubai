@@ -12,11 +12,13 @@ namespace Vii.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SignInPage : ContentPage
     {
+        private LoginViewModel _log;
         public SignInPage()
         {
-            InitializeComponent();            
-            LoginViewModel log = new LoginViewModel(this);
-            this.BindingContext = log;
+            InitializeComponent();
+            LoginViewModel log = new LoginViewModel();
+            _log = log;
+            BindingContext = _log;
         }
         private async void menu_Button_Clicked(object sender, EventArgs e)
         {
@@ -78,6 +80,19 @@ namespace Vii.Views
             else
             {
                 LabelTitle.IsVisible = false;
+            }
+        }
+
+        private async void SignIn_Check(object sender, EventArgs e)
+        {
+            bool ok =await _log.LoginCheck();
+            if(ok)
+            {
+                Application.Current.MainPage = new AppShell();
+            }
+            else
+            {
+                lblError.Text = "Invalid User";
             }
         }
     }
